@@ -1,0 +1,7 @@
+interface:
+  display_name: "Right-Size Governance"
+  short_description: "Remove duplicate governance while preserving real controls"
+  default_prompt: "Use $right-size-governance to audit this project workflow and remove duplicate ceremony."
+
+policy:
+  allow_implicit_invocation: false

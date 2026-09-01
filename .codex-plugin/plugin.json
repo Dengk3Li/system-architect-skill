@@ -1,7 +1,7 @@
 {
   "name": "system-architect",
-  "version": "0.1.0",
-  "description": "Keep AI coding agents inside owned modules and explicit interfaces.",
+  "version": "0.2.0",
+  "description": "Protect module boundaries and keep agent-work governance proportional to risk.",
   "author": {
     "name": "Dengk3Li",
     "url": "https://github.com/Dengk3Li"
@@ -11,26 +11,28 @@
   "keywords": [
     "agent-skills",
     "architecture",
+    "governance",
+    "multi-agent",
     "module-boundaries",
     "codex"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "System Architect",
-    "shortDescription": "Protect module ownership and integration contracts.",
-    "longDescription": "Places product changes into independently owned modules, protects shared shells, and validates file scope before agents integrate code.",
+    "shortDescription": "Protect boundaries and remove duplicate governance.",
+    "longDescription": "Places product changes into independently owned modules, validates file scope, and right-sizes long-horizon, multi-session and multi-machine governance against concrete risks.",
     "developerName": "Dengk3Li",
     "category": "Developer Tools",
     "capabilities": [
       "Architecture",
-      "Validation"
+      "Validation",
+      "Governance Review"
     ],
     "websiteURL": "https://github.com/Dengk3Li/system-architect-skill",
     "defaultPrompt": [
       "Place this change in one owned module and define its interfaces.",
       "Check whether this diff crosses a registered module boundary.",
-      "Extract this feature from a frontend monolith without replacing the shell."
+      "Audit this project's governance and remove controls that duplicate existing authority."
     ]
   }
 }
-
