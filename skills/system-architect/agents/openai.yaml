@@ -1,0 +1,5 @@
+interface:
+  display_name: "System Architect"
+  short_description: "Protect module ownership and integration contracts"
+  default_prompt: "Use $system-architect to place this change in one owned module and define its stable interfaces."
+

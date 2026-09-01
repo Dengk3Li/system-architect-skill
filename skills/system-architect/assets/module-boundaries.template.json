@@ -1,0 +1,60 @@
+{
+  "schema_version": "system-architect.module-boundaries/v1",
+  "managed_roots": [
+    "src"
+  ],
+  "managed_extensions": [
+    ".css",
+    ".html",
+    ".js",
+    ".jsx",
+    ".mjs",
+    ".py",
+    ".ts",
+    ".tsx",
+    ".vue"
+  ],
+  "interfaces": [
+    {
+      "interface_id": "shell.slot.v1",
+      "owner": "app-shell",
+      "version": "1.0.0",
+      "contract": "Feature modules mount through a named shell slot."
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "app-shell",
+      "purpose": "Own shared navigation, layout and integration slots.",
+      "protected": true,
+      "allowed_roles": [
+        "system-architect",
+        "integrator"
+      ],
+      "provides": [
+        "shell.slot.v1"
+      ],
+      "consumes": [],
+      "owned_paths": [
+        "src/shell/**",
+        ".system-architect/**"
+      ]
+    },
+    {
+      "module_id": "example-feature",
+      "purpose": "Replace this with one user-facing product capability.",
+      "protected": false,
+      "allowed_roles": [
+        "module-developer"
+      ],
+      "provides": [],
+      "consumes": [
+        "shell.slot.v1"
+      ],
+      "owned_paths": [
+        "src/features/example-feature/**"
+      ]
+    }
+  ]
+}
+
