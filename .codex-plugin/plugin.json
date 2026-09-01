@@ -1,6 +1,6 @@
 {
   "name": "system-architect",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Assign product changes to owned modules, protect shared surfaces, and check file scope before integration.",
   "author": {
     "name": "Dengk3Li",
