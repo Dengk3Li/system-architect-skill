@@ -1,6 +1,6 @@
 ---
 name: system-architect
-description: Design and enforce independently owned product modules, protected shared surfaces, stable upstream/downstream interfaces, and incremental integration. Use when a request spans multiple PRDs or modules, asks where and how much a feature should appear, adds or connects a frontend module, changes shared navigation, APIs or design tokens, asks to merge prior work, risks replacing existing UI, or needs architecture-wide placement before implementation.
+description: Assign product changes to independently owned modules, protect shared shells and APIs, define versioned upstream/downstream interfaces, and check file scope before integration. Use when a request spans multiple PRDs or modules, asks where and how much a feature should appear, adds or connects a frontend module, changes shared navigation, APIs or design tokens, asks to merge prior work, risks replacing existing UI, or needs architecture-wide placement before implementation.
 ---
 
 # System Architect
@@ -106,4 +106,3 @@ Stop with `BLOCKED` or `UNKNOWN` when:
 - integration would delete, replace or silently hide an existing surface;
 - a contract omits version, error behavior or write authority;
 - the product decision or architecture decision remains unresolved.
-
