@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Visualizer"
+  short_description: "Render evidence-backed architecture as repeatable interactive views"
+  default_prompt: "Use $architecture-visualizer to create a primary-source-backed architecture model, interactive HTML, SVG, and decision-focused feedback."

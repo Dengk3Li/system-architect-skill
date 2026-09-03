@@ -1,7 +1,7 @@
 {
   "name": "system-architect",
-  "version": "0.1.2",
-  "description": "Assign product changes to owned modules, protect shared surfaces, and check file scope before integration.",
+  "version": "0.2.0",
+  "description": "Design low-complexity, business-aligned systems from primary evidence, protect module boundaries, and communicate architecture through repeatable human-facing views.",
   "author": {
     "name": "Dengk3Li",
     "url": "https://github.com/Dengk3Li"
@@ -17,19 +17,22 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "System Architect",
-    "shortDescription": "Route changes into owned modules and protect shared code.",
-    "longDescription": "For multi-agent codebases where feature work must stay inside one module. The plugin records file ownership, protects shared shells and APIs, defines versioned interfaces, and checks planned or actual Git changes before integration.",
+    "shortDescription": "Design business-aligned systems and explain them through durable views.",
+    "longDescription": "Translate approved requirements and primary evidence into low-complexity architecture decisions, quality targets, owned modules and interfaces, then render a stable architecture model as interactive HTML and SVG.",
     "developerName": "Dengk3Li",
     "category": "Developer Tools",
     "capabilities": [
       "Architecture",
-      "Validation"
+      "Validation",
+      "Business-aligned Architecture",
+      "Architecture Visualization",
+      "Evidence Integrity"
     ],
     "websiteURL": "https://github.com/Dengk3Li/system-architect-skill",
     "defaultPrompt": [
-      "Place this change in one owned module and define its interfaces.",
-      "Check whether this diff crosses a registered module boundary.",
-      "Extract this feature from a frontend monolith without replacing the shell."
+      "Use $system-architect to turn these approved requirements and primary evidence into low-complexity architecture options and trade-offs.",
+      "Use $architecture-visualizer to render this architecture as interactive HTML and SVG.",
+      "Check whether this diff crosses a registered module boundary."
     ]
   }
 }

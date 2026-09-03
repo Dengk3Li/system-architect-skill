@@ -1,4 +1,4 @@
 interface:
   display_name: "System Architect"
-  short_description: "Route changes into owned modules and protect shared code"
-  default_prompt: "Use $system-architect to assign this change to one module, preserve shared surfaces, and define the interfaces needed for integration."
+  short_description: "Design low-complexity, evidence-backed architecture and interfaces"
+  default_prompt: "Use $system-architect to map approved requirements and primary evidence to low-complexity architecture, quality targets, boundaries, interfaces, and human feedback."

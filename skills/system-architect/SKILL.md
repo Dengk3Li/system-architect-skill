@@ -1,11 +1,11 @@
 ---
 name: system-architect
-description: Assign product changes to independently owned modules, protect shared shells and APIs, define versioned upstream/downstream interfaces, and check file scope before integration. Use when a request spans multiple PRDs or modules, asks where and how much a feature should appear, adds or connects a frontend module, changes shared navigation, APIs or design tokens, asks to merge prior work, risks replacing existing UI, or needs architecture-wide placement before implementation.
+description: Design or review low-complexity systems from approved requirements and primary evidence, map capabilities and quality requirements to owned modules and interfaces, protect shared surfaces, prevent AI-generated artifacts from becoming self-validating authority, and explain trade-offs to humans. Use for architecture design, module placement, cross-system flows, shared contracts, integration, architecture diagrams, or architecture-wide change.
 ---
 
 # System Architect
 
-Keep each product capability independently changeable while preserving the accepted system around it. Treat integration as a narrow contract change, not permission to redesign the product.
+Turn accepted product intent and business constraints into a system that can be built, operated, explained, and evolved. Keep each capability independently changeable while preserving the accepted system around it.
 
 ## Separate the roles
 
@@ -16,9 +16,21 @@ Keep each product capability independently changeable while preserving the accep
 
 Do not turn the system architect into a global feature developer or final product owner.
 
+## Start from business logic
+
+1. Read the approved requirement IDs, customer outcome, business objective, scope, non-goals, success measures, and constraints. If product intent is unresolved, return the decision to the product owner or product manager. Map architecture back to those IDs without editing their product meaning.
+2. Map the actors, critical journeys, domain rules, business events, data authority, and failure consequences that the system must support.
+3. Translate the important flows into measurable quality requirements for reliability, security, performance, cost, privacy, operability, and changeability. Apply only the qualities that affect this workload.
+4. Compare architecture options against business value, delivery and operating cost, risk, time constraints, team ownership, existing system reality, and likely evolution.
+5. Trace every significant component and relationship to a business capability, domain invariant, quality requirement, or operational responsibility. Do not use an unexplained box named “business logic.”
+
+When designing boundaries, interfaces, or a substantial refactor, read `references/code-complete-principles.md`. Minimize the complexity one maintainer must hold at once, hide volatile decisions, favor cohesive modules and narrow coupling, keep representations close to business language, and use construction evidence to refine rather than replace accepted intent.
+
+Give product stakeholders feedback when a requirement is infeasible, disproportionately expensive, internally inconsistent, or creates a material operational consequence. Explain the consequence and recommend an option; do not silently change product priority or scope.
+
 ## Preflight
 
-1. Read repository guidance, accepted architecture, current Git state and active work boundaries.
+1. Read repository guidance, accepted architecture, current Git state, runtime evidence, and active work boundaries.
 2. Locate `.system-architect/module-boundaries.json`. If it is absent, copy `assets/module-boundaries.template.json`, then replace every example path and contract with verified repository facts before allowing writes.
 3. Run the manifest check:
 
@@ -27,6 +39,37 @@ python3 <skill-dir>/scripts/check_module_scope.py --repo-root <repo> --check-man
 ```
 
 4. Preserve dirty files, active writers, accepted routes and existing user-visible surfaces. Return `UNKNOWN` when ownership, interface shape or authority is unresolved.
+
+## Inspect the current system
+
+Use primary repository and runtime evidence first. If graphify-out/graph.json exists, query it for relevant nodes, paths, communities, and candidate dependencies instead of rebuilding the graph. Run or update graphify only when the necessary evidence is absent or source files have materially changed.
+
+Graphify describes relationships discovered from source material. Treat those relationships as evidence candidates until contracts, runtime behavior, or accepted decisions confirm their architectural meaning. Keep observed, accepted, and proposed architecture distinct.
+
+Treat every AI-generated summary, PRD interpretation, graph, diagram, architecture recommendation, and agent report as `AI_PROPOSAL` until traced to a primary source. AI proposals may locate evidence or suggest a design; they cannot verify themselves, validate another AI artifact, establish acceptance, or become the sole input to a downstream architecture decision. Use human-approved requirements, source code, executable tests, runtime observations, schemas, contracts, and primary external sources for verification. Preserve `UNKNOWN` when that chain stops.
+
+## Choose the implementation model
+
+When a product capability proposes an AI model, LLM, agent, embedding model or semantic inference, compare three architectures before placing the change:
+
+1. **Deterministic:** ordinary code, state machines, schemas, rules, search, ranking, templates or explicit user input.
+2. **AI-assisted:** deterministic control and validation, with AI limited to open-ended interpretation, candidate generation or expression.
+3. **AI-core:** AI performs the central semantic decision or transformation behind a stable interface.
+
+Compare the candidates against the actual user outcome and the constraints that can change the architecture:
+
+- correctness, reproducibility and testability;
+- coverage of open-ended or previously unseen inputs;
+- latency, operating cost and offline availability;
+- explainability, auditability, privacy and failure impact;
+- implementation complexity, coupling and long-term maintenance;
+- user experience when AI is unavailable, times out or returns an uncertain result.
+
+Choose the deterministic design when it satisfies the outcome without material loss. Choose AI-assisted when AI adds meaningful semantic coverage but authority, permissions, calculations, state transitions and acceptance can remain deterministic. Choose AI-core only when open-ended semantic work is intrinsic to the outcome and the deterministic baseline materially fails.
+
+Record `NO_AI`, `AI_ASSISTED` or `AI_CORE`, the best deterministic baseline, the rejected alternatives and the evidence that would show the selected architecture is better. Do not use an arbitrary aggregate score to hide a decisive trade-off.
+
+For every retained AI component, define a narrow interface with structured input and output, model or provider substitutability, validation, timeout, uncertainty behavior and a no-AI fallback. AI output is a proposal or result within that contract; it does not own authoritative state or approve irreversible actions.
 
 ## Place the change
 
@@ -42,7 +85,9 @@ Prefer vertical product slices over technical buckets. If feature logic lives in
 
 Before code, state:
 
+- requirement IDs served and any unresolved product mapping;
 - module ID and role;
+- implementation model and deterministic baseline when AI is involved;
 - user-visible placement and presentation budget;
 - allowed files;
 - inputs, outputs and interface versions;
@@ -95,6 +140,14 @@ Share contracts, not internal state. A consumer must not reach into another modu
 6. Report the candidate and remaining coupling. Do not merge, push, publish or retire existing surfaces without authority.
 
 Read `references/architecture-sources.md` when designing a new boundary policy or choosing enforcement tools for a specific stack.
+
+## Communicate the architecture
+
+For a material design or an explicit diagram request, use architecture-visualizer to create one sourced architecture model and render audience-specific SVG and interactive HTML views. Use context, container, component, dynamic, or deployment views only when each answers a real stakeholder question. A routine file-scope check does not need a diagram.
+
+Lead with the architecture recommendation and the business outcome it protects. Then show the decisive trade-offs, affected flows, quality targets, costs, risks, assumptions, migration or integration implications, and decisions required from humans. The diagram supports this explanation; it does not replace it.
+
+After implementation or operation produces evidence, compare observed reliability, latency, cost, incidents, and user impact with the architecture assumptions. Recommend retain, refine, replace, or reverse. Record a durable decision as an ADR when future work needs its rationale.
 
 ## Stop conditions
 

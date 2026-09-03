@@ -1,10 +1,10 @@
-# System Architect Skill
+# System Architect Skill Suite
 
 English | [简体中文](README.zh-CN.md)
 
 [![CI](https://github.com/Dengk3Li/system-architect-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/Dengk3Li/system-architect-skill/actions/workflows/ci.yml)
 
-An Agent Skill for assigning changes to owned modules, protecting shared code, and checking file scope before integration.
+An Agent Skill suite for translating approved requirements and primary evidence into low-complexity architecture decisions, quality targets, owned modules, interfaces, repeatable diagrams, and human feedback.
 
 ## Quick start
 
@@ -12,6 +12,7 @@ Install with the open skills CLI:
 
 ```bash
 npx skills add Dengk3Li/system-architect-skill --skill system-architect
+npx skills add Dengk3Li/system-architect-skill --skill architecture-visualizer
 ```
 
 Ask your agent to establish module boundaries:
@@ -19,6 +20,8 @@ Ask your agent to establish module boundaries:
 ```text
 Use $system-architect to place this change in one owned module and define the
 interfaces needed for integration.
+Use $architecture-visualizer to render this architecture as interactive HTML
+and presentation-ready SVG.
 ```
 
 Copy the starter manifest into a repository:
@@ -41,24 +44,37 @@ The manifest becomes the repository's explicit map of module ownership and prote
 
 System Architect helps a team:
 
+- translate accepted business outcomes, critical flows, and domain rules into architecture decisions;
+- manage accidental complexity through information hiding, cohesive modules, narrow coupling, and iterative construction evidence;
+- keep AI-generated summaries, graphs, and diagrams as proposals until primary evidence verifies them;
+- define measurable quality targets and explain their business consequences;
 - assign every managed file to exactly one module;
 - reserve the application shell, global styles, shared APIs, and design tokens for authorized integration work;
 - define provider, consumer, version, errors, side effects, and ownership for module interfaces;
 - check planned files, the working tree, or the staged diff against a module boundary;
 - extract new features from a frontend monolith without requiring a full rewrite;
+- distinguish observed, accepted, and proposed architecture;
+- create one architecture model and rerender audience-specific HTML and SVG views;
+- return trade-offs, risks, assumptions, and decisions to human stakeholders;
 - stop with `UNKNOWN` when ownership, authority, or an interface contract has not been verified.
 
 The skill supplies both architecture instructions and a Python scope checker.
 
-## Why it exists
+## The problem this suite solves
 
-In a multi-agent codebase, a feature task often has a much larger write surface than its product scope.
+Coding agents can produce a plausible architecture from a prompt without checking the running system, source code, contracts, or accepted requirements. The next agent may treat that generated diagram or summary as evidence. After several rounds, the system is designed from earlier AI interpretations instead of the business logic and code that actually exist.
 
-A developer assigned to one page may still be able to edit the main router, global stylesheet, application shell, shared service client, and sibling features. A seemingly local change can replace navigation, break another module's assumptions, or turn an integration request into a site-wide redesign.
+A second failure appears during implementation. A developer assigned to one feature can still edit the router, application shell, shared APIs, global styles, and sibling modules. Local work then increases coupling, duplicates state, or replaces accepted behavior outside the product scope.
 
-Prompts alone are a weak boundary. This skill records ownership in the repository and checks the actual Git change set. Shared integration remains possible, but it is handled as an explicit architecture change rather than an accidental side effect of feature work.
+This suite starts from approved requirement IDs and primary evidence. It applies complexity management, information hiding, cohesion, narrow coupling, and iterative construction principles adapted from *Code Complete*. AI-generated summaries, graphs, and diagrams remain proposals until source code, tests, runtime observations, contracts, or human decisions verify them.
+
+The repository records module ownership and checks the actual Git change set. Shared integration stays possible through declared interfaces and authorized architecture changes. Product scope remains with the product manager; the architect owns placement, boundaries, quality targets, and integration consequences.
 
 ## Architecture model
+
+### Business drivers and quality requirements
+
+Architecture starts from accepted customer and business outcomes. Critical journeys, domain invariants, data authority, failure consequences, cost, reliability, security, performance, privacy, operability, and changeability become explicit design inputs. Only qualities that affect the workload are applied.
 
 ### Owned modules
 
@@ -101,12 +117,14 @@ If the order-event payload, error behavior, or write authority is missing, the a
 
 ## Typical workflow
 
-1. Read the accepted product scope and current repository guidance.
-2. Select an existing module, define a new module, or identify a protected shared-contract change.
-3. Record placement, presentation budget, file ownership, interfaces, preserved surfaces, and tests.
-4. Check the planned files before implementation.
-5. Run module and contract tests.
-6. Check the complete diff before integration.
+1. Read accepted product outcomes, business constraints, repository guidance, and runtime evidence.
+2. Map actors, critical flows, domain rules, quality targets, and data authority.
+3. Compare architecture options and explain the decisive trade-offs.
+4. Select an existing module, define a new module, or identify a protected shared-contract change.
+5. Record placement, ownership, interfaces, evidence, feedback, and verification.
+6. Render architecture views when they help a stakeholder decision.
+7. Check planned and actual files before integration.
+8. Revisit assumptions when runtime, cost, incident, or user evidence arrives.
 
 The system architect owns placement and interfaces. It does not become the developer for every module.
 
@@ -168,6 +186,7 @@ This keeps current behavior available while reducing the write surface of each n
 |---|---|
 | Product manager | User problem, priority, release scope, acceptance |
 | System architect | Module placement, presentation budget, ownership, interfaces, integration order |
+| Architecture visualizer | Stable architecture model, audience views, source evidence, and diagram feedback |
 | Module developer | Implementation and tests inside one registered module |
 | Integrator | Authorized changes to protected surfaces through declared contracts |
 
@@ -196,7 +215,15 @@ skills/system-architect/
   assets/module-boundaries.template.json
   references/architecture-sources.md
   references/change-contract.md
+  references/code-complete-principles.md
   scripts/check_module_scope.py
+skills/architecture-visualizer/
+  SKILL.md
+  agents/openai.yaml
+  assets/architecture-model.template.json
+  references/architecture-model.md
+  scripts/render_architecture.py
+tests/test_architecture_visualizer.py
 tests/test_check_module_scope.py
 ```
 
@@ -212,6 +239,11 @@ The skill adapts ideas from:
 - [dependency-cruiser rules](https://github.com/sverweij/dependency-cruiser/blob/main/doc/rules-reference.md)
 - [Building Evolutionary Architectures](https://www.thoughtworks.com/content/dam/thoughtworks/documents/books/bk_building_evolutionary_architectures_second_edition_free_chapter.pdf)
 - [MADR](https://adr.github.io/madr/)
+- [C4 model](https://c4model.com/diagrams)
+- [C4 tooling](https://c4model.com/tooling)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Code Complete, 2nd Edition](https://www.microsoftpressstore.com/store/code-complete-9780735619678)
+- [Code Complete: Design in Construction](https://www.microsoftpressstore.com/articles/article.aspx?p=2222451)
 
 See [architecture-sources.md](skills/system-architect/references/architecture-sources.md) for adaptation notes and related public tools.
 

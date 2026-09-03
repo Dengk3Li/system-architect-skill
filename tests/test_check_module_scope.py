@@ -107,6 +107,12 @@ class ModuleScopeGuardTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("PASS (3 modules, 3 files, 1 interfaces)", result.stdout)
 
+    def test_package_exposes_architecture_visualizer(self) -> None:
+        skill = ROOT / "skills/architecture-visualizer/SKILL.md"
+        renderer = ROOT / "skills/architecture-visualizer/scripts/render_architecture.py"
+        self.assertTrue(skill.is_file())
+        self.assertTrue(renderer.is_file())
+
     def test_manifest_blocks_an_unowned_managed_file(self) -> None:
         (self.repo / "src/orphan.ts").write_text("export {}\n", encoding="utf-8")
         result = self.run_guard("--check-manifest")

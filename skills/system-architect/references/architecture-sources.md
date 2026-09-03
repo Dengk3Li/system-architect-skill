@@ -2,6 +2,32 @@
 
 Use these sources to choose a boundary policy. The skill applies their principles without copying their implementations.
 
+## Business-driven architecture and communication
+
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/): evaluate reliability, security, cost, operational excellence, and performance as trade-offs in service of business value.
+- [Azure architecture design principles](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/): begin with business requirements, design for change and failure, and make quality targets measurable.
+- [C4 model](https://c4model.com/diagrams): communicate a system through audience-appropriate levels of abstraction and use only the views that add value.
+- [C4 tooling](https://c4model.com/tooling): keep architecture as structured data and render multiple views over one model.
+
+Adaptation: trace architecture decisions to business flows and quality targets, separate the stable architecture model from its visual views, and return explicit feedback to the human decision-maker.
+
+## Construction quality and complexity
+
+- [Microsoft Press: Code Complete, 2nd Edition](https://www.microsoftpressstore.com/store/code-complete-9780735619678): treat quality as a concern throughout construction, use right-sized practices, refactor safely, and prevent defects with defensive techniques.
+- [Microsoft Press sample chapter: Design in Construction](https://www.microsoftpressstore.com/articles/article.aspx?p=2222451): manage complexity, design iteratively, prefer simplicity, and use information hiding to resolve difficult boundaries.
+
+Adaptation: apply these construction principles at architecture scale. Minimize accidental complexity, hide volatile choices behind narrow interfaces, keep modules cohesive and dependencies explicit, let implementation evidence refine internal design, and protect accepted behavior while refactoring.
+
+## Evidence integrity
+
+Generated summaries, inferred graphs, diagrams, and agent reports are navigation aids or proposals. They do not become architecture facts by repetition. Trace verified claims to source code, executable tests, runtime observations, schemas, contracts, primary external sources, or explicit human decisions. If the primary chain is missing, keep the claim proposed or `UNKNOWN`.
+
+## Graph evidence and architecture views
+
+Graphify provides a persistent source graph, incremental extraction, relationship queries, and broad interactive exploration. It is useful for discovering candidate structure in an unfamiliar codebase.
+
+The architecture visualizer curates a smaller decision-specific model from accepted requirements and verified evidence. Store selected node IDs and sources, then rerender HTML or SVG without re-extracting the repository. Update graphify only when source evidence changes; update the architecture model when architectural meaning changes.
+
 ## Product slices and ownership
 
 - [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html): divide a large frontend into cohesive, user-visible vertical slices that can evolve independently. Keep shared libraries narrow and assign a custodian to shared assets.
@@ -35,4 +61,3 @@ Adaptation: keep routine changes lightweight. Use a compact change contract for 
 - [vladikk/modularity](https://github.com/vladikk/modularity/tree/main/skills/design) focuses on coupling-aware module design and organizational distance.
 
 These are complementary. This skill's distinct responsibility is to turn ownership and interface decisions into a fail-closed file-scope check for coding agents.
-
