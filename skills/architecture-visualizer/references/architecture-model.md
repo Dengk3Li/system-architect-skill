@@ -48,11 +48,41 @@ A feedback item contains:
     severity: decision | risk | warning | note
     message: consequence or action in business-readable language
 
+## Frontend module contract
+
+Use this optional extension when a frontend surface needs an internal implementation view. A frontend view contains `kind: frontend` and a `frontend_module_id` that resolves to one entry in `frontend_modules`.
+
+Each frontend module contains:
+
+    id: stable module identifier
+    node_id: architecture node that owns the frontend capability
+    name: human-readable module name
+    surface: route, shell slot, embedded panel, or application surface
+    template_ref: reusable layout contract, normally frontend-module-canvas-v1
+    requirement_ids: approved product requirement IDs served
+    implementation_requirements:
+      pages: page responsibilities, not visual decoration
+      components: owned UI regions or components
+      states: loading, empty, error, unavailable, ready
+      interactions: trigger, observable result, and requirement IDs
+      data_contracts: provider, version, and read/write authority
+      quality: applicable accessibility, responsive, performance, and operability targets
+    canvas:
+      width, height: positive canvas dimensions
+      elements: stable id, kind, title, details, requirement_ids, x, y, width, height
+      connectors: stable id, source element, target element, and directional label
+    annotations: stable id, target element_id, status, and human-readable text
+
+Every canvas requirement ID must belong to the frontend module. Every connector and annotation must resolve to a stable element ID. The canvas may include page, component, state, state-controller, and data-contract elements; use only types that answer the current review question.
+
+The renderer makes frontend elements movable, resizable, editable, and annotatable in the generated HTML. These changes live in browser memory until the user exports `architecture-model.edited.json`. Validate and review that JSON before replacing the source model. A canvas edit changes a proposal; it does not establish product acceptance, source-code implementation, or runtime behavior.
+
 ## View selection
 
 - Context: people and external systems around the system in scope.
 - Container: deployable applications and data stores, with protocols and responsibilities.
 - Component: significant functional groupings inside one container; create only when it improves an engineering decision.
+- Frontend: pages, components, interaction state, user intents, data contracts, and quality requirements inside one owned frontend capability.
 - Dynamic: numbered interactions for a critical use case or failure path.
 - Deployment: runtime instances, zones, networks, and operational dependencies.
 

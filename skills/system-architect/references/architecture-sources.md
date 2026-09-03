@@ -28,6 +28,18 @@ Graphify provides a persistent source graph, incremental extraction, relationshi
 
 The architecture visualizer curates a smaller decision-specific model from accepted requirements and verified evidence. Store selected node IDs and sources, then rerender HTML or SVG without re-extracting the repository. Update graphify only when source evidence changes; update the architecture model when architectural meaning changes.
 
+## Editable frontend architecture workspaces
+
+- [React Flow](https://reactflow.dev/) and its [examples](https://reactflow.dev/examples) provide an MIT-licensed reference for stable node IDs, controlled node state, selection, dragging, resizing, and save/restore behavior.
+- [Storybook](https://storybook.js.org/) and its [interaction testing guide](https://storybook.js.org/docs/9/writing-tests/interaction-testing) provide an MIT-licensed reference for expressing components and pages in defined states, exercising user behavior, and keeping implementation examples reviewable in isolation.
+- [Excalidraw](https://github.com/excalidraw/excalidraw) provides an MIT-licensed reference for an embeddable element scene and human-directed whiteboard editing.
+- [draw.io](https://github.com/jgraph/drawio) provides an Apache-2.0 reference for a mature diagram editor, editable diagram storage, and embedded editing workflows.
+- [Structurizr](https://docs.structurizr.com/) demonstrates one architecture model rendered into multiple audience-specific views.
+
+Adaptation: keep a small JSON model as authority, give every frontend element stable identity and geometry, and render an offline HTML review workspace with move, resize, annotation, reset, and JSON export. Store pages, components, interaction states, data contracts, and quality requirements alongside the canvas so the picture remains tied to implementation. Use Storybook or a stack-native equivalent later for executable component states and interaction tests.
+
+The bundled renderer does not copy or bundle these projects. It implements the small required interaction set with browser-native SVG and JavaScript so the public Skill remains dependency-free. If a product already uses React Flow, Excalidraw, draw.io, or another approved editor, adapt `frontend-module-canvas-v1` to that host instead of rebuilding the editor.
+
 ## Product slices and ownership
 
 - [Micro Frontends](https://martinfowler.com/articles/micro-frontends.html): divide a large frontend into cohesive, user-visible vertical slices that can evolve independently. Keep shared libraries narrow and assign a custodian to shared assets.

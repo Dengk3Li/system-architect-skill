@@ -55,6 +55,8 @@ System Architect helps a team:
 - extract new features from a frontend monolith without requiring a full rewrite;
 - distinguish observed, accepted, and proposed architecture;
 - create one architecture model and rerender audience-specific HTML and SVG views;
+- model a frontend as an owned capability module with pages, components, UI states, interactions, data contracts, and quality requirements;
+- open that frontend view as an offline workspace whose elements can be moved, resized, annotated, and exported back to validated JSON;
 - return trade-offs, risks, assumptions, and decisions to human stakeholders;
 - stop with `UNKNOWN` when ownership, authority, or an interface contract has not been verified.
 
@@ -91,6 +93,23 @@ Modules depend on published contracts rather than another module's private DOM, 
 ### Scope checks
 
 The checker can validate a proposed file list before work begins and the real Git diff before delivery. Violations return exit code `2`, which can fail a local hook or CI job.
+
+### Frontend architecture workspace
+
+Frontend is part of the system architecture, not a picture attached after backend design. A material user-facing capability is modeled as an owned module linked to approved requirement IDs. Its internal contract records pages, components, loading/empty/error/unavailable/ready states, user interactions, authoritative data contracts, accessibility, responsive behavior, performance, and recovery.
+
+Start from the bundled template:
+
+```bash
+cp skills/architecture-visualizer/assets/frontend-module.template.json \
+  architecture-model.json
+python3 skills/architecture-visualizer/scripts/render_architecture.py \
+  architecture-model.json --output-dir architecture-review
+```
+
+Open `architecture-review/architecture.html`, select the frontend view, and click an element. Elements can be moved, resized, edited, and annotated. Export `architecture-model.edited.json` to preserve the changes, then validate and review that model before replacing the source. The HTML page and its browser memory are review surfaces, not architecture authority.
+
+The interaction model borrows proven patterns from React Flow, Storybook, Excalidraw, draw.io, and Structurizr while keeping this renderer dependency-free. If a product already has an approved diagram editor, the same stable IDs and frontend model can be hosted there instead.
 
 ## Example
 
@@ -221,6 +240,7 @@ skills/architecture-visualizer/
   SKILL.md
   agents/openai.yaml
   assets/architecture-model.template.json
+  assets/frontend-module.template.json
   references/architecture-model.md
   scripts/render_architecture.py
 tests/test_architecture_visualizer.py
@@ -241,6 +261,11 @@ The skill adapts ideas from:
 - [MADR](https://adr.github.io/madr/)
 - [C4 model](https://c4model.com/diagrams)
 - [C4 tooling](https://c4model.com/tooling)
+- [React Flow](https://reactflow.dev/) and [MIT-licensed examples](https://reactflow.dev/examples)
+- [Storybook](https://storybook.js.org/) and [interaction testing](https://storybook.js.org/docs/9/writing-tests/interaction-testing)
+- [Excalidraw](https://github.com/excalidraw/excalidraw)
+- [draw.io](https://github.com/jgraph/drawio)
+- [Structurizr](https://docs.structurizr.com/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Code Complete, 2nd Edition](https://www.microsoftpressstore.com/store/code-complete-9780735619678)
 - [Code Complete: Design in Construction](https://www.microsoftpressstore.com/articles/article.aspx?p=2222451)

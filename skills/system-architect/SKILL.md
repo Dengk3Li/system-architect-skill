@@ -81,6 +81,20 @@ Choose one path:
 
 Prefer vertical product slices over technical buckets. If feature logic lives in a protected monolith, freeze that file for module developers and extract the smallest standalone slice or adapter. Do not add more feature logic to the monolith.
 
+## Architect the frontend as a module
+
+Treat every material frontend surface as architecture, not decoration. Model the frontend capability as a container or owned module with a route or shell slot, requirement IDs, an owner, versioned data contracts, and an explicit boundary around transient UI state. Inside that module, define only the implementation requirements that preserve the accepted product behavior:
+
+- pages, regions, components, and their ownership;
+- loading, empty, error, unavailable, and ready states;
+- user intents, state transitions, navigation, focus, and recovery behavior;
+- provider and consumer contracts, authoritative writes, caching, and stale-data behavior;
+- accessibility, responsive layout, performance, observability, and affected regression checks.
+
+Keep product meaning with the product manager. The architect maps accepted requirement IDs to UI elements and implementation contracts, identifies infeasible or costly consequences, and returns those decisions for human review without rewriting the PRD.
+
+For a material frontend design, use architecture-visualizer's `assets/frontend-module.template.json`. Produce a `kind: frontend` view linked by `frontend_module_id`; preserve stable element IDs and geometry so people can move, resize, annotate, and export the model without regenerating the architecture. Use Storybook or the stack's equivalent to implement component states and interaction tests after the architecture is accepted. The editable canvas is a review workspace; exported JSON must pass the same evidence and contract validation before it becomes architecture authority.
+
 ## Freeze the change contract
 
 Before code, state:
@@ -143,7 +157,7 @@ Read `references/architecture-sources.md` when designing a new boundary policy o
 
 ## Communicate the architecture
 
-For a material design or an explicit diagram request, use architecture-visualizer to create one sourced architecture model and render audience-specific SVG and interactive HTML views. Use context, container, component, dynamic, or deployment views only when each answers a real stakeholder question. A routine file-scope check does not need a diagram.
+For a material design or an explicit diagram request, use architecture-visualizer to create one sourced architecture model and render audience-specific SVG and interactive HTML views. Use context, container, component, frontend, dynamic, or deployment views only when each answers a real stakeholder question. A routine file-scope check does not need a diagram.
 
 Lead with the architecture recommendation and the business outcome it protects. Then show the decisive trade-offs, affected flows, quality targets, costs, risks, assumptions, migration or integration implications, and decisions required from humans. The diagram supports this explanation; it does not replace it.
 

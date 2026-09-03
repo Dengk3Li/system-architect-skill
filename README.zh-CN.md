@@ -55,6 +55,8 @@ System Architect 帮助团队：
 - 在不重写整站的前提下，从前端单体中逐步拆出新功能；
 - 区分观察到、已经接受和仍在提议的架构；
 - 用一个架构模型重复生成面向不同读者的 HTML 和 SVG；
+- 把前端建模为独立归属的能力模块，并明确页面、组件、界面状态、交互、数据合同和质量要求；
+- 在离线前端架构工作区中移动、调整尺寸、批注元素，并把修改导出为待验证 JSON；
 - 向人类利益相关者返回取舍、风险、假设和待决定事项；
 - 模块归属、授权或接口没有证据时保留 `UNKNOWN`。
 
@@ -91,6 +93,23 @@ System Architect 帮助团队：
 ### 范围检查
 
 检查器可以在开发前验证计划修改的文件，也可以在交付前检查真实 Git 差异。违规时返回退出码 `2`，可以直接阻断本地 hook 或 CI。
+
+### 前端架构工作区
+
+前端属于系统架构，不是后端设计完成后补上的一张展示图。重要的用户界面能力应当作为独立归属模块，关联已经批准的需求 ID；模块内部明确页面、组件、加载/空/错误/不可用/就绪状态、用户交互、数据写入权威、无障碍、响应式布局、性能和恢复行为。
+
+从内置样板开始：
+
+```bash
+cp skills/architecture-visualizer/assets/frontend-module.template.json \
+  architecture-model.json
+python3 skills/architecture-visualizer/scripts/render_architecture.py \
+  architecture-model.json --output-dir architecture-review
+```
+
+打开 `architecture-review/architecture.html`，选择前端视图并点击元素。元素可以移动、调整尺寸、编辑实现要求和添加批注。使用“导出已编辑模型”保存为 `architecture-model.edited.json`，通过验证和评审后再替换源模型。HTML 页面和浏览器内存是评审界面，不是架构权威。
+
+这套交互吸收了 React Flow、Storybook、Excalidraw、draw.io 和 Structurizr 的成熟模式，同时保持渲染器零依赖。如果项目已经有获准使用的图形编辑器，可以把相同的稳定元素 ID 和前端模型接入现有编辑器。
 
 ## 使用例子
 
@@ -221,6 +240,7 @@ skills/architecture-visualizer/
   SKILL.md
   agents/openai.yaml
   assets/architecture-model.template.json
+  assets/frontend-module.template.json
   references/architecture-model.md
   scripts/render_architecture.py
 tests/test_architecture_visualizer.py
@@ -241,6 +261,11 @@ tests/test_check_module_scope.py
 - [MADR](https://adr.github.io/madr/)
 - [C4 模型](https://c4model.com/diagrams)
 - [C4 工具原则](https://c4model.com/tooling)
+- [React Flow](https://reactflow.dev/) 与 [MIT 许可示例](https://reactflow.dev/examples)
+- [Storybook](https://storybook.js.org/) 与 [交互测试](https://storybook.js.org/docs/9/writing-tests/interaction-testing)
+- [Excalidraw](https://github.com/excalidraw/excalidraw)
+- [draw.io](https://github.com/jgraph/drawio)
+- [Structurizr](https://docs.structurizr.com/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [《代码大全（第 2 版）》](https://www.microsoftpressstore.com/store/code-complete-9780735619678)
 - [《代码大全》示例章节：构造中的设计](https://www.microsoftpressstore.com/articles/article.aspx?p=2222451)

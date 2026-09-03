@@ -19,13 +19,15 @@ Identify the audience and decision:
 - engineering teams need containers, components, interfaces, data and control flow, ownership, and failure behavior;
 - operations and security teams need deployment, trust boundaries, runtime dependencies, observability, and recovery.
 
-Do not mix every abstraction level in one view. Use only the C4-style zoom levels or dynamic/deployment views that add value.
+Do not mix every abstraction level in one view. Use only the C4-style zoom levels, frontend workspaces, or dynamic/deployment views that add value.
 
 ## Create the architecture model
 
 Read [references/architecture-model.md](references/architecture-model.md), then populate architecture-model.json. Every element needs a responsibility, business driver, type, source, source type, and evidence status. Every relationship needs a direction, specific label, evidence, evidence type, and evidence status.
 
 Keep uncertain discovered relationships explicit. A graph edge or folder relationship is not automatically an accepted runtime dependency.
+
+When the frontend is material to the decision, copy `assets/frontend-module.template.json`. Keep the frontend capability as a system node plus a linked `frontend_modules` entry. Map accepted requirement IDs to its pages, components, states, interactions, data contracts, quality requirements, and canvas elements. Read the frontend schema in the model reference. Do not invent product acceptance criteria or treat a wireframe as proof of implementation.
 
 ## Render repeatably
 
@@ -37,10 +39,12 @@ Run:
 The renderer creates:
 
 - architecture.svg for documents and slides;
-- architecture.html with view switching, search, element details, source evidence, and architecture feedback;
+- architecture.html with view switching, search, element details, source evidence, architecture feedback, and an editable frontend workspace when the model defines one;
 - architecture-summary.md for the decision and feedback narrative.
 
-Edit the model and rerun the renderer when architecture changes. Do not hand-edit generated views as independent sources.
+In a frontend workspace, select and drag an element to move it, use the lower-right handle to resize it, edit its requirement mapping and implementation note, and attach a local annotation. Export the edited JSON before leaving the page. Browser edits are review candidates until the exported model is validated and accepted; do not treat the generated HTML or local browser state as architecture authority.
+
+Edit the source model and rerun the renderer when accepted architecture changes. Do not hand-edit generated views as independent sources.
 
 Use ppt-master only when the user asks for a presentation or the architecture must join a broader slide narrative. Give it the SVG and summary as source artifacts; do not ask it to rediscover architecture.
 

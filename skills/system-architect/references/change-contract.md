@@ -29,6 +29,14 @@ implementation_model:
 placement:
   surface: "route, slot, panel or background adapter"
   presentation_budget: "what appears, where and how much"
+frontend_architecture:
+  module_id: "owned frontend module, or NOT_APPLICABLE"
+  template_ref: "frontend-module-canvas-v1, another reviewed template, or NOT_APPLICABLE"
+  pages_and_components: []
+  requirement_to_element: {}
+  interactions_and_states: []
+  data_contracts: []
+  accessibility_responsive_performance: []
 allowed_paths: []
 preserve:
   routes: []
@@ -72,6 +80,7 @@ Rules:
 - Map modules and interfaces to product requirement IDs supplied by the product owner; return missing or conflicting mappings instead of inventing product intent.
 - Keep primary observations, human acceptance, AI proposals, and unknowns separate. An AI proposal cannot verify itself or another AI artifact.
 - Preserve every existing route and surface unless the user explicitly retires it.
+- Complete `frontend_architecture` for a material user-facing surface. Keep it `NOT_APPLICABLE` for backend-only or infrastructure-only changes.
 - Change an interface version when existing consumers would interpret the payload differently.
 - Give writes to one authority. Other modules receive a result or event, not direct storage access.
 - Keep exceptions narrow, visible and temporary; do not widen an ordinary module to absorb unrelated work.
