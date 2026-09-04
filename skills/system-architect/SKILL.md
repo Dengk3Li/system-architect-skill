@@ -28,6 +28,8 @@ When designing boundaries, interfaces, or a substantial refactor, read `referenc
 
 Give product stakeholders feedback when a requirement is infeasible, disproportionately expensive, internally inconsistent, or creates a material operational consequence. Explain the consequence and recommend an option; do not silently change product priority or scope.
 
+For medium or larger architecture work, read [references/architecture-workflow.md](references/architecture-workflow.md). Work the current decision frontier, use executable prototypes for runnable unknowns, keep domain language consistent, admit ADRs only for durable trade-offs, and hand accepted decisions into vertical delivery packages. Handle a small settled change directly.
+
 ## Preflight
 
 1. Read repository guidance, accepted architecture, current Git state, runtime evidence, and active work boundaries.
@@ -150,8 +152,9 @@ Share contracts, not internal state. A consumer must not reach into another modu
 2. Connect through a registered shell slot, API, event or adapter.
 3. Add the smallest shared-surface change only after the module works independently.
 4. Run module, contract, scope and affected regression tests.
-5. Record durable shared decisions as an ADR when future modules need the rationale.
-6. Report the candidate and remaining coupling. Do not merge, push, publish or retire existing surfaces without authority.
+5. Record durable shared decisions as an ADR only when they are hard to reverse, surprising without context, and the result of a real trade-off.
+6. For an authorized build or integration request, create an isolated branch/worktree, commit the scoped change, push it, open a PR, and merge after required verification and review. This lifecycle does not require a second approval. Clean up only Git resources created by this task after verifying the PR is merged, the merge is reachable from the target branch, the worktree is clean, no active writer remains, and referenced evidence is retained.
+7. Report the integrated result and remaining coupling. Pause when branch protection, conflicts, missing credentials, or unrelated dirty work prevents reliable automation.
 
 Read `references/architecture-sources.md` when designing a new boundary policy or choosing enforcement tools for a specific stack.
 
@@ -172,4 +175,4 @@ Stop with `BLOCKED` or `UNKNOWN` when:
 - a module developer needs a protected shell or server file;
 - integration would delete, replace or silently hide an existing surface;
 - a contract omits version, error behavior or write authority;
-- the product decision or architecture decision remains unresolved.
+- a material unresolved product decision, architecture fact, or conflict prevents safely freezing the change contract.

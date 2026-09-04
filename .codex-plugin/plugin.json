@@ -1,6 +1,6 @@
 {
   "name": "system-architect",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Design low-complexity, business-aligned systems from primary evidence, protect module boundaries, and communicate architecture through repeatable human-facing views.",
   "author": {
     "name": "Dengk3Li",
@@ -26,7 +26,9 @@
       "Validation",
       "Business-aligned Architecture",
       "Architecture Visualization",
-      "Evidence Integrity"
+      "Evidence Integrity",
+      "Decision-frontier Design",
+      "Automated Git Delivery"
     ],
     "websiteURL": "https://github.com/Dengk3Li/system-architect-skill",
     "defaultPrompt": [

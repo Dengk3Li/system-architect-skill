@@ -137,15 +137,20 @@ If the order-event payload, error behavior, or write authority is missing, the a
 ## Typical workflow
 
 1. Read accepted product outcomes, business constraints, repository guidance, and runtime evidence.
-2. Map actors, critical flows, domain rules, quality targets, and data authority.
-3. Compare architecture options and explain the decisive trade-offs.
-4. Select an existing module, define a new module, or identify a protected shared-contract change.
-5. Record placement, ownership, interfaces, evidence, feedback, and verification.
-6. Render architecture views when they help a stakeholder decision.
-7. Check planned and actual files before integration.
-8. Revisit assumptions when runtime, cost, incident, or user evidence arrives.
+2. Handle a small settled change directly; for medium or larger work, resolve the current decision frontier in focused rounds.
+3. Use a throwaway prototype or cited primary-source research when the answer cannot be settled reliably in conversation.
+4. Map actors, critical flows, domain rules, quality targets, and data authority.
+5. Compare architecture options and explain the decisive trade-offs.
+6. Select an existing module, define a new module, or identify a protected shared-contract change.
+7. Record placement, ownership, interfaces, evidence, feedback, and verification. Write an ADR only for a hard-to-reverse, surprising, real trade-off.
+8. Render architecture views when they help a stakeholder decision.
+9. Check planned and actual files before integration.
+10. For authorized delivery, create the branch/worktree, commit, push, open and merge the PR after checks. Clean up only task-created Git resources after confirming the merge is reachable, the worktree is clean, no active writer remains, and cited evidence is retained.
+11. Revisit assumptions when runtime, cost, incident, or user evidence arrives.
 
 The system architect owns placement and interfaces. It does not become the developer for every module.
+
+The complete decision and delivery flow is in [architecture-workflow.md](skills/system-architect/references/architecture-workflow.md). Adapted third-party workflow material and its license are recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ## Scope checker
 
