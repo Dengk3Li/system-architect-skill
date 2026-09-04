@@ -1,0 +1,48 @@
+{
+  "title": "System architecture",
+  "scope": "One explicit system or business capability",
+  "language": "en",
+  "audience": ["product", "engineering"],
+  "views": [
+    {
+      "id": "context",
+      "title": "System context",
+      "node_ids": ["user", "system"],
+      "relationship_ids": ["uses"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "user",
+      "name": "User",
+      "type": "person",
+      "responsibility": "Achieves one stated outcome",
+      "business_driver": "Accepted product outcome",
+      "source": "accepted product brief",
+      "source_type": "HUMAN_APPROVED_REQUIREMENT",
+      "evidence_status": "ACCEPTED"
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "type": "system",
+      "responsibility": "Delivers the stated capability",
+      "business_driver": "Accepted product outcome",
+      "source": "verified architecture evidence",
+      "source_type": "SOURCE_CODE",
+      "evidence_status": "OBSERVED"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "uses",
+      "source": "user",
+      "target": "system",
+      "label": "uses to achieve the outcome",
+      "evidence": "accepted user flow",
+      "evidence_type": "HUMAN_APPROVED_REQUIREMENT",
+      "evidence_status": "ACCEPTED"
+    }
+  ],
+  "feedback": []
+}

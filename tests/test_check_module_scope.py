@@ -107,6 +107,37 @@ class ModuleScopeGuardTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertIn("PASS (3 modules, 3 files, 1 interfaces)", result.stdout)
 
+    def test_package_exposes_architecture_visualizer(self) -> None:
+        skill = ROOT / "skills/architecture-visualizer/SKILL.md"
+        renderer = ROOT / "skills/architecture-visualizer/scripts/render_architecture.py"
+        self.assertTrue(skill.is_file())
+        self.assertTrue(renderer.is_file())
+
+    def test_architecture_workflow_uses_a_decision_frontier_and_strict_adr_admission(self) -> None:
+        skill = (ROOT / "skills/system-architect/SKILL.md").read_text()
+        workflow = (ROOT / "skills/system-architect/references/architecture-workflow.md").read_text().lower()
+        self.assertIn("architecture-workflow.md", skill)
+        self.assertIn("decision frontier", workflow)
+        self.assertIn("hard to reverse", workflow)
+        self.assertIn("surprising without context", workflow)
+        self.assertIn("real trade-off", workflow)
+        self.assertTrue((ROOT / "THIRD_PARTY_NOTICES.md").is_file())
+
+    def test_architecture_workflow_evals_cover_routing_detours_and_cleanup(self) -> None:
+        cases = json.loads((ROOT / "evals/architecture-workflow.json").read_text())
+        by_id = {case["id"]: case for case in cases}
+        self.assertIn("source boundary", by_id["runnable-unknown"]["required_patterns"])
+        self.assertIn("time boundary", by_id["runnable-unknown"]["required_patterns"])
+        self.assertIn("output location", by_id["runnable-unknown"]["required_patterns"])
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "evals/evaluate_architecture_workflow.py")],
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("PASS scenarios=4", result.stdout)
+
     def test_manifest_blocks_an_unowned_managed_file(self) -> None:
         (self.repo / "src/orphan.ts").write_text("export {}\n", encoding="utf-8")
         result = self.run_guard("--check-manifest")

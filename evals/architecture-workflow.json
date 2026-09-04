@@ -1,0 +1,30 @@
+[
+  {
+    "id": "medium-cross-module",
+    "prompt": "Add recovery across a state projection, command gateway, and frontend panel.",
+    "candidate_output": "First inspect current runtime behavior and existing contracts. The architect owns transport choice, adapter placement, and interface version. Ask the user only for recovery risk tolerance, then recompute the decision frontier.",
+    "required_patterns": ["current runtime behavior", "existing contracts", "architect owns", "recovery risk tolerance", "decision frontier"],
+    "forbidden_patterns": ["ask the user to choose the transport", "ask the user to place the adapter"]
+  },
+  {
+    "id": "runnable-unknown",
+    "prompt": "Choose a recovery state model whose interaction cannot be judged from prose.",
+    "candidate_output": "Prototype detour. Blocked decision: recovery state model. Question: which transition model remains understandable under interruption? Criteria: recoverability and operator clarity. Source boundary: current state contract only. Time boundary: 60 minutes. Output location: tmp/recovery-state-prototype. Evidence: recorded transition trace. Conclusion: return the evidence to the original architecture decision; do not promote prototype code.",
+    "required_patterns": ["blocked decision", "question", "criteria", "source boundary", "time boundary", "output location", "evidence", "conclusion", "return", "do not promote prototype code"],
+    "forbidden_patterns": ["merge the prototype"]
+  },
+  {
+    "id": "reversible-retry-default",
+    "prompt": "Choose an inexpensive retry interval that can be tuned after launch.",
+    "candidate_output": "Use a reversible architect default and record it in the change contract. This is inexpensive to change and does not need an ADR.",
+    "required_patterns": ["reversible architect default", "does not need an adr"],
+    "forbidden_patterns": ["create an adr", "ask the user"]
+  },
+  {
+    "id": "unmerged-or-dirty-worktree",
+    "prompt": "Clean up after a PR that is still open or a worktree with uncommitted evidence.",
+    "candidate_output": "Retain and report. Cleanup is blocked until the PR is MERGED, the merge is reachable from the target branch, the worktree has no uncommitted or untracked content, no active writer remains, and referenced evidence is preserved. Remove only resources created by this task.",
+    "required_patterns": ["pr is merged", "reachable from the target branch", "no uncommitted or untracked content", "no active writer", "evidence is preserved", "created by this task"],
+    "forbidden_patterns": ["cleanup is allowed", "delete now"]
+  }
+]

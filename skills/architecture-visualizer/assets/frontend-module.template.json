@@ -1,0 +1,222 @@
+{
+  "title": "Frontend capability architecture",
+  "scope": "One user-visible capability and its frontend implementation boundary",
+  "language": "en",
+  "audience": ["product", "design", "frontend engineering", "system architecture"],
+  "views": [
+    {
+      "id": "frontend-workspace",
+      "title": "Frontend capability module",
+      "kind": "frontend",
+      "frontend_module_id": "frontend-capability-workspace",
+      "node_ids": ["frontend-capability"],
+      "relationship_ids": []
+    },
+    {
+      "id": "context",
+      "title": "Capability context",
+      "node_ids": ["user", "frontend-capability", "business-api"],
+      "relationship_ids": ["uses-capability", "calls-api"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "user",
+      "name": "User",
+      "type": "person",
+      "responsibility": "Completes the accepted user outcome",
+      "business_driver": "REQ-CAPABILITY-01",
+      "source": "approved product requirement",
+      "source_type": "HUMAN_APPROVED_REQUIREMENT",
+      "evidence_status": "ACCEPTED"
+    },
+    {
+      "id": "frontend-capability",
+      "name": "Frontend capability",
+      "type": "container",
+      "responsibility": "Owns the route, interaction state, presentation, and recovery behavior for one capability",
+      "business_driver": "REQ-CAPABILITY-01",
+      "source": "replace with source code or accepted architecture decision",
+      "source_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    },
+    {
+      "id": "business-api",
+      "name": "Business API",
+      "type": "container",
+      "responsibility": "Owns authoritative business data and writes behind a versioned contract",
+      "business_driver": "Preserve business invariants",
+      "source": "replace with verified API contract",
+      "source_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "uses-capability",
+      "source": "user",
+      "target": "frontend-capability",
+      "label": "uses to complete the accepted outcome",
+      "evidence": "approved user journey",
+      "evidence_type": "HUMAN_APPROVED_REQUIREMENT",
+      "evidence_status": "ACCEPTED"
+    },
+    {
+      "id": "calls-api",
+      "source": "frontend-capability",
+      "target": "business-api",
+      "label": "reads and writes through capability.api.v1",
+      "evidence": "replace with verified interface contract",
+      "evidence_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    }
+  ],
+  "frontend_modules": [
+    {
+      "id": "frontend-capability-workspace",
+      "node_id": "frontend-capability",
+      "name": "Frontend capability module",
+      "surface": "/capability",
+      "template_ref": "frontend-module-canvas-v1",
+      "requirement_ids": ["REQ-CAPABILITY-01", "REQ-CAPABILITY-02"],
+      "implementation_requirements": {
+        "pages": ["Capability page with one primary user outcome"],
+        "components": ["Route shell", "Primary workspace", "Status and recovery panel"],
+        "states": {
+          "loading": "Preserve orientation and show bounded progress",
+          "empty": "Explain why no business data exists and offer the next valid action",
+          "error": "State the impact and provide a recoverable action without losing user input",
+          "unavailable": "Keep authoritative state unchanged and offer retry or a deterministic fallback",
+          "ready": "Expose one clear primary action and current business status"
+        },
+        "interactions": [
+          {
+            "id": "complete-primary-action",
+            "trigger": "User confirms the primary action",
+            "result": "Validate locally, call one versioned contract, and render the resulting authoritative state",
+            "requirement_ids": ["REQ-CAPABILITY-01"]
+          },
+          {
+            "id": "recover-failed-action",
+            "trigger": "The provider returns an error or is unavailable",
+            "result": "Preserve user work, explain impact, and expose a safe retry or fallback",
+            "requirement_ids": ["REQ-CAPABILITY-02"]
+          }
+        ],
+        "data_contracts": [
+          {
+            "id": "capability-api-v1",
+            "provider": "business-api",
+            "version": "1.0",
+            "read_write": "The API owns authoritative writes; the frontend owns only transient interaction state"
+          }
+        ],
+        "quality": [
+          "Keyboard and screen-reader operable for the critical journey",
+          "Responsive behavior defined for compact and wide layouts",
+          "Loading and input response targets tied to the accepted user outcome",
+          "No duplicate side effects after retry or navigation"
+        ]
+      },
+      "canvas": {
+        "width": 1200,
+        "height": 700,
+        "elements": [
+          {
+            "id": "capability-page",
+            "kind": "page",
+            "title": "Capability page",
+            "details": "Owns the route, page-level states, focus order, and recovery path",
+            "requirement_ids": ["REQ-CAPABILITY-01", "REQ-CAPABILITY-02"],
+            "x": 45,
+            "y": 45,
+            "width": 760,
+            "height": 600
+          },
+          {
+            "id": "route-shell",
+            "kind": "component",
+            "title": "Route shell",
+            "details": "Provides navigation context and a stable slot without owning feature state",
+            "requirement_ids": ["REQ-CAPABILITY-01"],
+            "x": 80,
+            "y": 100,
+            "width": 690,
+            "height": 90
+          },
+          {
+            "id": "primary-workspace",
+            "kind": "component",
+            "title": "Primary workspace",
+            "details": "Renders the accepted task, validates input, and emits explicit user intents",
+            "requirement_ids": ["REQ-CAPABILITY-01"],
+            "x": 250,
+            "y": 235,
+            "width": 520,
+            "height": 240
+          },
+          {
+            "id": "status-recovery",
+            "kind": "state",
+            "title": "Status and recovery",
+            "details": "Makes loading, empty, error, unavailable, and ready states observable and actionable",
+            "requirement_ids": ["REQ-CAPABILITY-02"],
+            "x": 80,
+            "y": 235,
+            "width": 140,
+            "height": 240
+          },
+          {
+            "id": "interaction-controller",
+            "kind": "state-controller",
+            "title": "Interaction controller",
+            "details": "Owns transient UI state and maps explicit user intents to versioned requests",
+            "requirement_ids": ["REQ-CAPABILITY-01", "REQ-CAPABILITY-02"],
+            "x": 860,
+            "y": 155,
+            "width": 285,
+            "height": 150
+          },
+          {
+            "id": "api-adapter",
+            "kind": "data-contract",
+            "title": "capability.api.v1 adapter",
+            "details": "Isolates transport details, validates responses, and exposes typed failure states",
+            "requirement_ids": ["REQ-CAPABILITY-01", "REQ-CAPABILITY-02"],
+            "x": 860,
+            "y": 380,
+            "width": 285,
+            "height": 150
+          }
+        ],
+        "connectors": [
+          {
+            "id": "workspace-intent",
+            "source": "primary-workspace",
+            "target": "interaction-controller",
+            "label": "user intent"
+          },
+          {
+            "id": "controller-request",
+            "source": "interaction-controller",
+            "target": "api-adapter",
+            "label": "validated request"
+          },
+          {
+            "id": "recovery-state",
+            "source": "status-recovery",
+            "target": "interaction-controller",
+            "label": "retry or fallback intent"
+          }
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "feedback": [
+    {
+      "severity": "decision",
+      "message": "Replace template requirement IDs, sources, contracts, and targets with approved project evidence before acceptance."
+    }
+  ]
+}
