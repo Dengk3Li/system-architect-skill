@@ -4,7 +4,22 @@
 
 [![CI](https://github.com/Dengk3Li/system-architect-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/Dengk3Li/system-architect-skill/actions/workflows/ci.yml)
 
-一组把已批准需求和一手证据转化为低复杂度架构决策、质量目标、模块归属、接口、可重复架构图和人类反馈的 Agent Skill。
+确定改动应该放在哪里，保护现有功能，并把架构变成可查看、可编辑的图。这套工具包含系统架构 Skill、Python 模块范围检查器，以及离线 HTML/SVG 架构视图。
+
+## 先看一个具体结果
+
+![退款工作台架构示例](examples/refund-dashboard/preview.svg)
+
+[下载交互 HTML](https://raw.githubusercontent.com/Dengk3Li/system-architect-skill/main/examples/refund-dashboard/architecture.html)，保存后在浏览器中打开。切换系统上下文与前端视图，选择组件，移动、批注并导出修改后的 JSON。这是现有渲染器生成的虚构退款工作台示例，不代表已经核验的生产系统。
+
+[示例源文件和复现方法](examples/refund-dashboard/README.md) · [v0.3.1 更新记录](CHANGELOG.md)
+
+## v0.3.1 更新
+
+- Git 操作遵守项目规则和用户明确授权的范围，包括仅本地修改。
+- 同一动作沿用已有授权；Skill 不额外授予发布或合并权限。
+- 不适合委派或环境不支持时，可直接完成文档研究。
+- 增加可下载示例，便于体验已有架构查看与编辑能力。
 
 ## 快速开始
 
@@ -145,7 +160,7 @@ src/features/orders/internal/**
 7. 记录落点、归属、接口、证据、反馈和验证。只有难逆转、缺少背景会令人意外且存在真实取舍时才写 ADR。
 8. 架构图有助于利益相关者决策时生成对应视图。
 9. 整合前检查计划文件和实际差异。
-10. 已授权的交付自动创建分支/worktree、提交、推送、创建并合并 PR；确认合并已进入目标分支、worktree 干净、没有活跃 writer 且引用证据已保留后，只清理本任务创建的 Git 资源。
+10. Git 交付遵守项目规则和用户本次范围；已授权的分支、提交、推送、PR 和合并在适用检查通过后完成，同一动作沿用已有授权。清理时保留其他工作与引用证据。
 11. 运行、成本、事故或用户证据出现后重新审视假设。
 
 系统架构师负责模块落点和接口，不会接管所有模块的开发。
