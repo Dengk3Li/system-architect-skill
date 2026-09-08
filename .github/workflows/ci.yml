@@ -4,13 +4,32 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.10", "3.13"]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-      - run: python -m unittest discover -s tests -v
-
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Contracts and regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Browser script syntax
+        run: node --check skills/architecture-workspace/assets/workspace.js
+      - name: Synthetic example is current and repeatable
+        run: |
+          python examples/research-workspace/generate.py
+          python skills/architecture-workspace/scripts/workspace.py validate examples/research-workspace/catalog.json
+          git diff --exit-code -- examples/research-workspace/catalog.json examples/research-workspace/index.html examples/research-workspace/workspace-map.json
+      - name: Declared ownership is complete
+        run: python skills/system-architect/scripts/check_module_scope.py --check-manifest

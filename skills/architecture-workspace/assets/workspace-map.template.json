@@ -1,0 +1,12 @@
+{
+  "schema": "system-architect.workspace-map/v1",
+  "project": {
+    "id": "project-one",
+    "title": "Project one",
+    "synthetic": false
+  },
+  "modules": [],
+  "relationships": [],
+  "nature_rules": [],
+  "exclude": []
+}

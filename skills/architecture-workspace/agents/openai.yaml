@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Workspace"
+  short_description: "Trace files, experiment history, and storage in an offline workspace"
+  default_prompt: "Use $architecture-workspace to connect this project's module declarations, directory snapshots, and explicit experiment records in an offline reader."

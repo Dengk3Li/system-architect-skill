@@ -1,7 +1,7 @@
 {
   "name": "system-architect",
-  "version": "0.3.1",
-  "description": "Design low-complexity, business-aligned systems from primary evidence, protect module boundaries, and communicate architecture through repeatable human-facing views.",
+  "version": "0.4.0",
+  "description": "Design evidence-grounded architecture and connect modules, local files, explicit experiment history, and storage in shareable offline workspaces.",
   "author": {
     "name": "Dengk3Li",
     "url": "https://github.com/Dengk3Li"
@@ -12,13 +12,16 @@
     "agent-skills",
     "architecture",
     "module-boundaries",
-    "codex"
+    "codex",
+    "file-history",
+    "data-lineage",
+    "offline-workspace"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "System Architect",
-    "shortDescription": "Design business-aligned systems and explain them through durable views.",
-    "longDescription": "Translate approved requirements and primary evidence into low-complexity architecture decisions, quality targets, owned modules and interfaces, then render a stable architecture model as interactive HTML and SVG.",
+    "shortDescription": "Connect architecture, files, experiment history, and storage.",
+    "longDescription": "Design low-complexity modules and interfaces, validate ownership, render editable architecture views, and build offline file/history workspaces from read-only directory scans and explicit experiment receipts.",
     "developerName": "Dengk3Li",
     "category": "Developer Tools",
     "capabilities": [
@@ -28,13 +31,18 @@
       "Architecture Visualization",
       "Evidence Integrity",
       "Decision-frontier Design",
-      "Automated Git Delivery"
+      "Automated Git Delivery",
+      "File History",
+      "Experiment Lineage",
+      "Storage Analysis",
+      "Offline Workspace"
     ],
     "websiteURL": "https://github.com/Dengk3Li/system-architect-skill",
     "defaultPrompt": [
       "Use $system-architect to turn these approved requirements and primary evidence into low-complexity architecture options and trade-offs.",
       "Use $architecture-visualizer to render this architecture as interactive HTML and SVG.",
-      "Check whether this diff crosses a registered module boundary."
+      "Check whether this diff crosses a registered module boundary.",
+      "Use $architecture-workspace to connect this project's modules, directory snapshots, and explicit experiment records in an offline reader."
     ]
   }
 }

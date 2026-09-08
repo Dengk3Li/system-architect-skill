@@ -1,0 +1,1540 @@
+{
+  "captured_at": "2026-09-08T03:36:47.864781+00:00",
+  "queries": [
+    {
+      "query": "file organizer in:name,description,readme archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 798697,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "files-community/Files",
+            "html_url": "https://github.com/files-community/Files",
+            "description": "A modern file manager that helps users organize their files and folders.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "C#",
+            "stargazers_count": 44920,
+            "forks_count": 2860,
+            "updated_at": "2026-09-08T01:42:27Z",
+            "pushed_at": "2026-09-08T01:28:59Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "QiuYannnn/Local-File-Organizer",
+            "html_url": "https://github.com/QiuYannnn/Local-File-Organizer",
+            "description": "An AI-powered file management tool that ensures privacy by organizing local texts, images. Using Llama3.2 3B and Llava v1.6 models with the Nexa SDK, it intuitively scans, restructures, and organizes files for quick, seamless access and easy retrieval.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Python",
+            "stargazers_count": 3336,
+            "forks_count": 332,
+            "updated_at": "2026-09-08T02:30:36Z",
+            "pushed_at": "2024-10-21T22:20:55Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "SimpleMobileTools/Simple-File-Manager",
+            "html_url": "https://github.com/SimpleMobileTools/Simple-File-Manager",
+            "description": "Easy app for managing your files without ads, respecting your privacy & security",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Kotlin",
+            "stargazers_count": 1579,
+            "forks_count": 389,
+            "updated_at": "2026-09-04T11:37:34Z",
+            "pushed_at": "2024-06-11T09:59:37Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "Radarr/Radarr",
+            "html_url": "https://github.com/Radarr/Radarr",
+            "description": "Movie organizer/manager for usenet and torrent users.",
+            "archived": false,
+            "default_branch": "develop",
+            "language": "C#",
+            "stargazers_count": 14298,
+            "forks_count": 1224,
+            "updated_at": "2026-09-08T01:57:18Z",
+            "pushed_at": "2026-09-06T11:54:47Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "tfeldmann/organize",
+            "html_url": "https://github.com/tfeldmann/organize",
+            "description": "The file management automation tool.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Python",
+            "stargazers_count": 3139,
+            "forks_count": 187,
+            "updated_at": "2026-09-07T09:35:44Z",
+            "pushed_at": "2026-09-07T22:28:44Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "gildas-lormeau/SingleFile",
+            "html_url": "https://github.com/gildas-lormeau/SingleFile",
+            "description": "Web Extension for saving a faithful copy of a complete web page in a single HTML file",
+            "archived": false,
+            "default_branch": "master",
+            "language": "JavaScript",
+            "stargazers_count": 22340,
+            "forks_count": 1409,
+            "updated_at": "2026-09-07T22:59:01Z",
+            "pushed_at": "2026-09-07T15:17:31Z",
+            "license": {
+              "key": "agpl-3.0",
+              "name": "GNU Affero General Public License v3.0",
+              "spdx_id": "AGPL-3.0",
+              "url": "https://api.github.com/licenses/agpl-3.0",
+              "node_id": "MDc6TGljZW5zZTE="
+            }
+          },
+          {
+            "full_name": "vinceglb/FileKit",
+            "html_url": "https://github.com/vinceglb/FileKit",
+            "description": "Pick and save Files, Medias and Folder for Kotlin Multiplatform / KMP and Compose Multiplatform / CMP",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Kotlin",
+            "stargazers_count": 1533,
+            "forks_count": 81,
+            "updated_at": "2026-09-07T23:28:23Z",
+            "pushed_at": "2026-09-07T23:28:51Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "haiwen/seafile",
+            "html_url": "https://github.com/haiwen/seafile",
+            "description": "Beyond file syncing and sharing, a new way to organize your files with extensible file properties and flexible views",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C",
+            "stargazers_count": 15221,
+            "forks_count": 1679,
+            "updated_at": "2026-09-07T14:37:06Z",
+            "pushed_at": "2026-08-28T05:49:27Z",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            }
+          },
+          {
+            "full_name": "iyaja/llama-fs",
+            "html_url": "https://github.com/iyaja/llama-fs",
+            "description": "A self-organizing file system with llama 3",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 5835,
+            "forks_count": 383,
+            "updated_at": "2026-09-06T13:26:49Z",
+            "pushed_at": "2025-08-08T02:27:02Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "causefx/Organizr",
+            "html_url": "https://github.com/causefx/Organizr",
+            "description": "HTPC/Homelab Services Organizer - Written in PHP",
+            "archived": false,
+            "default_branch": "v2-master",
+            "language": "PHP",
+            "stargazers_count": 5816,
+            "forks_count": 312,
+            "updated_at": "2026-09-06T06:46:41Z",
+            "pushed_at": "2026-05-19T23:24:29Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "disk usage analyzer in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 399,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "dundee/gdu",
+            "html_url": "https://github.com/dundee/gdu",
+            "description": "Fast disk usage analyzer with console interface written in Go",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Go",
+            "stargazers_count": 5967,
+            "forks_count": 235,
+            "updated_at": "2026-09-07T23:25:58Z",
+            "pushed_at": "2026-09-04T23:36:37Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "KSXGitHub/parallel-disk-usage",
+            "html_url": "https://github.com/KSXGitHub/parallel-disk-usage",
+            "description": "Highly parallelized, blazing fast directory tree analyzer",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Rust",
+            "stargazers_count": 726,
+            "forks_count": 24,
+            "updated_at": "2026-09-07T17:00:16Z",
+            "pushed_at": "2026-08-10T22:52:33Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "newhinton/disky",
+            "html_url": "https://github.com/newhinton/disky",
+            "description": "An android filesystem analyzer that can show you the usage of your storage! ",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Kotlin",
+            "stargazers_count": 951,
+            "forks_count": 38,
+            "updated_at": "2026-09-06T12:54:39Z",
+            "pushed_at": "2026-05-31T11:26:12Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "RobinNaumann/disko",
+            "html_url": "https://github.com/RobinNaumann/disko",
+            "description": "a minimalist disk usage analyzer for macOS",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Dart",
+            "stargazers_count": 120,
+            "forks_count": 8,
+            "updated_at": "2026-08-23T22:43:13Z",
+            "pushed_at": "2025-03-19T16:35:44Z",
+            "license": null
+          },
+          {
+            "full_name": "137137137/OpenDisk",
+            "html_url": "https://github.com/137137137/OpenDisk",
+            "description": "Fast macOS disk-usage analyzer with an interactive sunburst chart — scans a full drive in seconds.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Swift",
+            "stargazers_count": 101,
+            "forks_count": 10,
+            "updated_at": "2026-09-08T03:19:06Z",
+            "pushed_at": "2026-08-31T15:37:27Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "minostauros/duc-docker",
+            "html_url": "https://github.com/minostauros/duc-docker",
+            "description": "Dockerized version of duc, a disk usage analyzer.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Dockerfile",
+            "stargazers_count": 14,
+            "forks_count": 6,
+            "updated_at": "2026-04-20T11:35:36Z",
+            "pushed_at": "2025-11-19T16:48:44Z",
+            "license": null
+          },
+          {
+            "full_name": "salihgerdan/spaceman",
+            "html_url": "https://github.com/salihgerdan/spaceman",
+            "description": "Treemap disk usage analyzer: In search of lost space",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Rust",
+            "stargazers_count": 71,
+            "forks_count": 3,
+            "updated_at": "2026-08-29T18:48:07Z",
+            "pushed_at": "2026-08-29T18:48:02Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "Andos/DiskUsageAnalyzer.NET",
+            "html_url": "https://github.com/Andos/DiskUsageAnalyzer.NET",
+            "description": "Disk Usage Analyzer written in C#. Inspired by Ubuntu's Baobab tool.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C#",
+            "stargazers_count": 7,
+            "forks_count": 3,
+            "updated_at": "2024-03-27T04:18:11Z",
+            "pushed_at": "2016-03-31T17:56:15Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "xiaodingfeng/ncdu-win-qt",
+            "html_url": "https://github.com/xiaodingfeng/ncdu-win-qt",
+            "description": "A modern, light-themed disk usage analyzer for Windows, inspired by Linux [`ncdu`](https://dev.yorhel.nl/ncdu).",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C++",
+            "stargazers_count": 77,
+            "forks_count": 9,
+            "updated_at": "2026-09-06T11:17:24Z",
+            "pushed_at": "2026-09-06T01:24:36Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "pld-linux/baobab",
+            "html_url": "https://github.com/pld-linux/baobab",
+            "description": "GNOME Disk Usage Analyzer",
+            "archived": false,
+            "default_branch": "master",
+            "language": null,
+            "stargazers_count": 2,
+            "forks_count": 4,
+            "updated_at": "2026-08-06T19:57:02Z",
+            "pushed_at": "2026-08-06T20:26:29Z",
+            "license": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "agent workspace in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 42799,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "gastownhall/gastown",
+            "html_url": "https://github.com/gastownhall/gastown",
+            "description": "Gas Town - multi-agent workspace manager",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Go",
+            "stargazers_count": 17958,
+            "forks_count": 1656,
+            "updated_at": "2026-09-08T02:35:31Z",
+            "pushed_at": "2026-09-03T15:25:42Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "outsourc-e/hermes-workspace",
+            "html_url": "https://github.com/outsourc-e/hermes-workspace",
+            "description": "Native web workspace for Hermes Agent — chat, terminal, memory, skills, inspector.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "JavaScript",
+            "stargazers_count": 6583,
+            "forks_count": 1044,
+            "updated_at": "2026-09-07T22:56:52Z",
+            "pushed_at": "2026-08-22T05:24:08Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "Agenta-AI/agenta",
+            "html_url": "https://github.com/Agenta-AI/agenta",
+            "description": "Agenta is a workspace where you and your team build agents and automations.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 4728,
+            "forks_count": 665,
+            "updated_at": "2026-09-07T22:08:57Z",
+            "pushed_at": "2026-09-08T01:56:56Z",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            }
+          },
+          {
+            "full_name": "HKUDS/AgentSpace",
+            "html_url": "https://github.com/HKUDS/AgentSpace",
+            "description": "\"AgentSpace: Human + Agents. One Team. One Workspace\"",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 976,
+            "forks_count": 131,
+            "updated_at": "2026-09-08T00:30:52Z",
+            "pushed_at": "2026-07-24T03:40:37Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "OpenBB-finance/agents-for-openbb",
+            "html_url": "https://github.com/OpenBB-finance/agents-for-openbb",
+            "description": "Custom agents for OpenBB Workspace",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Python",
+            "stargazers_count": 383,
+            "forks_count": 93,
+            "updated_at": "2026-09-04T19:02:39Z",
+            "pushed_at": "2026-07-01T14:10:44Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "simstudioai/sim",
+            "html_url": "https://github.com/simstudioai/sim",
+            "description": "Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 29569,
+            "forks_count": 3805,
+            "updated_at": "2026-09-07T23:39:30Z",
+            "pushed_at": "2026-09-08T03:31:02Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "cloudflare/cloudflare-os",
+            "html_url": "https://github.com/cloudflare/cloudflare-os",
+            "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 9751,
+            "forks_count": 1151,
+            "updated_at": "2026-09-08T02:41:42Z",
+            "pushed_at": "2026-09-08T00:21:27Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "tony1223/better-agent-terminal",
+            "html_url": "https://github.com/tony1223/better-agent-terminal",
+            "description": "Multi-workspace terminal aggregator with Claude Code AI integration",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 498,
+            "forks_count": 116,
+            "updated_at": "2026-09-08T00:00:15Z",
+            "pushed_at": "2026-09-07T01:39:58Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "zarazhangrui/lark-coding-agent-bridge",
+            "html_url": "https://github.com/zarazhangrui/lark-coding-agent-bridge",
+            "description": "Bot that bridges Feishu/Lark messenger with a local Claude Code or Codex CLI. Streaming cards, per-chat sessions, multiple workspaces",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 2458,
+            "forks_count": 392,
+            "updated_at": "2026-09-08T02:11:02Z",
+            "pushed_at": "2026-08-31T12:16:43Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "jsgrrchg/NeverWrite",
+            "html_url": "https://github.com/jsgrrchg/NeverWrite",
+            "description": "Your ultimate agentic markdown workspace",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 771,
+            "forks_count": 74,
+            "updated_at": "2026-09-08T03:06:31Z",
+            "pushed_at": "2026-09-07T17:42:05Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "file tagging in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 9295,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "kien/ctrlp.vim",
+            "html_url": "https://github.com/kien/ctrlp.vim",
+            "description": "Fuzzy file, buffer, mru, tag, etc finder.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "VimL",
+            "stargazers_count": 7232,
+            "forks_count": 660,
+            "updated_at": "2026-09-06T05:49:14Z",
+            "pushed_at": "2022-03-16T17:22:40Z",
+            "license": null
+          },
+          {
+            "full_name": "novoid/filetags",
+            "html_url": "https://github.com/novoid/filetags",
+            "description": "Management of simple tags within file names",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 332,
+            "forks_count": 40,
+            "updated_at": "2026-09-01T11:33:12Z",
+            "pushed_at": "2026-09-01T11:31:03Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "Dijji/FileMeta",
+            "html_url": "https://github.com/Dijji/FileMeta",
+            "description": "Enable Explorer in Vista, Windows 7 and later to see, edit and search on tags and other metadata for any file type",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C#",
+            "stargazers_count": 868,
+            "forks_count": 74,
+            "updated_at": "2026-09-05T19:17:48Z",
+            "pushed_at": "2021-07-18T11:14:55Z",
+            "license": {
+              "key": "ms-pl",
+              "name": "Microsoft Public License",
+              "spdx_id": "MS-PL",
+              "url": "https://api.github.com/licenses/ms-pl",
+              "node_id": "MDc6TGljZW5zZTE5"
+            }
+          },
+          {
+            "full_name": "xolox/vim-easytags",
+            "html_url": "https://github.com/xolox/vim-easytags",
+            "description": "Automated tag file generation and syntax highlighting of tags in Vim",
+            "archived": false,
+            "default_branch": "master",
+            "language": "VimL",
+            "stargazers_count": 1004,
+            "forks_count": 104,
+            "updated_at": "2026-07-05T07:12:56Z",
+            "pushed_at": "2019-10-01T21:08:29Z",
+            "license": null
+          },
+          {
+            "full_name": "ludovicchabant/vim-gutentags",
+            "html_url": "https://github.com/ludovicchabant/vim-gutentags",
+            "description": "A Vim plugin that manages your tag files",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Vim Script",
+            "stargazers_count": 2341,
+            "forks_count": 176,
+            "updated_at": "2026-09-05T17:17:00Z",
+            "pushed_at": "2024-06-09T01:12:19Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "cbochs/grapple.nvim",
+            "html_url": "https://github.com/cbochs/grapple.nvim",
+            "description": "Neovim plugin for tagging important files",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Lua",
+            "stargazers_count": 716,
+            "forks_count": 33,
+            "updated_at": "2026-08-29T06:29:07Z",
+            "pushed_at": "2024-09-29T09:57:39Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "beetbox/mediafile",
+            "html_url": "https://github.com/beetbox/mediafile",
+            "description": "elegant audio file tagging",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 121,
+            "forks_count": 40,
+            "updated_at": "2026-09-06T16:04:08Z",
+            "pushed_at": "2026-06-29T18:40:27Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "jdberry/tag",
+            "html_url": "https://github.com/jdberry/tag",
+            "description": "A command line tool to manipulate tags on Mac OS X files, and to query for files with those tags.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Objective-C",
+            "stargazers_count": 1564,
+            "forks_count": 110,
+            "updated_at": "2026-08-28T12:53:56Z",
+            "pushed_at": "2024-07-29T05:38:52Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "mdhiggins/sickbeard_mp4_automator",
+            "html_url": "https://github.com/mdhiggins/sickbeard_mp4_automator",
+            "description": "Automatically convert video files to a standardized format with metadata tagging to create a beautiful and uniform media library",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 1586,
+            "forks_count": 186,
+            "updated_at": "2026-08-30T09:51:00Z",
+            "pushed_at": "2026-08-15T08:59:18Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "hkneptune/FreeFileSync",
+            "html_url": "https://github.com/hkneptune/FreeFileSync",
+            "description": "A Copy of FreeFileSync Source Code. This repository is just a mirror of the FreeFileSync source code. Please do not send pull requests. Submit issues to the official forum (https://freefilesync.org/forum/). Last free version for commercial use: https://github.com/hkneptune/FreeFileSync/releases/tag/v12.5",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C++",
+            "stargazers_count": 1632,
+            "forks_count": 188,
+            "updated_at": "2026-09-07T14:47:37Z",
+            "pushed_at": "2026-08-14T03:55:29Z",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "\"file organizer\" in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 12436,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "QiuYannnn/Local-File-Organizer",
+            "html_url": "https://github.com/QiuYannnn/Local-File-Organizer",
+            "description": "An AI-powered file management tool that ensures privacy by organizing local texts, images. Using Llama3.2 3B and Llava v1.6 models with the Nexa SDK, it intuitively scans, restructures, and organizes files for quick, seamless access and easy retrieval.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Python",
+            "stargazers_count": 3336,
+            "forks_count": 332,
+            "updated_at": "2026-09-08T02:30:36Z",
+            "pushed_at": "2024-10-21T22:20:55Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "Nexus-JPF/note-companion",
+            "html_url": "https://github.com/Nexus-JPF/note-companion",
+            "description": "Note Companion: AI assistant for Obsidian that goes beyond just a chat. (prev File Organizer 2000)",
+            "archived": false,
+            "default_branch": "master",
+            "language": "TypeScript",
+            "stargazers_count": 860,
+            "forks_count": 119,
+            "updated_at": "2026-09-07T12:38:20Z",
+            "pushed_at": "2026-09-07T11:53:55Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "Ash515/AutomaDesk",
+            "html_url": "https://github.com/Ash515/AutomaDesk",
+            "description": "Desktop Files Organizing Automation",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 18,
+            "forks_count": 23,
+            "updated_at": "2026-04-28T04:10:40Z",
+            "pushed_at": "2024-07-24T14:09:17Z",
+            "license": null
+          },
+          {
+            "full_name": "hsr88/mouzi",
+            "html_url": "https://github.com/hsr88/mouzi",
+            "description": "A free, privacy-first automatic file organizer that quietly sorts your Downloads folder from the system tray.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 895,
+            "forks_count": 42,
+            "updated_at": "2026-09-07T15:45:22Z",
+            "pushed_at": "2026-08-29T10:35:25Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "lachlan-00/rb-fileorganizer",
+            "html_url": "https://github.com/lachlan-00/rb-fileorganizer",
+            "description": "Rhythmbox File Organizer - looking for a maintainer.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 32,
+            "forks_count": 12,
+            "updated_at": "2026-08-21T18:26:27Z",
+            "pushed_at": "2026-08-11T03:06:07Z",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            }
+          },
+          {
+            "full_name": "Arbazkhan4712/Desktop-Cleaner",
+            "html_url": "https://github.com/Arbazkhan4712/Desktop-Cleaner",
+            "description": "It is a Automated file organizer",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 20,
+            "forks_count": 9,
+            "updated_at": "2025-09-02T18:18:16Z",
+            "pushed_at": "2020-05-07T17:50:46Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "mondaychen/file_organizer",
+            "html_url": "https://github.com/mondaychen/file_organizer",
+            "description": "demo app: how to use LLM as a general purpose classifier",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 109,
+            "forks_count": 13,
+            "updated_at": "2026-08-16T08:24:48Z",
+            "pushed_at": "2023-06-04T21:38:29Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "ricardodantas/hazelnut",
+            "html_url": "https://github.com/ricardodantas/hazelnut",
+            "description": "🌰 Terminal-based automated file organizer inspired by Hazel. Watch folders and organize files with rules.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Rust",
+            "stargazers_count": 296,
+            "forks_count": 14,
+            "updated_at": "2026-09-06T15:40:41Z",
+            "pushed_at": "2026-08-12T03:39:02Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "piyx/FileOrganizer",
+            "html_url": "https://github.com/piyx/FileOrganizer",
+            "description": "Automatically organizes files in your computer",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 57,
+            "forks_count": 7,
+            "updated_at": "2026-04-10T11:54:25Z",
+            "pushed_at": "2021-07-10T04:38:27Z",
+            "license": null
+          },
+          {
+            "full_name": "sreekaransrinath/file_organizer",
+            "html_url": "https://github.com/sreekaransrinath/file_organizer",
+            "description": "A script that looks through any folder you tell it to and moves the files to respective subfolders based on the file type.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 27,
+            "forks_count": 22,
+            "updated_at": "2026-07-04T10:29:31Z",
+            "pushed_at": "2023-05-05T16:21:53Z",
+            "license": null
+          }
+        ]
+      }
+    },
+    {
+      "query": "\"disk usage\" in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 3513,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "muesli/duf",
+            "html_url": "https://github.com/muesli/duf",
+            "description": "Disk Usage/Free Utility - a better 'df' alternative",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Go",
+            "stargazers_count": 15288,
+            "forks_count": 466,
+            "updated_at": "2026-09-07T22:14:11Z",
+            "pushed_at": "2026-01-13T11:07:14Z",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            }
+          },
+          {
+            "full_name": "dundee/gdu",
+            "html_url": "https://github.com/dundee/gdu",
+            "description": "Fast disk usage analyzer with console interface written in Go",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Go",
+            "stargazers_count": 5967,
+            "forks_count": 235,
+            "updated_at": "2026-09-07T23:25:58Z",
+            "pushed_at": "2026-09-04T23:36:37Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "KSXGitHub/parallel-disk-usage",
+            "html_url": "https://github.com/KSXGitHub/parallel-disk-usage",
+            "description": "Highly parallelized, blazing fast directory tree analyzer",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Rust",
+            "stargazers_count": 726,
+            "forks_count": 24,
+            "updated_at": "2026-09-07T17:00:16Z",
+            "pushed_at": "2026-08-10T22:52:33Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "jenkinsci/disk-usage-plugin",
+            "html_url": "https://github.com/jenkinsci/disk-usage-plugin",
+            "description": "Jenkins disk-usage plugin",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Java",
+            "stargazers_count": 24,
+            "forks_count": 69,
+            "updated_at": "2026-09-01T17:33:14Z",
+            "pushed_at": "2026-09-01T17:11:51Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "ricochet2200/go-disk-usage",
+            "html_url": "https://github.com/ricochet2200/go-disk-usage",
+            "description": "Get disk usage information like how much space is available, free, and used ",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Go",
+            "stargazers_count": 128,
+            "forks_count": 32,
+            "updated_at": "2026-09-05T08:28:42Z",
+            "pushed_at": "2023-10-31T09:46:55Z",
+            "license": {
+              "key": "unlicense",
+              "name": "The Unlicense",
+              "spdx_id": "Unlicense",
+              "url": "https://api.github.com/licenses/unlicense",
+              "node_id": "MDc6TGljZW5zZTE1"
+            }
+          },
+          {
+            "full_name": "windirstat/windirstat",
+            "html_url": "https://github.com/windirstat/windirstat",
+            "description": "WinDirStat is a disk usage statistics viewer and cleanup tool for Microsoft Windows",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C++",
+            "stargazers_count": 4015,
+            "forks_count": 242,
+            "updated_at": "2026-09-08T02:02:20Z",
+            "pushed_at": "2026-09-07T22:47:07Z",
+            "license": {
+              "key": "gpl-2.0",
+              "name": "GNU General Public License v2.0",
+              "spdx_id": "GPL-2.0",
+              "url": "https://api.github.com/licenses/gpl-2.0",
+              "node_id": "MDc6TGljZW5zZTg="
+            }
+          },
+          {
+            "full_name": "rofl0r/ncdu",
+            "html_url": "https://github.com/rofl0r/ncdu",
+            "description": "inofficial fork of \"NCurses Disk Usage\"",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C",
+            "stargazers_count": 730,
+            "forks_count": 42,
+            "updated_at": "2026-09-07T16:56:56Z",
+            "pushed_at": "2020-10-25T12:53:17Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "dundee/disk_usage_exporter",
+            "html_url": "https://github.com/dundee/disk_usage_exporter",
+            "description": "Disk Usage Prometheus Exporter",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Go",
+            "stargazers_count": 95,
+            "forks_count": 21,
+            "updated_at": "2026-08-17T10:55:44Z",
+            "pushed_at": "2026-06-02T09:34:28Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "menees/DiskUsage",
+            "html_url": "https://github.com/menees/DiskUsage",
+            "description": "A Windows utility to show disk usage in a treemap",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C#",
+            "stargazers_count": 58,
+            "forks_count": 6,
+            "updated_at": "2026-08-26T20:30:34Z",
+            "pushed_at": "2026-04-28T23:02:51Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "amerkurev/doku",
+            "html_url": "https://github.com/amerkurev/doku",
+            "description": "💽 Doku - Docker disk usage dashboard",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 446,
+            "forks_count": 19,
+            "updated_at": "2026-09-01T03:13:48Z",
+            "pushed_at": "2025-12-26T09:13:21Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "\"agent workspace\" in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 2068,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "gastownhall/gastown",
+            "html_url": "https://github.com/gastownhall/gastown",
+            "description": "Gas Town - multi-agent workspace manager",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Go",
+            "stargazers_count": 17958,
+            "forks_count": 1656,
+            "updated_at": "2026-09-08T02:35:31Z",
+            "pushed_at": "2026-09-03T15:25:42Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "NoKV-Lab/NoKV",
+            "html_url": "https://github.com/NoKV-Lab/NoKV",
+            "description": "Durable agent workspace and ai4s research workbench",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Rust",
+            "stargazers_count": 483,
+            "forks_count": 59,
+            "updated_at": "2026-09-05T12:29:21Z",
+            "pushed_at": "2026-09-08T03:06:24Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "cloudflare/cloudflare-os",
+            "html_url": "https://github.com/cloudflare/cloudflare-os",
+            "description": "Agent workspace built on Cloudflare Workers for creating documents, building apps, and running agents with your company’s context and systems.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 9751,
+            "forks_count": 1151,
+            "updated_at": "2026-09-08T02:41:42Z",
+            "pushed_at": "2026-09-08T00:21:27Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "KunAgent/Kun",
+            "html_url": "https://github.com/KunAgent/Kun",
+            "description": "Local-first AI agent workspace for coding, writing, design, research, and automation — one runtime for desktop GUI and TUI.",
+            "archived": false,
+            "default_branch": "master",
+            "language": "TypeScript",
+            "stargazers_count": 6292,
+            "forks_count": 595,
+            "updated_at": "2026-09-08T01:13:46Z",
+            "pushed_at": "2026-09-08T01:45:36Z",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            }
+          },
+          {
+            "full_name": "apache/maka",
+            "html_url": "https://github.com/apache/maka",
+            "description": "Apache Maka (Incubating) is a high-performance agent workspace that keeps a complete record of everything it did.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 4962,
+            "forks_count": 464,
+            "updated_at": "2026-09-08T03:36:31Z",
+            "pushed_at": "2026-09-08T03:03:08Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "chekusu/sandbank",
+            "html_url": "https://github.com/chekusu/sandbank",
+            "description": "unified agent workspace",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 171,
+            "forks_count": 14,
+            "updated_at": "2026-08-19T20:01:37Z",
+            "pushed_at": "2026-07-06T12:08:23Z",
+            "license": null
+          },
+          {
+            "full_name": "zhu1090093659/deepseek-pp",
+            "html_url": "https://github.com/zhu1090093659/deepseek-pp",
+            "description": "DeepSeek Web browser extension: AI agent workspace with MCP tools, memory, Skills, automation, web search, and conversation export.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 1813,
+            "forks_count": 236,
+            "updated_at": "2026-09-08T02:05:09Z",
+            "pushed_at": "2026-08-13T17:19:34Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "agent-sh/agent-workspace-linux",
+            "html_url": "https://github.com/agent-sh/agent-workspace-linux",
+            "description": "Isolated Linux desktop workspaces for AI agents — a hidden, agent-owned desktop and browser over MCP, so an agent can do GUI and web work without touching your real desktop.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Rust",
+            "stargazers_count": 93,
+            "forks_count": 9,
+            "updated_at": "2026-09-07T20:26:31Z",
+            "pushed_at": "2026-09-05T22:50:22Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "cubeplexai/cubeplex",
+            "html_url": "https://github.com/cubeplexai/cubeplex",
+            "description": "AI agent workspace for teams",
+            "archived": false,
+            "default_branch": "main",
+            "language": "Python",
+            "stargazers_count": 182,
+            "forks_count": 10,
+            "updated_at": "2026-09-08T03:21:14Z",
+            "pushed_at": "2026-09-07T16:47:41Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "freestylefly/wesight",
+            "html_url": "https://github.com/freestylefly/wesight",
+            "description": "Open-source desktop AI agent workspace with one-click Claude Code, Codex, OpenClaw, Hermes Agent setup and custom LLM model routing.",
+            "archived": false,
+            "default_branch": "main",
+            "language": "TypeScript",
+            "stargazers_count": 916,
+            "forks_count": 207,
+            "updated_at": "2026-09-08T02:26:42Z",
+            "pushed_at": "2026-08-24T08:24:28Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "query": "\"file tagging\" in:name,description archived:false",
+      "endpoint": "GET /search/repositories (default relevance, per_page=10)",
+      "result": {
+        "total_count": 412,
+        "incomplete_results": false,
+        "items": [
+          {
+            "full_name": "beetbox/mediafile",
+            "html_url": "https://github.com/beetbox/mediafile",
+            "description": "elegant audio file tagging",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 121,
+            "forks_count": 40,
+            "updated_at": "2026-09-06T16:04:08Z",
+            "pushed_at": "2026-06-29T18:40:27Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "darkfeline/dantalian",
+            "html_url": "https://github.com/darkfeline/dantalian",
+            "description": "File tagging with hard links",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 82,
+            "forks_count": 5,
+            "updated_at": "2025-12-02T04:35:19Z",
+            "pushed_at": "2017-10-07T20:19:49Z",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            }
+          },
+          {
+            "full_name": "kasper9n/mr-tagger",
+            "html_url": "https://github.com/kasper9n/mr-tagger",
+            "description": "Music file tagging app for Mac, Linux and Windows",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Rust",
+            "stargazers_count": 166,
+            "forks_count": 8,
+            "updated_at": "2026-09-04T00:08:31Z",
+            "pushed_at": "2026-09-04T00:08:27Z",
+            "license": null
+          },
+          {
+            "full_name": "keichi/osx-tag",
+            "html_url": "https://github.com/keichi/osx-tag",
+            "description": "Manipulate file tags on macOS",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Objective-C++",
+            "stargazers_count": 32,
+            "forks_count": 7,
+            "updated_at": "2026-08-12T01:47:38Z",
+            "pushed_at": "2026-08-12T01:47:41Z",
+            "license": null
+          },
+          {
+            "full_name": "nrittsti/ntag",
+            "html_url": "https://github.com/nrittsti/ntag",
+            "description": "audio file tag editor",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Java",
+            "stargazers_count": 31,
+            "forks_count": 4,
+            "updated_at": "2026-08-31T23:35:39Z",
+            "pushed_at": "2026-08-09T20:12:16Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "novoid/appendfilename",
+            "html_url": "https://github.com/novoid/appendfilename",
+            "description": "Intelligent appending text to file names, considering file extensions and file tags",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 64,
+            "forks_count": 8,
+            "updated_at": "2026-08-24T16:44:45Z",
+            "pushed_at": "2026-08-24T16:37:31Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "midnightdim/declutter",
+            "html_url": "https://github.com/midnightdim/declutter",
+            "description": "File tagger and organizer",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Python",
+            "stargazers_count": 68,
+            "forks_count": 2,
+            "updated_at": "2026-08-06T20:01:44Z",
+            "pushed_at": "2026-02-13T12:29:46Z",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            }
+          },
+          {
+            "full_name": "kaworu/tagutil",
+            "html_url": "https://github.com/kaworu/tagutil",
+            "description": "scriptable music files tags tool and editor",
+            "archived": false,
+            "default_branch": "master",
+            "language": "C",
+            "stargazers_count": 34,
+            "forks_count": 4,
+            "updated_at": "2026-03-01T21:01:17Z",
+            "pushed_at": "2025-12-10T19:04:30Z",
+            "license": {
+              "key": "bsd-2-clause",
+              "name": "BSD 2-Clause \"Simplified\" License",
+              "spdx_id": "BSD-2-Clause",
+              "url": "https://api.github.com/licenses/bsd-2-clause",
+              "node_id": "MDc6TGljZW5zZTQ="
+            }
+          },
+          {
+            "full_name": "talklittle/tmsu-nautilus-rs",
+            "html_url": "https://github.com/talklittle/tmsu-nautilus-rs",
+            "description": "GNOME Nautilus extension for TMSU file tagging",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Rust",
+            "stargazers_count": 55,
+            "forks_count": 3,
+            "updated_at": "2026-05-11T14:14:11Z",
+            "pushed_at": "2022-09-17T05:06:44Z",
+            "license": {
+              "key": "gpl-3.0",
+              "name": "GNU General Public License v3.0",
+              "spdx_id": "GPL-3.0",
+              "url": "https://api.github.com/licenses/gpl-3.0",
+              "node_id": "MDc6TGljZW5zZTk="
+            }
+          },
+          {
+            "full_name": "bgoglin/lltag",
+            "html_url": "https://github.com/bgoglin/lltag",
+            "description": "Automatic command-line mp3/ogg/flac file tagger and renamer",
+            "archived": false,
+            "default_branch": "master",
+            "language": "Perl",
+            "stargazers_count": 39,
+            "forks_count": 4,
+            "updated_at": "2026-08-24T22:39:38Z",
+            "pushed_at": "2022-02-23T16:20:29Z",
+            "license": {
+              "key": "gpl-2.0",
+              "name": "GNU General Public License v2.0",
+              "spdx_id": "GPL-2.0",
+              "url": "https://api.github.com/licenses/gpl-2.0",
+              "node_id": "MDc6TGljZW5zZTg="
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "serialization_note": "Search results projected to repository identity, description and observed status; redundant API endpoint and owner-avatar metadata omitted."
+}

@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.4.0 — 2026-09-08
+
+### Added
+
+- Architecture Workspace Skill, versioned catalog contracts, read-only POSIX scanner, explicit run importer, boundary-map adapter, and offline renderer.
+- Module/file navigation, full-content identity and unknown states, historical input/config/output tracing, run and snapshot comparison, and storage grouping with separate logical/allocation semantics.
+- Atomic catalog updates with writer coordination, source-directory binding, tamper and reference validation, and protected output paths.
+- Reproducible synthetic research example, public Pages entry, offline HTML/JSON exports, 30 workspace regression tests, and a bounded review of 28 related repositories.
+
+### Changed
+
+- Connect the architect to the workspace while retaining architecture-visualizer and existing role boundaries.
+- Update both README entry paths and the plugin manifest to expose three complementary Skills.
+
+### Scope
+
+No file-body backup, deletion, relocation, automatic experiment capture, model inference, or remote service is added. Scanner and catalog writes support macOS/Linux, Python 3.10+. The project remains publicly visible without an open-source license grant.
+
+### 中文说明
+
+首版把模块职责、实际文件、历史输入输出和空间分布连成可离线保存的工作台。实验运行单独登记，未知摘要保持未知，合成样例与真实研究结论明确分开。原有架构检查与可编辑架构图继续保留。
+
 ## 0.3.1 — 2026-09-08
 
 ### Changed

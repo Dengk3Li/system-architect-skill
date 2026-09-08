@@ -1,0 +1,45 @@
+{
+  "captured_on": "2026-09-08",
+  "page": "examples/research-workspace/index.html",
+  "catalog_sha256": "8b935ff9a9b020c42d55154708f9a03ed24d8fcde302336a285b0dc115329030",
+  "html_sha256": "5a2e0dbd9dee3c0c1f33880a35d83702a79d5942c2783c29998ba5fc5f6407e1",
+  "requested_viewport": [
+    1440,
+    1000
+  ],
+  "screenshots": [
+    {
+      "file": "preview.png",
+      "sha256": "5c004b9c05128bf6c8d8426f171096ae030b89ab3901e6ea2de85c955615fbd8",
+      "pixels": [
+        65536,
+        4292542531
+      ],
+      "source": "Rendered synthetic example from this repository",
+      "view": "files, latest snapshot, window-24 prediction",
+      "capture": "Actual Codex in-app browser viewport screenshot; no image synthesis or retouching"
+    },
+    {
+      "file": "runs.png",
+      "sha256": "750a4af348d486e4d4e4e5df181d326221d7496632ed47fb289a606319fdb29c",
+      "pixels": [
+        65536,
+        4292542531
+      ],
+      "source": "Rendered synthetic example from this repository",
+      "view": "runs, window-24 comparison, latest snapshot",
+      "capture": "Actual Codex in-app browser viewport screenshot; no image synthesis or retouching"
+    },
+    {
+      "file": "storage.png",
+      "sha256": "a075146093e7ca66974f89aa46a28116178729bee5b0a7a6aac0e439c9ce67fe",
+      "pixels": [
+        65536,
+        4292542531
+      ],
+      "source": "Rendered synthetic example from this repository",
+      "view": "storage by nature, latest snapshot",
+      "capture": "Actual Codex in-app browser viewport screenshot; no image synthesis or retouching"
+    }
+  ]
+}
