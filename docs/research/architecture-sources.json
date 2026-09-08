@@ -1,0 +1,254 @@
+[
+  {
+    "full_name": "Cocoon-AI/architecture-diagram-generator",
+    "description": "Generate beautiful dark-themed system architecture diagrams as standalone HTML/SVG files. Works as a Claude AI skill.    ",
+    "created_at": "2025-12-22T17:40:16Z",
+    "pushed_at": "2026-05-13T23:04:17Z",
+    "stargazers_count": 7171,
+    "forks_count": 555,
+    "archived": false,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "homepage": "",
+    "commit": "4b9087d55268c79a935105439dbcd37b630fc3f3",
+    "commit_date": "2026-05-13T23:04:16Z",
+    "releases": [
+      {
+        "tag_name": "1.1",
+        "published_at": "2026-05-09T02:08:10Z",
+        "html_url": "https://github.com/Cocoon-AI/architecture-diagram-generator/releases/tag/1.1",
+        "prerelease": false
+      },
+      {
+        "tag_name": "1.0",
+        "published_at": "2025-12-22T21:05:35Z",
+        "html_url": "https://github.com/Cocoon-AI/architecture-diagram-generator/releases/tag/1.0",
+        "prerelease": false
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:35.800980+00:00"
+  },
+  {
+    "full_name": "CodeBoarding/CodeBoarding",
+    "description": "Interactive architecture diagrams for codebases",
+    "created_at": "2025-04-08T19:57:56Z",
+    "pushed_at": "2026-09-08T01:13:42Z",
+    "stargazers_count": 2413,
+    "forks_count": 202,
+    "archived": false,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "homepage": "https://www.codeboarding.org",
+    "commit": "e38c07e31b615ff5cb479b8d117d741d247e6b60",
+    "commit_date": "2026-09-06T19:33:54Z",
+    "releases": [
+      {
+        "tag_name": "v0.14.0",
+        "published_at": "2026-09-06T21:12:33Z",
+        "html_url": "https://github.com/CodeBoarding/CodeBoarding/releases/tag/v0.14.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v0.13.2",
+        "published_at": "2026-09-01T14:31:27Z",
+        "html_url": "https://github.com/CodeBoarding/CodeBoarding/releases/tag/v0.13.2",
+        "prerelease": false
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:32.042874+00:00"
+  },
+  {
+    "full_name": "juxstin1/archmap-plugin",
+    "description": "Claude Code plugin that generates interactive 2D architecture maps of any codebase. Explores your   project to discover modules, dependencies, types, and data flow pipelines, then renders a   self-contained HTML visualization with pan/zoom, clickable module inspector, bezier-curve dependency edges, Outputs both interactive HTML and Markdown",
+    "created_at": "2026-02-21T21:58:39Z",
+    "pushed_at": "2026-05-09T22:52:40Z",
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "archived": false,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "homepage": "",
+    "commit": "c87a31068728b1297de9350eb39233fdc7366bb6",
+    "commit_date": "2026-04-25T04:20:39Z",
+    "releases": [
+      {
+        "tag_name": "Release",
+        "published_at": "2026-04-15T01:49:19Z",
+        "html_url": "https://github.com/juxstin1/archmap-plugin/releases/tag/Release",
+        "prerelease": false
+      },
+      {
+        "tag_name": "Beta",
+        "published_at": "2026-04-15T02:24:50Z",
+        "html_url": "https://github.com/juxstin1/archmap-plugin/releases/tag/Beta",
+        "prerelease": false
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:32.172789+00:00"
+  },
+  {
+    "full_name": "MaibornWolff/codecharta",
+    "description": "CodeCharta is a visualization tool that transforms complex software architecture and code metrics into interactive, customizable visual maps, empowering everyone to communicate and analyze your codebase. Improve code quality, maintainability, and architectural decisions",
+    "created_at": "2017-03-14T05:59:13Z",
+    "pushed_at": "2026-09-07T18:44:23Z",
+    "stargazers_count": 506,
+    "forks_count": 52,
+    "archived": false,
+    "license": {
+      "key": "bsd-3-clause",
+      "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "spdx_id": "BSD-3-Clause",
+      "url": "https://api.github.com/licenses/bsd-3-clause",
+      "node_id": "MDc6TGljZW5zZTU="
+    },
+    "default_branch": "main",
+    "homepage": "https://codecharta.com",
+    "commit": "9d1c40c3b45eb316d40c690b9eedad6d691305e9",
+    "commit_date": "2026-09-07T18:37:52Z",
+    "releases": [
+      {
+        "tag_name": "vis-2.1.1",
+        "published_at": "2026-09-07T18:42:10Z",
+        "html_url": "https://github.com/MaibornWolff/codecharta/releases/tag/vis-2.1.1",
+        "prerelease": false
+      },
+      {
+        "tag_name": "vis-2.1.0",
+        "published_at": "2026-09-04T10:33:41Z",
+        "html_url": "https://github.com/MaibornWolff/codecharta/releases/tag/vis-2.1.0",
+        "prerelease": false
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:32.036720+00:00"
+  },
+  {
+    "full_name": "structurizr/lite",
+    "description": "Structurizr Lite",
+    "created_at": "2022-09-04T09:29:18Z",
+    "pushed_at": "2026-02-01T14:25:09Z",
+    "stargazers_count": 383,
+    "forks_count": 61,
+    "archived": true,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "homepage": "https://docs.structurizr.com",
+    "commit": "cdcbb1ba784fad75d3c05fa1a3364ab17b221e51",
+    "commit_date": "2026-02-01T14:25:08Z",
+    "releases": [
+      {
+        "tag_name": "v2025.11.08",
+        "published_at": "2025-11-08T07:59:19Z",
+        "html_url": "https://github.com/structurizr/lite/releases/tag/v2025.11.08",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2025.11.01",
+        "published_at": "2025-11-01T09:02:12Z",
+        "html_url": "https://github.com/structurizr/lite/releases/tag/v2025.11.01",
+        "prerelease": false
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:35.816486+00:00"
+  },
+  {
+    "full_name": "sverweij/dependency-cruiser",
+    "description": "Validate and visualize dependencies. Your rules. JavaScript, TypeScript, CoffeeScript. ES6, CommonJS, AMD.",
+    "created_at": "2016-11-20T20:05:37Z",
+    "pushed_at": "2026-09-07T21:13:39Z",
+    "stargazers_count": 7144,
+    "forks_count": 301,
+    "archived": false,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "homepage": "https://npmjs.com/dependency-cruiser",
+    "commit": "ee229c36bb25201610e06e07333df8cf2c0d7880",
+    "commit_date": "2026-09-07T21:12:51Z",
+    "releases": [
+      {
+        "tag_name": "v18.2.0",
+        "published_at": "2026-08-10T17:47:19Z",
+        "html_url": "https://github.com/sverweij/dependency-cruiser/releases/tag/v18.2.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v18.2.0-beta-2",
+        "published_at": "2026-08-07T13:38:33Z",
+        "html_url": "https://github.com/sverweij/dependency-cruiser/releases/tag/v18.2.0-beta-2",
+        "prerelease": true
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:31.862197+00:00"
+  },
+  {
+    "full_name": "tt-a1i/archify",
+    "description": "Agent skill for beautiful, verifiable architecture, workflow, sequence, data-flow, and lifecycle diagrams—self-contained HTML with motion and crisp export.",
+    "created_at": "2026-04-15T05:27:37Z",
+    "pushed_at": "2026-09-08T01:22:24Z",
+    "stargazers_count": 53226,
+    "forks_count": 3483,
+    "archived": false,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "default_branch": "main",
+    "homepage": "https://tt-a1i.github.io/archify/",
+    "commit": "2ead014aa8ec91f104cd052f1a6ca82de5e26c31",
+    "commit_date": "2026-09-08T01:22:23Z",
+    "releases": [
+      {
+        "tag_name": "v2.16.0",
+        "published_at": "2026-08-30T11:17:04Z",
+        "html_url": "https://github.com/tt-a1i/archify/releases/tag/v2.16.0",
+        "prerelease": false
+      },
+      {
+        "tag_name": "v2.15.0",
+        "published_at": "2026-08-17T15:50:19Z",
+        "html_url": "https://github.com/tt-a1i/archify/releases/tag/v2.15.0",
+        "prerelease": false
+      }
+    ],
+    "readme_path": "README.md",
+    "observed_at": "2026-09-08T03:31:32.037657+00:00"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "schema_version": "system-architect.module-boundaries/v1",
+  "managed_roots": [
+    "skills",
+    "tests",
+    "examples"
+  ],
+  "managed_extensions": [
+    ".py",
+    ".js",
+    ".css",
+    ".html",
+    ".json",
+    ".md",
+    ".yaml",
+    ".yml",
+    ".svg"
+  ],
+  "interfaces": [],
+  "modules": [
+    {
+      "module_id": "architect",
+      "purpose": "Architecture decisions and scope validation",
+      "owned_paths": [
+        "skills/system-architect/**"
+      ],
+      "allowed_roles": [
+        "system-architect",
+        "integrator",
+        "module-developer"
+      ],
+      "provides": [],
+      "consumes": [],
+      "protected": false
+    },
+    {
+      "module_id": "visualizer",
+      "purpose": "Existing architecture and frontend canvas",
+      "owned_paths": [
+        "skills/architecture-visualizer/**"
+      ],
+      "allowed_roles": [
+        "system-architect",
+        "integrator",
+        "module-developer"
+      ],
+      "provides": [],
+      "consumes": [],
+      "protected": false
+    },
+    {
+      "module_id": "workspace",
+      "purpose": "File observations, run lineage and offline workspace",
+      "owned_paths": [
+        "skills/architecture-workspace/**"
+      ],
+      "allowed_roles": [
+        "system-architect",
+        "integrator",
+        "module-developer"
+      ],
+      "provides": [],
+      "consumes": [],
+      "protected": false
+    },
+    {
+      "module_id": "delivery",
+      "purpose": "Examples, product docs, validation and package delivery",
+      "owned_paths": [
+        "README.md",
+        "README.zh-CN.md",
+        "CHANGELOG.md",
+        "PRODUCT.md",
+        "DESIGN.md",
+        "docs/**",
+        "examples/**",
+        "tests/**",
+        "evals/**",
+        ".github/**",
+        ".codex-plugin/**",
+        ".system-architect/**",
+        ".gitignore",
+        "THIRD_PARTY_NOTICES.md",
+        ".impeccable/design.json"
+      ],
+      "allowed_roles": [
+        "system-architect",
+        "integrator",
+        "module-developer"
+      ],
+      "provides": [],
+      "consumes": [],
+      "protected": true
+    }
+  ]
+}

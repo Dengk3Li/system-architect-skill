@@ -11,3 +11,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Workspace research references
+
+The v0.4 workspace scanner, catalog model, reader and synthetic example are independently implemented. The research notes link to upstream documentation and source lines; no upstream implementation, dependency, logo, font, or screenshot from those 28 candidate repositories is bundled in the workspace. Competitor licenses are recorded as observed at the cited revision and do not extend to this repository. The existing MIT adaptation notice above remains applicable to its stated workflow material.

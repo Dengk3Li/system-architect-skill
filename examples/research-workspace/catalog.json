@@ -1,0 +1,995 @@
+{
+  "schema": "system-architect.workspace/v1",
+  "project": {
+    "id": "river-temperature-study",
+    "title": "河流温度预测实验",
+    "synthetic": true
+  },
+  "snapshots": [
+    {
+      "label": "准备 · 输入与配置",
+      "captured_at": "2026-09-08T01:55:00Z",
+      "source_key": "2ac610fa7c9e7a00d194eedef48956c54779f75dd752be28dd158449a5b787ac",
+      "map": {
+        "schema": "system-architect.workspace-map/v1",
+        "project": {
+          "id": "river-temperature-study",
+          "title": "河流温度预测实验",
+          "synthetic": true
+        },
+        "modules": [
+          {
+            "id": "data",
+            "title": "观测数据",
+            "purpose": "整理站点观测与特征",
+            "paths": [
+              "data/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "model",
+            "title": "预测模型",
+            "purpose": "比较特征与训练配置",
+            "paths": [
+              "src/**",
+              "config/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "results",
+            "title": "实验成果",
+            "purpose": "保存预测、评估与结论",
+            "paths": [
+              "results/**",
+              "notes/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r1",
+            "source": "data",
+            "target": "model",
+            "label": "提供训练输入",
+            "evidence": "合成项目声明"
+          },
+          {
+            "id": "r2",
+            "source": "model",
+            "target": "results",
+            "label": "生成预测与评估",
+            "evidence": "合成项目声明"
+          }
+        ],
+        "nature_rules": [
+          {
+            "pattern": "data/raw/**",
+            "nature": "原始观测"
+          },
+          {
+            "pattern": "data/features/**",
+            "nature": "特征数据"
+          },
+          {
+            "pattern": "config/**",
+            "nature": "实验配置"
+          },
+          {
+            "pattern": "src/**",
+            "nature": "模型代码"
+          },
+          {
+            "pattern": "results/**",
+            "nature": "预测产物"
+          },
+          {
+            "pattern": "notes/**",
+            "nature": "研究结论"
+          }
+        ],
+        "exclude": []
+      },
+      "complete": true,
+      "files": [
+        {
+          "path": "config/model.json",
+          "size_bytes": 27,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "5617285ef402a4146a59cd954509f007d9947d84ae797b922aa9b029d8ce61d9",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "实验配置",
+          "content_id": "sha256:89ff4c32ef58403135271be622c818ba3ead139dd814df8a199ed66b130ba5ed",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/features/window.csv",
+          "size_bytes": 240009,
+          "allocated_bytes": 241664,
+          "mtime_ms": 1788825600000,
+          "storage_id": "6894a2d679981e7f54d95da542d5fbe9aca84301ca2c873ee8827ba94e53b966",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "特征数据",
+          "content_id": "sha256:f6a67bebd8d6b9d44f6f97d526cff6d4c963e575f8ae86687d9761f15169a707",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/raw/observations.csv",
+          "size_bytes": 432013,
+          "allocated_bytes": 434176,
+          "mtime_ms": 1788825600000,
+          "storage_id": "830903ccf9ffdc4b00e5df448aa270d1113ab7dbd43196ae9301ef72d2dda99f",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "原始观测",
+          "content_id": "sha256:346919d15780a686681aee69090c7557ca81b3f69d1ee225a7c540c0b8b94bf7",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/question.md",
+          "size_bytes": 67,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "ef1e1e10265605c67393e54da654aa5c01dab99f1d6f233479bbaea032517d70",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:c84bacf1aeda8f011c9336692a4db695736d63910042ef340814fad1be5c07e0",
+          "hash_status": "full"
+        },
+        {
+          "path": "src/predict.py",
+          "size_bytes": 48,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7429166e6ccb1537c37d43a750dd4955bfb0345daef908d9fb6e513fc50008c1",
+          "format": ".py",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "模型代码",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550",
+          "hash_status": "full"
+        }
+      ],
+      "summary": {
+        "file_count": 5,
+        "logical_bytes": 672164,
+        "allocated_bytes": 688128,
+        "storage_object_count": 5,
+        "full_hash_count": 5,
+        "unclassified_count": 0
+      },
+      "skipped": [],
+      "policy": {
+        "hash_max_bytes": 2097152,
+        "max_files": 100000,
+        "hidden": "excluded",
+        "symlinks": "excluded",
+        "atomic": false
+      },
+      "synthetic_normalization": "Example dates and allocation normalized; logical sizes and hashes measured.",
+      "id": "s-78a30e1afad826127b360ff4ba63aa51da0c77cf2db5f4f81ef9e8dda5d146a3"
+    },
+    {
+      "label": "基线 · 12 步窗口",
+      "captured_at": "2026-09-08T02:06:00Z",
+      "source_key": "2ac610fa7c9e7a00d194eedef48956c54779f75dd752be28dd158449a5b787ac",
+      "map": {
+        "schema": "system-architect.workspace-map/v1",
+        "project": {
+          "id": "river-temperature-study",
+          "title": "河流温度预测实验",
+          "synthetic": true
+        },
+        "modules": [
+          {
+            "id": "data",
+            "title": "观测数据",
+            "purpose": "整理站点观测与特征",
+            "paths": [
+              "data/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "model",
+            "title": "预测模型",
+            "purpose": "比较特征与训练配置",
+            "paths": [
+              "src/**",
+              "config/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "results",
+            "title": "实验成果",
+            "purpose": "保存预测、评估与结论",
+            "paths": [
+              "results/**",
+              "notes/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r1",
+            "source": "data",
+            "target": "model",
+            "label": "提供训练输入",
+            "evidence": "合成项目声明"
+          },
+          {
+            "id": "r2",
+            "source": "model",
+            "target": "results",
+            "label": "生成预测与评估",
+            "evidence": "合成项目声明"
+          }
+        ],
+        "nature_rules": [
+          {
+            "pattern": "data/raw/**",
+            "nature": "原始观测"
+          },
+          {
+            "pattern": "data/features/**",
+            "nature": "特征数据"
+          },
+          {
+            "pattern": "config/**",
+            "nature": "实验配置"
+          },
+          {
+            "pattern": "src/**",
+            "nature": "模型代码"
+          },
+          {
+            "pattern": "results/**",
+            "nature": "预测产物"
+          },
+          {
+            "pattern": "notes/**",
+            "nature": "研究结论"
+          }
+        ],
+        "exclude": []
+      },
+      "complete": true,
+      "files": [
+        {
+          "path": "config/model.json",
+          "size_bytes": 27,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "5617285ef402a4146a59cd954509f007d9947d84ae797b922aa9b029d8ce61d9",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "实验配置",
+          "content_id": "sha256:89ff4c32ef58403135271be622c818ba3ead139dd814df8a199ed66b130ba5ed",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/features/window.csv",
+          "size_bytes": 240009,
+          "allocated_bytes": 241664,
+          "mtime_ms": 1788825600000,
+          "storage_id": "6894a2d679981e7f54d95da542d5fbe9aca84301ca2c873ee8827ba94e53b966",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "特征数据",
+          "content_id": "sha256:f6a67bebd8d6b9d44f6f97d526cff6d4c963e575f8ae86687d9761f15169a707",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/raw/observations.csv",
+          "size_bytes": 432013,
+          "allocated_bytes": 434176,
+          "mtime_ms": 1788825600000,
+          "storage_id": "830903ccf9ffdc4b00e5df448aa270d1113ab7dbd43196ae9301ef72d2dda99f",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "原始观测",
+          "content_id": "sha256:346919d15780a686681aee69090c7557ca81b3f69d1ee225a7c540c0b8b94bf7",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/baseline.md",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "4da6cb4ceb92da48ce3b7efad28241929346dca2a47fc2148def8d697ac3aeee",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:db99b5fa27fa564fb56c81251168b3d6df5d4ff0d1477fb77504965b16e87f50",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/question.md",
+          "size_bytes": 67,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "ef1e1e10265605c67393e54da654aa5c01dab99f1d6f233479bbaea032517d70",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:c84bacf1aeda8f011c9336692a4db695736d63910042ef340814fad1be5c07e0",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/baseline/metrics.json",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "506dcdb2a6ade87bc23048814d96a9916e23f99d693195682d95f47a26df3f78",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:931cb69e5c7d204ee3ee2be7e9e224ea5cfd33406cf6cc1e7b7653265a3303a1",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/baseline/predictions.csv",
+          "size_bytes": 160019,
+          "allocated_bytes": 163840,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7df8c29114d5f4626f90947831bd752e8ae9f36eed6cb53ae5ed20b6b3c1d9fe",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:8e20bac1b496530d8455116dac47ead95cc89bfa0c5497319a381163a5d9e5f5",
+          "hash_status": "full"
+        },
+        {
+          "path": "src/predict.py",
+          "size_bytes": 48,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7429166e6ccb1537c37d43a750dd4955bfb0345daef908d9fb6e513fc50008c1",
+          "format": ".py",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "模型代码",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550",
+          "hash_status": "full"
+        }
+      ],
+      "summary": {
+        "file_count": 8,
+        "logical_bytes": 832275,
+        "allocated_bytes": 860160,
+        "storage_object_count": 8,
+        "full_hash_count": 8,
+        "unclassified_count": 0
+      },
+      "skipped": [],
+      "policy": {
+        "hash_max_bytes": 2097152,
+        "max_files": 100000,
+        "hidden": "excluded",
+        "symlinks": "excluded",
+        "atomic": false
+      },
+      "synthetic_normalization": "Example dates and allocation normalized; logical sizes and hashes measured.",
+      "id": "s-72561d3d94f5c6e709018dfc0149331564c3ed0983fd1b3d7ecd84c7e5581bdf"
+    },
+    {
+      "label": "新配置 · 24 步窗口",
+      "captured_at": "2026-09-08T02:55:00Z",
+      "source_key": "2ac610fa7c9e7a00d194eedef48956c54779f75dd752be28dd158449a5b787ac",
+      "map": {
+        "schema": "system-architect.workspace-map/v1",
+        "project": {
+          "id": "river-temperature-study",
+          "title": "河流温度预测实验",
+          "synthetic": true
+        },
+        "modules": [
+          {
+            "id": "data",
+            "title": "观测数据",
+            "purpose": "整理站点观测与特征",
+            "paths": [
+              "data/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "model",
+            "title": "预测模型",
+            "purpose": "比较特征与训练配置",
+            "paths": [
+              "src/**",
+              "config/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "results",
+            "title": "实验成果",
+            "purpose": "保存预测、评估与结论",
+            "paths": [
+              "results/**",
+              "notes/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r1",
+            "source": "data",
+            "target": "model",
+            "label": "提供训练输入",
+            "evidence": "合成项目声明"
+          },
+          {
+            "id": "r2",
+            "source": "model",
+            "target": "results",
+            "label": "生成预测与评估",
+            "evidence": "合成项目声明"
+          }
+        ],
+        "nature_rules": [
+          {
+            "pattern": "data/raw/**",
+            "nature": "原始观测"
+          },
+          {
+            "pattern": "data/features/**",
+            "nature": "特征数据"
+          },
+          {
+            "pattern": "config/**",
+            "nature": "实验配置"
+          },
+          {
+            "pattern": "src/**",
+            "nature": "模型代码"
+          },
+          {
+            "pattern": "results/**",
+            "nature": "预测产物"
+          },
+          {
+            "pattern": "notes/**",
+            "nature": "研究结论"
+          }
+        ],
+        "exclude": []
+      },
+      "complete": true,
+      "files": [
+        {
+          "path": "config/model.json",
+          "size_bytes": 27,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "5617285ef402a4146a59cd954509f007d9947d84ae797b922aa9b029d8ce61d9",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "实验配置",
+          "content_id": "sha256:24d5eebc61989a128ef0038b0efa440eec50c52520f11f587de188d89ecd3551",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/features/window.csv",
+          "size_bytes": 320009,
+          "allocated_bytes": 323584,
+          "mtime_ms": 1788825600000,
+          "storage_id": "6894a2d679981e7f54d95da542d5fbe9aca84301ca2c873ee8827ba94e53b966",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "特征数据",
+          "content_id": "sha256:fa47d88926a650e22aab7f0213a1a09bd85eda8ec09d7d6841b2326c601e5912",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/raw/observations.csv",
+          "size_bytes": 432013,
+          "allocated_bytes": 434176,
+          "mtime_ms": 1788825600000,
+          "storage_id": "830903ccf9ffdc4b00e5df448aa270d1113ab7dbd43196ae9301ef72d2dda99f",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "原始观测",
+          "content_id": "sha256:346919d15780a686681aee69090c7557ca81b3f69d1ee225a7c540c0b8b94bf7",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/baseline.md",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "4da6cb4ceb92da48ce3b7efad28241929346dca2a47fc2148def8d697ac3aeee",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:db99b5fa27fa564fb56c81251168b3d6df5d4ff0d1477fb77504965b16e87f50",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/question.md",
+          "size_bytes": 67,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "ef1e1e10265605c67393e54da654aa5c01dab99f1d6f233479bbaea032517d70",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:c84bacf1aeda8f011c9336692a4db695736d63910042ef340814fad1be5c07e0",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/baseline/metrics.json",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "506dcdb2a6ade87bc23048814d96a9916e23f99d693195682d95f47a26df3f78",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:931cb69e5c7d204ee3ee2be7e9e224ea5cfd33406cf6cc1e7b7653265a3303a1",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/baseline/predictions.csv",
+          "size_bytes": 160019,
+          "allocated_bytes": 163840,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7df8c29114d5f4626f90947831bd752e8ae9f36eed6cb53ae5ed20b6b3c1d9fe",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:8e20bac1b496530d8455116dac47ead95cc89bfa0c5497319a381163a5d9e5f5",
+          "hash_status": "full"
+        },
+        {
+          "path": "src/predict.py",
+          "size_bytes": 48,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7429166e6ccb1537c37d43a750dd4955bfb0345daef908d9fb6e513fc50008c1",
+          "format": ".py",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "模型代码",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550",
+          "hash_status": "full"
+        }
+      ],
+      "summary": {
+        "file_count": 8,
+        "logical_bytes": 912275,
+        "allocated_bytes": 942080,
+        "storage_object_count": 8,
+        "full_hash_count": 8,
+        "unclassified_count": 0
+      },
+      "skipped": [],
+      "policy": {
+        "hash_max_bytes": 2097152,
+        "max_files": 100000,
+        "hidden": "excluded",
+        "symlinks": "excluded",
+        "atomic": false
+      },
+      "synthetic_normalization": "Example dates and allocation normalized; logical sizes and hashes measured.",
+      "id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99"
+    },
+    {
+      "label": "比较 · 两组预测结果",
+      "captured_at": "2026-09-08T03:06:00Z",
+      "source_key": "2ac610fa7c9e7a00d194eedef48956c54779f75dd752be28dd158449a5b787ac",
+      "map": {
+        "schema": "system-architect.workspace-map/v1",
+        "project": {
+          "id": "river-temperature-study",
+          "title": "河流温度预测实验",
+          "synthetic": true
+        },
+        "modules": [
+          {
+            "id": "data",
+            "title": "观测数据",
+            "purpose": "整理站点观测与特征",
+            "paths": [
+              "data/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "model",
+            "title": "预测模型",
+            "purpose": "比较特征与训练配置",
+            "paths": [
+              "src/**",
+              "config/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          },
+          {
+            "id": "results",
+            "title": "实验成果",
+            "purpose": "保存预测、评估与结论",
+            "paths": [
+              "results/**",
+              "notes/**"
+            ],
+            "evidence": "合成项目的显式职责映射"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r1",
+            "source": "data",
+            "target": "model",
+            "label": "提供训练输入",
+            "evidence": "合成项目声明"
+          },
+          {
+            "id": "r2",
+            "source": "model",
+            "target": "results",
+            "label": "生成预测与评估",
+            "evidence": "合成项目声明"
+          }
+        ],
+        "nature_rules": [
+          {
+            "pattern": "data/raw/**",
+            "nature": "原始观测"
+          },
+          {
+            "pattern": "data/features/**",
+            "nature": "特征数据"
+          },
+          {
+            "pattern": "config/**",
+            "nature": "实验配置"
+          },
+          {
+            "pattern": "src/**",
+            "nature": "模型代码"
+          },
+          {
+            "pattern": "results/**",
+            "nature": "预测产物"
+          },
+          {
+            "pattern": "notes/**",
+            "nature": "研究结论"
+          }
+        ],
+        "exclude": []
+      },
+      "complete": true,
+      "files": [
+        {
+          "path": "config/model.json",
+          "size_bytes": 27,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "5617285ef402a4146a59cd954509f007d9947d84ae797b922aa9b029d8ce61d9",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "实验配置",
+          "content_id": "sha256:24d5eebc61989a128ef0038b0efa440eec50c52520f11f587de188d89ecd3551",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/features/window.csv",
+          "size_bytes": 320009,
+          "allocated_bytes": 323584,
+          "mtime_ms": 1788825600000,
+          "storage_id": "6894a2d679981e7f54d95da542d5fbe9aca84301ca2c873ee8827ba94e53b966",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "特征数据",
+          "content_id": "sha256:fa47d88926a650e22aab7f0213a1a09bd85eda8ec09d7d6841b2326c601e5912",
+          "hash_status": "full"
+        },
+        {
+          "path": "data/raw/observations.csv",
+          "size_bytes": 432013,
+          "allocated_bytes": 434176,
+          "mtime_ms": 1788825600000,
+          "storage_id": "830903ccf9ffdc4b00e5df448aa270d1113ab7dbd43196ae9301ef72d2dda99f",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "data",
+          "nature": "原始观测",
+          "content_id": "sha256:346919d15780a686681aee69090c7557ca81b3f69d1ee225a7c540c0b8b94bf7",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/baseline.md",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "4da6cb4ceb92da48ce3b7efad28241929346dca2a47fc2148def8d697ac3aeee",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:db99b5fa27fa564fb56c81251168b3d6df5d4ff0d1477fb77504965b16e87f50",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/question.md",
+          "size_bytes": 67,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "ef1e1e10265605c67393e54da654aa5c01dab99f1d6f233479bbaea032517d70",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:c84bacf1aeda8f011c9336692a4db695736d63910042ef340814fad1be5c07e0",
+          "hash_status": "full"
+        },
+        {
+          "path": "notes/window-24.md",
+          "size_bytes": 67,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "1e72c89d45b3397ac62f88e6fd82f95cdae3875e46c36f639ceb5331d8402ad9",
+          "format": ".md",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "研究结论",
+          "content_id": "sha256:dd331f8557ce98eaf4b8cc49b9936901eca2caab27dbef82a801e4d7b01acf15",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/baseline/metrics.json",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "506dcdb2a6ade87bc23048814d96a9916e23f99d693195682d95f47a26df3f78",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:931cb69e5c7d204ee3ee2be7e9e224ea5cfd33406cf6cc1e7b7653265a3303a1",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/baseline/predictions.csv",
+          "size_bytes": 160019,
+          "allocated_bytes": 163840,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7df8c29114d5f4626f90947831bd752e8ae9f36eed6cb53ae5ed20b6b3c1d9fe",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:8e20bac1b496530d8455116dac47ead95cc89bfa0c5497319a381163a5d9e5f5",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/window-24/metrics.json",
+          "size_bytes": 46,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "226d8a070d4eae8a6d36bd73a4ff711080681ffbbf8aaa8273c9db0ac2e349bc",
+          "format": ".json",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:8cda0058171b2bc8de9050e1616b7072756f91c00d74f605f8d14a337f1b183c",
+          "hash_status": "full"
+        },
+        {
+          "path": "results/window-24/predictions.csv",
+          "size_bytes": 220019,
+          "allocated_bytes": 221184,
+          "mtime_ms": 1788825600000,
+          "storage_id": "4167e840b4519014f345946854a71986de2c755401250f9d6614165011fd6489",
+          "format": ".csv",
+          "format_source": "extension",
+          "module_id": "results",
+          "nature": "预测产物",
+          "content_id": "sha256:8bf9f984e4a0d04aed4990458aa461a468cec37086ddf3c1dcef7eb52361f3fa",
+          "hash_status": "full"
+        },
+        {
+          "path": "src/predict.py",
+          "size_bytes": 48,
+          "allocated_bytes": 4096,
+          "mtime_ms": 1788825600000,
+          "storage_id": "7429166e6ccb1537c37d43a750dd4955bfb0345daef908d9fb6e513fc50008c1",
+          "format": ".py",
+          "format_source": "extension",
+          "module_id": "model",
+          "nature": "模型代码",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550",
+          "hash_status": "full"
+        }
+      ],
+      "summary": {
+        "file_count": 11,
+        "logical_bytes": 1132407,
+        "allocated_bytes": 1171456,
+        "storage_object_count": 11,
+        "full_hash_count": 11,
+        "unclassified_count": 0
+      },
+      "skipped": [],
+      "policy": {
+        "hash_max_bytes": 2097152,
+        "max_files": 100000,
+        "hidden": "excluded",
+        "symlinks": "excluded",
+        "atomic": false
+      },
+      "synthetic_normalization": "Example dates and allocation normalized; logical sizes and hashes measured.",
+      "id": "s-efeebe767989100d2c4bdc89ba508c18f7b7226359e08a4baa6a7f97eadec4fa"
+    }
+  ],
+  "runs": [
+    {
+      "schema": "system-architect.run/v1",
+      "id": "run-baseline",
+      "title": "基线 · 12 步窗口",
+      "status": "completed",
+      "started_at": "2026-09-08T02:00:00Z",
+      "ended_at": "2026-09-08T02:05:00Z",
+      "inputs": [
+        {
+          "snapshot_id": "s-78a30e1afad826127b360ff4ba63aa51da0c77cf2db5f4f81ef9e8dda5d146a3",
+          "path": "data/features/window.csv",
+          "content_id": "sha256:f6a67bebd8d6b9d44f6f97d526cff6d4c963e575f8ae86687d9761f15169a707"
+        },
+        {
+          "snapshot_id": "s-78a30e1afad826127b360ff4ba63aa51da0c77cf2db5f4f81ef9e8dda5d146a3",
+          "path": "src/predict.py",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550"
+        }
+      ],
+      "config": [
+        {
+          "snapshot_id": "s-78a30e1afad826127b360ff4ba63aa51da0c77cf2db5f4f81ef9e8dda5d146a3",
+          "path": "config/model.json",
+          "content_id": "sha256:89ff4c32ef58403135271be622c818ba3ead139dd814df8a199ed66b130ba5ed"
+        }
+      ],
+      "outputs": [
+        {
+          "snapshot_id": "s-72561d3d94f5c6e709018dfc0149331564c3ed0983fd1b3d7ecd84c7e5581bdf",
+          "path": "results/baseline/predictions.csv",
+          "content_id": "sha256:8e20bac1b496530d8455116dac47ead95cc89bfa0c5497319a381163a5d9e5f5"
+        },
+        {
+          "snapshot_id": "s-72561d3d94f5c6e709018dfc0149331564c3ed0983fd1b3d7ecd84c7e5581bdf",
+          "path": "results/baseline/metrics.json",
+          "content_id": "sha256:931cb69e5c7d204ee3ee2be7e9e224ea5cfd33406cf6cc1e7b7653265a3303a1"
+        },
+        {
+          "snapshot_id": "s-72561d3d94f5c6e709018dfc0149331564c3ed0983fd1b3d7ecd84c7e5581bdf",
+          "path": "notes/baseline.md",
+          "content_id": "sha256:db99b5fa27fa564fb56c81251168b3d6df5d4ff0d1477fb77504965b16e87f50"
+        }
+      ],
+      "command": "python src/predict.py --config config/model.json",
+      "metrics": {
+        "MAE (°C)": 0.84
+      },
+      "conclusion": "12 步窗口作为比较基线。样例 MAE 为 0.84°C。",
+      "evidence": "合成实验记录，指标仅供交互示例，不构成实际研究结果",
+      "record_digest": "cd5b9b125b7d4e2070a31ff8e5c15a4599ba778206cf29f7a08e5acae5bc0ad5"
+    },
+    {
+      "schema": "system-architect.run/v1",
+      "id": "run-window-24",
+      "title": "对照 · 24 步窗口",
+      "status": "completed",
+      "started_at": "2026-09-08T03:00:00Z",
+      "ended_at": "2026-09-08T03:05:00Z",
+      "inputs": [
+        {
+          "snapshot_id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99",
+          "path": "data/features/window.csv",
+          "content_id": "sha256:fa47d88926a650e22aab7f0213a1a09bd85eda8ec09d7d6841b2326c601e5912"
+        },
+        {
+          "snapshot_id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99",
+          "path": "src/predict.py",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550"
+        }
+      ],
+      "config": [
+        {
+          "snapshot_id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99",
+          "path": "config/model.json",
+          "content_id": "sha256:24d5eebc61989a128ef0038b0efa440eec50c52520f11f587de188d89ecd3551"
+        }
+      ],
+      "outputs": [
+        {
+          "snapshot_id": "s-efeebe767989100d2c4bdc89ba508c18f7b7226359e08a4baa6a7f97eadec4fa",
+          "path": "results/window-24/predictions.csv",
+          "content_id": "sha256:8bf9f984e4a0d04aed4990458aa461a468cec37086ddf3c1dcef7eb52361f3fa"
+        },
+        {
+          "snapshot_id": "s-efeebe767989100d2c4bdc89ba508c18f7b7226359e08a4baa6a7f97eadec4fa",
+          "path": "results/window-24/metrics.json",
+          "content_id": "sha256:8cda0058171b2bc8de9050e1616b7072756f91c00d74f605f8d14a337f1b183c"
+        },
+        {
+          "snapshot_id": "s-efeebe767989100d2c4bdc89ba508c18f7b7226359e08a4baa6a7f97eadec4fa",
+          "path": "notes/window-24.md",
+          "content_id": "sha256:dd331f8557ce98eaf4b8cc49b9936901eca2caab27dbef82a801e4d7b01acf15"
+        }
+      ],
+      "command": "python src/predict.py --config config/model.json",
+      "metrics": {
+        "MAE (°C)": 0.71
+      },
+      "conclusion": "样例 MAE 从 0.84°C 降到 0.71°C。输入特征与窗口配置均有变化，不能仅凭这两次记录认定改善原因。跨站点验证尚未完成。",
+      "evidence": "合成实验记录，指标仅供交互示例，不构成实际研究结果",
+      "record_digest": "70bfc4c7e4c13d4c5f22f04a3e18507429d76d2bdc241d910b700827ce7927fe"
+    },
+    {
+      "schema": "system-architect.run/v1",
+      "id": "run-aborted",
+      "title": "重试 · 无新产物",
+      "status": "cancelled",
+      "started_at": "2026-09-08T03:10:00Z",
+      "ended_at": "2026-09-08T03:11:00Z",
+      "inputs": [
+        {
+          "snapshot_id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99",
+          "path": "data/features/window.csv",
+          "content_id": "sha256:fa47d88926a650e22aab7f0213a1a09bd85eda8ec09d7d6841b2326c601e5912"
+        },
+        {
+          "snapshot_id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99",
+          "path": "src/predict.py",
+          "content_id": "sha256:77a9b907e7ea2ff3e44e909550e9f334c3aba07f628d3843a9d0397988511550"
+        }
+      ],
+      "config": [
+        {
+          "snapshot_id": "s-91408c5c9ad37a58f92f21c70c02d5f3fe0386bf96d84d0aab7386a21b3c9a99",
+          "path": "config/model.json",
+          "content_id": "sha256:24d5eebc61989a128ef0038b0efa440eec50c52520f11f587de188d89ecd3551"
+        }
+      ],
+      "outputs": [],
+      "command": "python src/predict.py --config config/model.json",
+      "metrics": {},
+      "conclusion": "模拟一次取消的尝试，保留输入与配置，没有生成新产物。",
+      "evidence": "合成实验记录，指标仅供交互示例，不构成实际研究结果",
+      "record_digest": "8fe5e170a835ee88df94eebc02823130a50daa66e41e443998f993c46308588f"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T04:22:27.727904+00:00",
+  "title": "Design System: System Architect Workspace",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "浅纸",
+        "tonalRamp": [
+          "oklch(15.000% 0.005392 95.099)",
+          "oklch(26.429% 0.005392 95.099)",
+          "oklch(37.857% 0.005392 95.099)",
+          "oklch(49.286% 0.005392 95.099)",
+          "oklch(60.714% 0.005392 95.099)",
+          "oklch(72.143% 0.005392 95.099)",
+          "oklch(83.571% 0.005392 95.099)",
+          "oklch(95.000% 0.005392 95.099)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "深林墨",
+        "tonalRamp": [
+          "oklch(15.000% 0.025767 179.856)",
+          "oklch(26.429% 0.025767 179.856)",
+          "oklch(37.857% 0.025767 179.856)",
+          "oklch(49.286% 0.025767 179.856)",
+          "oklch(60.714% 0.025767 179.856)",
+          "oklch(72.143% 0.025767 179.856)",
+          "oklch(83.571% 0.025767 179.856)",
+          "oklch(95.000% 0.025767 179.856)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "灰绿",
+        "tonalRamp": [
+          "oklch(15.000% 0.021333 165.690)",
+          "oklch(26.429% 0.021333 165.690)",
+          "oklch(37.857% 0.021333 165.690)",
+          "oklch(49.286% 0.021333 165.690)",
+          "oklch(60.714% 0.021333 165.690)",
+          "oklch(72.143% 0.021333 165.690)",
+          "oklch(83.571% 0.021333 165.690)",
+          "oklch(95.000% 0.021333 165.690)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "细线",
+        "tonalRamp": [
+          "oklch(15.000% 0.012590 137.787)",
+          "oklch(26.429% 0.012590 137.787)",
+          "oklch(37.857% 0.012590 137.787)",
+          "oklch(49.286% 0.012590 137.787)",
+          "oklch(60.714% 0.012590 137.787)",
+          "oklch(72.143% 0.012590 137.787)",
+          "oklch(83.571% 0.012590 137.787)",
+          "oklch(95.000% 0.012590 137.787)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "green": {
+        "role": "primary",
+        "displayName": "森林绿",
+        "tonalRamp": [
+          "oklch(15.000% 0.068915 167.469)",
+          "oklch(26.429% 0.068915 167.469)",
+          "oklch(37.857% 0.068915 167.469)",
+          "oklch(49.286% 0.068915 167.469)",
+          "oklch(60.714% 0.068915 167.469)",
+          "oklch(72.143% 0.068915 167.469)",
+          "oklch(83.571% 0.068915 167.469)",
+          "oklch(95.000% 0.068915 167.469)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "soft": {
+        "role": "primary",
+        "displayName": "浅叶色",
+        "tonalRamp": [
+          "oklch(15.000% 0.011266 141.263)",
+          "oklch(26.429% 0.011266 141.263)",
+          "oklch(37.857% 0.011266 141.263)",
+          "oklch(49.286% 0.011266 141.263)",
+          "oklch(60.714% 0.011266 141.263)",
+          "oklch(72.143% 0.011266 141.263)",
+          "oklch(83.571% 0.011266 141.263)",
+          "oklch(95.000% 0.011266 141.263)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "warm": {
+        "role": "secondary",
+        "displayName": "赭棕",
+        "tonalRamp": [
+          "oklch(15.000% 0.099034 49.161)",
+          "oklch(26.429% 0.099034 49.161)",
+          "oklch(37.857% 0.099034 49.161)",
+          "oklch(49.286% 0.099034 49.161)",
+          "oklch(60.714% 0.099034 49.161)",
+          "oklch(72.143% 0.099034 49.161)",
+          "oklch(83.571% 0.099034 49.161)",
+          "oklch(95.000% 0.099034 49.161)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "白纸",
+        "tonalRamp": [
+          "oklch(15.000% 0.000000 0.000)",
+          "oklch(26.429% 0.000000 0.000)",
+          "oklch(37.857% 0.000000 0.000)",
+          "oklch(49.286% 0.000000 0.000)",
+          "oklch(60.714% 0.000000 0.000)",
+          "oklch(72.143% 0.000000 0.000)",
+          "oklch(83.571% 0.000000 0.000)",
+          "oklch(95.000% 0.000000 0.000)"
+        ],
+        "tonalRampSource": "为面板展示从源色计算的 OKLCH 色阶；不是当前界面令牌，也不构成新增设计规则。"
+      }
+    },
+    "typographyMeta": {
+      "project-title": {
+        "displayName": "项目标题",
+        "purpose": "项目名称；手机字号见布局断点。"
+      },
+      "headline": {
+        "displayName": "区域标题",
+        "purpose": "文件、运行比较与存储区域标题。"
+      },
+      "title": {
+        "displayName": "小节标题",
+        "purpose": "输入、配置、产物与详情小节。"
+      },
+      "body": {
+        "displayName": "正文与控件",
+        "purpose": "默认阅读和操作文字。"
+      },
+      "table": {
+        "displayName": "文件表",
+        "purpose": "连续文件记录。"
+      },
+      "label": {
+        "displayName": "辅助文字",
+        "purpose": "字段名称和口径说明。"
+      },
+      "tag": {
+        "displayName": "状态标签",
+        "purpose": "已计算、未知和声明状态。"
+      },
+      "mono": {
+        "displayName": "等宽路径",
+        "purpose": "详情路径和运行标识；数值另用等宽数字。"
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "detail-entry",
+        "value": "160ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "显式选择文件后，从 translateY(5px) 回到 translateY(0)；再次选择相同文件也会触发。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}",
+        "purpose": "降低动效偏好下关闭动画与过渡。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1650px",
+        "query": "min-width:1650px"
+      },
+      {
+        "name": "stacked-inspector",
+        "value": "1100px",
+        "query": "max-width:1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px",
+        "query": "max-width:700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "保存按钮",
+      "kind": "button",
+      "description": "绿色主操作；当前悬停仍为原绿底，焦点通过外轮廓呈现。",
+      "html": "<button class=\"ds-primary\">保存离线工作台</button>",
+      "css": ".ds-primary{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;color:var(--surface,#fff);background:var(--green,#28614d);border-color:var(--green,#28614d)}.ds-primary:hover{background:var(--green,#28614d);border-color:var(--green,#28614d)}.ds-primary:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-primary:disabled{opacity:.45;cursor:default}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "普通按钮",
+      "kind": "button",
+      "description": "透明底次操作与浅色悬停，用于导出和清空筛选。",
+      "html": "<button class=\"ds-default\">导出 JSON</button>",
+      "css": ".ds-default{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;}.ds-default:hover{background:var(--soft,#e9efe8);border-color:#a8b7aa}.ds-default:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-default:disabled{opacity:.45;cursor:default}",
+      "refersTo": "button-default"
+    },
+    {
+      "name": "文件搜索",
+      "kind": "input",
+      "description": "上方标签与即时搜索；片段保留外观，检索行为由工作台负责。",
+      "html": "<label class=\"ds-search\">搜索文件<input class=\"ds-search-input\" type=\"search\" placeholder=\"名称、路径或性质\"></label>",
+      "css": ".ds-search{display:grid;gap:5px;font:12px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--muted,#586760)}.ds-search-input{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:var(--surface,#fff);border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 10px;max-width:100%;caret-color:var(--green,#28614d)}.ds-search-input:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}",
+      "refersTo": "input"
+    },
+    {
+      "name": "视图导航",
+      "kind": "nav",
+      "description": "当前视图以绿色文字和底线定位，保留 aria-current。",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"工作台视图\"><button class=\"ds-tab\" aria-current=\"page\">文件与架构</button><button class=\"ds-tab\">运行与历史</button><button class=\"ds-tab\">存储分布</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:26px;padding:0 30px;border-bottom:1px solid var(--line,#d5dbd3)}.ds-tab{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;border:0;border-radius:0;padding:12px 0;border-bottom:2px solid transparent;color:var(--muted,#586760)}.ds-tab:hover{background:var(--soft,#e9efe8);border-color:#a8b7aa}.ds-tab:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-tab:disabled{opacity:.45;cursor:default}.ds-tab[aria-current]{border-bottom-color:var(--green,#28614d);color:var(--green,#28614d);font-weight:650}@media(max-width:700px){.ds-tabs{padding:0 16px;gap:24px;justify-content:space-between}.ds-tab{white-space:nowrap}}",
+      "refersTo": "view-tab"
+    },
+    {
+      "name": "模块导航",
+      "kind": "nav",
+      "description": "整行目录入口；在手机使用横向滚动。",
+      "html": "<div class=\"ds-side-list\"><button class=\"ds-side-button\" aria-current=\"true\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h5v5h-5z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\"/></svg>全部文件<span class=\"ds-count\">11</span></button><button class=\"ds-side-button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h5v5h-5z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\"/></svg>观测数据<span class=\"ds-count\">2</span></button></div>",
+      "css": ".ds-side-list{background:#f0f2ec}.ds-side-button{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;display:flex;align-items:center;gap:8px;width:100%;border:0;border-radius:5px;padding:9px 10px;text-align:left;margin:2px 0;overflow-wrap:anywhere}.ds-count{margin-left:auto;color:var(--muted,#586760);font-size:12px}.ds-side-button svg{flex-shrink:0}.ds-side-button:hover{background:var(--soft,#e9efe8);border-color:#a8b7aa}.ds-side-button:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-side-button:disabled{opacity:.45;cursor:default}.ds-side-button[aria-current]{color:var(--green,#28614d);background:#dfe8de;font-weight:600}@media(max-width:700px){.ds-side-list{display:flex;gap:5px;overflow-x:auto;padding-bottom:3px}.ds-side-list .ds-side-button{width:auto;min-width:max-content}.ds-count{margin-left:4px}}",
+      "refersTo": "side-navigation"
+    },
+    {
+      "name": "状态标签",
+      "kind": "chip",
+      "description": "声明、已计算与未知是独立的文字状态；标签不承担筛选操作。",
+      "html": "<span class=\"ds-tag\">职责由工作区映射声明</span> <span class=\"ds-tag ds-good\">完整 SHA-256</span> <span class=\"ds-tag ds-warn\">未知</span>",
+      "css": ".ds-tag{display:inline-block;font:11px/1.7 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;border:1px solid var(--line,#d5dbd3);border-radius:4px;padding:0 6px;color:var(--muted,#586760);white-space:nowrap}.ds-good{color:var(--green,#28614d);border-color:#b6c9b5;background:#f1f6ef}.ds-warn{color:var(--warm,#8b4c27);border-color:#d6bda8;background:#fcf3e8}",
+      "refersTo": "tag"
+    },
+    {
+      "name": "模块职责入口",
+      "kind": "card",
+      "description": "白色模块卡保留职责与文件汇总；选中后加绿边与浅叶底。",
+      "html": "<button class=\"ds-module\" aria-current=\"true\"><strong>观测数据</strong><p>整理站点观测与特征</p><div class=\"ds-module-small\">2 个文件 · 734.4 KiB</div></button>",
+      "css": ".ds-module{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;min-width:160px;flex:1;text-align:left;padding:16px;background:var(--surface,#fff);border:1px solid var(--line,#d5dbd3);border-radius:8px}.ds-module strong{display:block;margin-bottom:5px}.ds-module p{margin:0;color:var(--muted,#586760);font-size:12px}.ds-module-small{font-size:12px;color:var(--muted,#586760);font-variant-numeric:tabular-nums}.ds-module:hover{background:var(--soft,#e9efe8);border-color:#a8b7aa}.ds-module:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-module:disabled{opacity:.45;cursor:default}.ds-module[aria-current]{background:var(--soft,#e9efe8);border-color:var(--green,#28614d)}@media(max-width:1100px){.ds-module{min-width:155px}}@media(max-width:700px){.ds-module{min-width:170px}}",
+      "refersTo": "module-node"
+    },
+    {
+      "name": "选中文件行",
+      "kind": "custom",
+      "description": "连续文件表中的当前观察；示例数值来自合成项目。",
+      "html": "<div class=\"ds-table-wrap\"><table class=\"ds-table\"><tbody><tr class=\"ds-selected\"><td><button class=\"ds-file\">window.csv<span class=\"ds-directory\">data/features</span></button></td><td>特征数据</td><td class=\"ds-value\">312.51 KiB</td></tr></tbody></table></div>",
+      "css": ".ds-table-wrap{overflow:auto;border-top:1px solid var(--line,#d5dbd3)}.ds-table{border-collapse:collapse;width:100%;font:13px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f)}.ds-table td{padding:12px 10px;border-bottom:1px solid var(--line,#d5dbd3);vertical-align:middle}.ds-table td:first-child{padding-left:2px;min-width:170px;max-width:400px}.ds-selected{background:var(--soft,#e9efe8)}.ds-value{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}.ds-file{font:13px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;display:block;border:0;padding:0 5px 0 0;min-height:28px;text-align:left;max-width:100%;overflow-wrap:anywhere;border-radius:2px;font-weight:550}.ds-directory{display:block;font-weight:400;color:var(--muted,#586760);font-size:11px;word-break:break-all}.ds-file:hover{background:var(--soft,#e9efe8);border-color:#a8b7aa}.ds-file:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-file:disabled{opacity:.45;cursor:default}",
+      "refersTo": "file-row-current"
+    },
+    {
+      "name": "运行与历史入口",
+      "kind": "button",
+      "description": "详情中用连续按钮表达运行或历史观察，副行说明引用方式。",
+      "html": "<button class=\"ds-history\"><strong>对照 · 24 步窗口</strong><span>输入 · 相同完整摘要关联</span></button>",
+      "css": ".ds-history{font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);background:transparent;border:1px solid var(--line,#d5dbd3);border-radius:6px;padding:8px 12px;min-height:36px;cursor:pointer;display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line,#d5dbd3);border-radius:0;padding:10px 0;font-size:12px}.ds-history strong{display:block;font-weight:550}.ds-history span{font-size:11px;color:var(--muted,#586760)}.ds-history:hover{background:var(--soft,#e9efe8);border-color:#a8b7aa}.ds-history:focus-visible{outline:2px solid var(--green,#28614d);outline-offset:3px;}.ds-history:disabled{opacity:.45;cursor:default}",
+      "refersTo": "history-row"
+    },
+    {
+      "name": "逻辑大小比例条",
+      "kind": "custom",
+      "description": "静态比例与数字并排，示例为合成项目的存储分组；条形不是按钮。",
+      "html": "<div class=\"ds-bar-row\"><span>原始观测</span><div class=\"ds-track\" role=\"img\" aria-label=\"原始观测占 38.1%\"><div class=\"ds-fill\" style=\"width:38.1%\"></div></div><span class=\"ds-bar-value\">421.89 KiB<br><small>38.1%</small></span></div>",
+      "css": ".ds-bar-row{display:grid;grid-template-columns:minmax(95px,1fr) minmax(100px,2fr) 85px;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line,#d5dbd3);font:14px/1.55 -apple-system,BlinkMacSystemFont,\"Segoe UI\",\"PingFang SC\",sans-serif;color:var(--ink,#20332f);}.ds-track{height:9px;background:#e3e8df;border-radius:2px;overflow:hidden}.ds-fill{height:100%;background:var(--green,#28614d)}.ds-bar-value{text-align:right;font-size:12px;font-variant-numeric:tabular-nums}.ds-bar-value small{font-size:12px;color:var(--muted,#586760)}@media(max-width:700px){.ds-bar-row{grid-template-columns:minmax(85px,1fr) minmax(65px,1.1fr) 76px;gap:10px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "研究档案工作台",
+    "overview": "长时间核对目录、文件和实验记录时，视线需要在列表、关系和细节之间稳定往返。浅纸底、森林绿、细分隔线和连续文件行构成主要材料。名称、路径和数值占据阅读中心，选中状态安静而明确。\n\n保留既有方向中的窄目录、相邻详情和沿来源回看的关系。模块表达职责，文件表达一次快照中的观察，运行表达登记的输入、配置和产物。布局可以随屏幕收拢，内容身份与证据口径保持一致。\n\n本记录限定于 `skills/architecture-workspace/assets/workspace.html`、`workspace.css`、`workspace.js` 及生成的 `examples/research-workspace/index.html`，不替代既有架构编辑器的设计。数值以当前代码为准；截图提供指定状态的外观证据，行为说明来自源代码。该版本采用代码直接构建，没有批准的视觉稿或 QUALITY BAR 图卡，也没有首次使用成功率验证。方向合同与补记时间见 `docs/workspace-surface.md`；概念编号属于该合同，不属于可复用的视觉规则。",
+    "keyCharacteristics": [
+      "浅纸底与白色阅读面，依靠边线和浅色选中面区分区域。",
+      "衬线项目名、无衬线正文、等宽路径与对齐数值各司其职。",
+      "文件行、模块入口和详情共享明确的文件观察身份。",
+      "状态用文字说明，测量、声明与未知各自保留来源。"
+    ],
+    "rules": [
+      {
+        "name": "状态有字",
+        "body": "颜色提示状态，文字给出状态的准确含义；“已完成 · 登记”“完整 SHA-256”“未知”等标签保持可读。",
+        "section": "colors"
+      },
+      {
+        "name": "名称先读",
+        "body": "文件名单独成行，目录置于下一行；完整路径和摘要在详情中展开，数值使用等宽数字便于纵向核对。",
+        "section": "typography"
+      },
+      {
+        "name": "平面阅读",
+        "body": "区域以底色和边线建立秩序；状态变化使用颜色、下划线与明确位置，不扩展成装饰性立体效果。",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** 用纸面、细线和连续条目承载文件信息，让选择状态落在具体对象上。",
+      "**Do** 保留状态文字、单位、快照标签和来源性质，使数据能独立阅读。",
+      "**Do** 在跨运行追溯文件时保持快照与路径一致，并让选中文件出现在当前列表页。",
+      "**Do** 用局部滚动容纳宽表格，在小屏保留完整操作与详情。",
+      "**Do** 复用现有字体角色、紧凑控件和共享焦点环，并尊重降低动效偏好。"
+    ],
+    "donts": [
+      "**Don't** 用已登记状态或绿色标签表达科学验证、因果关系或删除建议。",
+      "**Don't** 把合成例的归一化日期、分配字节或登记指标写成实际研究测量。",
+      "**Don't** 把静态比例条、状态标签或装饰关系线描绘成已有的筛选操作。",
+      "**Don't** 将现有实现概括成严格八像素栅格、统一行高、全部目标尺寸合规或完整键盘验证。",
+      "**Don't** 将本次指定截图与修复评审扩展为全界面视觉批准或真实用户验证。"
+    ]
+  }
+}

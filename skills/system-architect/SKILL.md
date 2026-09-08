@@ -166,6 +166,10 @@ Lead with the architecture recommendation and the business outcome it protects. 
 
 After implementation or operation produces evidence, compare observed reliability, latency, cost, incidents, and user impact with the architecture assumptions. Recommend retain, refine, replace, or reverse. Record a durable decision as an ADR when future work needs its rationale.
 
+## Connect architecture to file and experiment history
+
+When the user's question concerns actual directories, file sizes, historical inputs, outputs, or experiment conclusions, use architecture-workspace. Reuse verified module-boundary declarations through its map adapter; preserve the architect's ownership authority. The workspace adds read-only observations and explicit run references. It does not infer architecture from names or execution from modification times. Use architecture-visualizer for editable architecture diagrams and architecture-workspace for the linked metadata reader; a small file question can use the latter directly.
+
 ## Stop conditions
 
 Stop with `BLOCKED` or `UNKNOWN` when:

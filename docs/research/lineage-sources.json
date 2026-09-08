@@ -1,0 +1,583 @@
+{
+  "scope": "9 official repositories: data versioning, experiment tracking, data lineage, research workspaces and knowledge links. Bounded evidence scan, not exhaustive GitHub coverage.",
+  "cutoff_utc": "2026-09-08T03:34:42Z",
+  "method": [
+    "Public web search for discovery",
+    "GitHub REST API repository metadata, default-branch commit, recursive tree and 5 latest release entries",
+    "Read README, license and selected immutable source/test/example files; no third-party execution"
+  ],
+  "queries": [
+    "site:github.com DVC MLflow DataLad data versioning experiments provenance",
+    "site:github.com OpenLineage Marquez dataset run job facets",
+    "site:github.com lakeFS Aim Renku experiment data lineage",
+    "site:github.com Logseq knowledge graph local markdown files"
+  ],
+  "evidence_levels": {
+    "author_claim": "README or documentation assertion",
+    "code_review": "source, schema or test read; no execution",
+    "trial": "none"
+  },
+  "caveats": [
+    "iterative/dvc redirects to treeverse/dvc",
+    "DataLad API license classification is NOASSERTION, but COPYING specifies MIT and third-party exceptions",
+    "MLflow model-catalog/latest is not the main product release",
+    "Logseq 2.0.1 release text says beta despite API prerelease=false",
+    "pushed_at does not establish default-branch feature development",
+    "Renku legacy graph claims must not be attributed automatically to Renku 2"
+  ],
+  "projects": [
+    {
+      "project": "dvc",
+      "repo": "treeverse/dvc",
+      "requested_repo": "iterative/dvc",
+      "commit": "56e59829512ff134aa269099a2099587b810b4dd",
+      "commit_date": "2026-08-06T04:17:40Z",
+      "commit_url": "https://github.com/treeverse/dvc/commit/56e59829512ff134aa269099a2099587b810b4dd",
+      "default_branch": "main",
+      "latest_reviewed_product_release": {
+        "tag": "3.67.1",
+        "published_at": "2026-03-31T05:06:44Z",
+        "url": "https://github.com/treeverse/dvc/releases/tag/3.67.1",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "mlflow",
+      "repo": "mlflow/mlflow",
+      "requested_repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "commit_date": "2026-09-08T03:25:26Z",
+      "commit_url": "https://github.com/mlflow/mlflow/commit/1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "default_branch": "master",
+      "latest_reviewed_product_release": {
+        "tag": "v3.16.0",
+        "published_at": "2026-09-04T08:30:54Z",
+        "url": "https://github.com/mlflow/mlflow/releases/tag/v3.16.0",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "datalad",
+      "repo": "datalad/datalad",
+      "requested_repo": "datalad/datalad",
+      "commit": "28dc8b16519690bf0c00c3a0a63f84445829652d",
+      "commit_date": "2026-09-05T13:23:25Z",
+      "commit_url": "https://github.com/datalad/datalad/commit/28dc8b16519690bf0c00c3a0a63f84445829652d",
+      "default_branch": "maint",
+      "latest_reviewed_product_release": {
+        "tag": "1.6.2",
+        "published_at": "2026-08-13T13:49:42Z",
+        "url": "https://github.com/datalad/datalad/releases/tag/1.6.2",
+        "api_prerelease": false
+      },
+      "license": "MIT with enumerated third-party exceptions",
+      "trial": "not_run"
+    },
+    {
+      "project": "ol",
+      "repo": "OpenLineage/OpenLineage",
+      "requested_repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "commit_date": "2026-09-07T13:36:51Z",
+      "commit_url": "https://github.com/OpenLineage/OpenLineage/commit/aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "default_branch": "main",
+      "latest_reviewed_product_release": {
+        "tag": "1.53.0",
+        "published_at": "2026-09-01T16:54:44Z",
+        "url": "https://github.com/OpenLineage/OpenLineage/releases/tag/1.53.0",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "lakefs",
+      "repo": "treeverse/lakeFS",
+      "requested_repo": "treeverse/lakeFS",
+      "commit": "4bb11638e95637e853d9680abf072b14f09e32fb",
+      "commit_date": "2026-08-16T07:46:56Z",
+      "commit_url": "https://github.com/treeverse/lakeFS/commit/4bb11638e95637e853d9680abf072b14f09e32fb",
+      "default_branch": "master",
+      "latest_reviewed_product_release": {
+        "tag": "v1.86.0",
+        "published_at": "2026-08-05T15:53:41Z",
+        "url": "https://github.com/treeverse/lakeFS/releases/tag/v1.86.0",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "aim",
+      "repo": "aimhubio/aim",
+      "requested_repo": "aimhubio/aim",
+      "commit": "6e098e38065364c76b2bb7c028f266e53b647642",
+      "commit_date": "2025-12-31T17:24:10Z",
+      "commit_url": "https://github.com/aimhubio/aim/commit/6e098e38065364c76b2bb7c028f266e53b647642",
+      "default_branch": "main",
+      "latest_reviewed_product_release": {
+        "tag": "v3.29.1",
+        "published_at": "2025-05-08T10:24:23Z",
+        "url": "https://github.com/aimhubio/aim/releases/tag/v3.29.1",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "marquez",
+      "repo": "MarquezProject/marquez",
+      "requested_repo": "MarquezProject/marquez",
+      "commit": "180f37b22387146187af1ef0279e3ee1d1ccd789",
+      "commit_date": "2026-04-12T18:43:52Z",
+      "commit_url": "https://github.com/MarquezProject/marquez/commit/180f37b22387146187af1ef0279e3ee1d1ccd789",
+      "default_branch": "main",
+      "latest_reviewed_product_release": {
+        "tag": "0.50.0",
+        "published_at": "2024-10-24T08:23:00Z",
+        "url": "https://github.com/MarquezProject/marquez/releases/tag/0.50.0",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "renku",
+      "repo": "SwissDataScienceCenter/renku",
+      "requested_repo": "SwissDataScienceCenter/renku",
+      "commit": "e5608308d1a62bafd2c6d7dd00c4a269ce6c009c",
+      "commit_date": "2026-08-27T07:07:56Z",
+      "commit_url": "https://github.com/SwissDataScienceCenter/renku/commit/e5608308d1a62bafd2c6d7dd00c4a269ce6c009c",
+      "default_branch": "master",
+      "latest_reviewed_product_release": {
+        "tag": "2.20.0",
+        "published_at": "2026-08-27T07:37:57Z",
+        "url": "https://github.com/SwissDataScienceCenter/renku/releases/tag/2.20.0",
+        "api_prerelease": false
+      },
+      "license": "Apache-2.0",
+      "trial": "not_run"
+    },
+    {
+      "project": "logseq",
+      "repo": "logseq/logseq",
+      "requested_repo": "logseq/logseq",
+      "commit": "263fd97cbde87b747712f3d2de7d8b12c774ce23",
+      "commit_date": "2026-09-08T02:38:21Z",
+      "commit_url": "https://github.com/logseq/logseq/commit/263fd97cbde87b747712f3d2de7d8b12c774ce23",
+      "default_branch": "master",
+      "latest_reviewed_product_release": {
+        "tag": "2.0.1",
+        "published_at": "2026-07-13T14:10:34Z",
+        "url": "https://github.com/logseq/logseq/releases/tag/2.0.1",
+        "api_prerelease": false
+      },
+      "license": "AGPL-3.0",
+      "trial": "not_run"
+    }
+  ],
+  "sources": [
+    {
+      "id": "dvc-readme",
+      "kind": "readme",
+      "repo": "treeverse/dvc",
+      "commit": "56e59829512ff134aa269099a2099587b810b4dd",
+      "path": "README.rst",
+      "url": "https://github.com/treeverse/dvc/blob/56e59829512ff134aa269099a2099587b810b4dd/README.rst"
+    },
+    {
+      "id": "dvc-license",
+      "kind": "license",
+      "repo": "treeverse/dvc",
+      "commit": "56e59829512ff134aa269099a2099587b810b4dd",
+      "path": "LICENSE",
+      "url": "https://github.com/treeverse/dvc/blob/56e59829512ff134aa269099a2099587b810b4dd/LICENSE"
+    },
+    {
+      "id": "dvc-code",
+      "kind": "code",
+      "repo": "treeverse/dvc",
+      "commit": "56e59829512ff134aa269099a2099587b810b4dd",
+      "path": "dvc/dvcfile.py",
+      "url": "https://github.com/treeverse/dvc/blob/56e59829512ff134aa269099a2099587b810b4dd/dvc/dvcfile.py"
+    },
+    {
+      "id": "dvc-output",
+      "kind": "output",
+      "repo": "treeverse/dvc",
+      "commit": "56e59829512ff134aa269099a2099587b810b4dd",
+      "path": "dvc/output.py",
+      "url": "https://github.com/treeverse/dvc/blob/56e59829512ff134aa269099a2099587b810b4dd/dvc/output.py"
+    },
+    {
+      "id": "dvc-test",
+      "kind": "test",
+      "repo": "treeverse/dvc",
+      "commit": "56e59829512ff134aa269099a2099587b810b4dd",
+      "path": "tests/func/test_dvcfile.py",
+      "url": "https://github.com/treeverse/dvc/blob/56e59829512ff134aa269099a2099587b810b4dd/tests/func/test_dvcfile.py"
+    },
+    {
+      "id": "dvc-release",
+      "kind": "release",
+      "repo": "treeverse/dvc",
+      "tag": "3.67.1",
+      "published_at": "2026-03-31T05:06:44Z",
+      "url": "https://github.com/treeverse/dvc/releases/tag/3.67.1"
+    },
+    {
+      "id": "mlflow-readme",
+      "kind": "readme",
+      "repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "path": "README.md",
+      "url": "https://github.com/mlflow/mlflow/blob/1246a5c8baf81dce7fe06fa83f4cad873411e9fe/README.md"
+    },
+    {
+      "id": "mlflow-license",
+      "kind": "license",
+      "repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "path": "LICENSE.txt",
+      "url": "https://github.com/mlflow/mlflow/blob/1246a5c8baf81dce7fe06fa83f4cad873411e9fe/LICENSE.txt"
+    },
+    {
+      "id": "mlflow-code",
+      "kind": "code",
+      "repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "path": "mlflow/data/dataset.py",
+      "url": "https://github.com/mlflow/mlflow/blob/1246a5c8baf81dce7fe06fa83f4cad873411e9fe/mlflow/data/dataset.py"
+    },
+    {
+      "id": "mlflow-digest",
+      "kind": "digest",
+      "repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "path": "mlflow/data/digest_utils.py",
+      "url": "https://github.com/mlflow/mlflow/blob/1246a5c8baf81dce7fe06fa83f4cad873411e9fe/mlflow/data/digest_utils.py"
+    },
+    {
+      "id": "mlflow-example",
+      "kind": "example",
+      "repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "path": "examples/quickstart/mlflow_tracking.py",
+      "url": "https://github.com/mlflow/mlflow/blob/1246a5c8baf81dce7fe06fa83f4cad873411e9fe/examples/quickstart/mlflow_tracking.py"
+    },
+    {
+      "id": "mlflow-docker",
+      "kind": "docker",
+      "repo": "mlflow/mlflow",
+      "commit": "1246a5c8baf81dce7fe06fa83f4cad873411e9fe",
+      "path": "docker-compose/README.md",
+      "url": "https://github.com/mlflow/mlflow/blob/1246a5c8baf81dce7fe06fa83f4cad873411e9fe/docker-compose/README.md"
+    },
+    {
+      "id": "mlflow-release",
+      "kind": "release",
+      "repo": "mlflow/mlflow",
+      "tag": "v3.16.0",
+      "published_at": "2026-09-04T08:30:54Z",
+      "url": "https://github.com/mlflow/mlflow/releases/tag/v3.16.0"
+    },
+    {
+      "id": "datalad-readme",
+      "kind": "readme",
+      "repo": "datalad/datalad",
+      "commit": "28dc8b16519690bf0c00c3a0a63f84445829652d",
+      "path": "README.md",
+      "url": "https://github.com/datalad/datalad/blob/28dc8b16519690bf0c00c3a0a63f84445829652d/README.md"
+    },
+    {
+      "id": "datalad-license",
+      "kind": "license",
+      "repo": "datalad/datalad",
+      "commit": "28dc8b16519690bf0c00c3a0a63f84445829652d",
+      "path": "COPYING",
+      "url": "https://github.com/datalad/datalad/blob/28dc8b16519690bf0c00c3a0a63f84445829652d/COPYING"
+    },
+    {
+      "id": "datalad-code",
+      "kind": "code",
+      "repo": "datalad/datalad",
+      "commit": "28dc8b16519690bf0c00c3a0a63f84445829652d",
+      "path": "datalad/core/local/run.py",
+      "url": "https://github.com/datalad/datalad/blob/28dc8b16519690bf0c00c3a0a63f84445829652d/datalad/core/local/run.py"
+    },
+    {
+      "id": "datalad-test",
+      "kind": "test",
+      "repo": "datalad/datalad",
+      "commit": "28dc8b16519690bf0c00c3a0a63f84445829652d",
+      "path": "datalad/core/local/tests/test_run.py",
+      "url": "https://github.com/datalad/datalad/blob/28dc8b16519690bf0c00c3a0a63f84445829652d/datalad/core/local/tests/test_run.py"
+    },
+    {
+      "id": "datalad-release",
+      "kind": "release",
+      "repo": "datalad/datalad",
+      "tag": "1.6.2",
+      "published_at": "2026-08-13T13:49:42Z",
+      "url": "https://github.com/datalad/datalad/releases/tag/1.6.2"
+    },
+    {
+      "id": "ol-readme",
+      "kind": "readme",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "README.md",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/README.md"
+    },
+    {
+      "id": "ol-license",
+      "kind": "license",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "LICENSE",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/LICENSE"
+    },
+    {
+      "id": "ol-spec",
+      "kind": "spec",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "spec/OpenLineage.md",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/spec/OpenLineage.md"
+    },
+    {
+      "id": "ol-schema",
+      "kind": "schema",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "spec/OpenLineage.json",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/spec/OpenLineage.json"
+    },
+    {
+      "id": "ol-code",
+      "kind": "code",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "client/python/src/openlineage/client/generated/base.py",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/client/python/src/openlineage/client/generated/base.py"
+    },
+    {
+      "id": "ol-example",
+      "kind": "example",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "client/python/tests/serde_example_run_event.json",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/client/python/tests/serde_example_run_event.json"
+    },
+    {
+      "id": "ol-version",
+      "kind": "version",
+      "repo": "OpenLineage/OpenLineage",
+      "commit": "aab43df6c425d6998ce0683ddc7a10dc3e15d205",
+      "path": "spec/facets/DatasetVersionDatasetFacet.json",
+      "url": "https://github.com/OpenLineage/OpenLineage/blob/aab43df6c425d6998ce0683ddc7a10dc3e15d205/spec/facets/DatasetVersionDatasetFacet.json"
+    },
+    {
+      "id": "ol-release",
+      "kind": "release",
+      "repo": "OpenLineage/OpenLineage",
+      "tag": "1.53.0",
+      "published_at": "2026-09-01T16:54:44Z",
+      "url": "https://github.com/OpenLineage/OpenLineage/releases/tag/1.53.0"
+    },
+    {
+      "id": "lakefs-readme",
+      "kind": "readme",
+      "repo": "treeverse/lakeFS",
+      "commit": "4bb11638e95637e853d9680abf072b14f09e32fb",
+      "path": "README.md",
+      "url": "https://github.com/treeverse/lakeFS/blob/4bb11638e95637e853d9680abf072b14f09e32fb/README.md"
+    },
+    {
+      "id": "lakefs-license",
+      "kind": "license",
+      "repo": "treeverse/lakeFS",
+      "commit": "4bb11638e95637e853d9680abf072b14f09e32fb",
+      "path": "LICENSE",
+      "url": "https://github.com/treeverse/lakeFS/blob/4bb11638e95637e853d9680abf072b14f09e32fb/LICENSE"
+    },
+    {
+      "id": "lakefs-release",
+      "kind": "release",
+      "repo": "treeverse/lakeFS",
+      "tag": "v1.86.0",
+      "published_at": "2026-08-05T15:53:41Z",
+      "url": "https://github.com/treeverse/lakeFS/releases/tag/v1.86.0"
+    },
+    {
+      "id": "aim-readme",
+      "kind": "readme",
+      "repo": "aimhubio/aim",
+      "commit": "6e098e38065364c76b2bb7c028f266e53b647642",
+      "path": "README.md",
+      "url": "https://github.com/aimhubio/aim/blob/6e098e38065364c76b2bb7c028f266e53b647642/README.md"
+    },
+    {
+      "id": "aim-license",
+      "kind": "license",
+      "repo": "aimhubio/aim",
+      "commit": "6e098e38065364c76b2bb7c028f266e53b647642",
+      "path": "LICENSE",
+      "url": "https://github.com/aimhubio/aim/blob/6e098e38065364c76b2bb7c028f266e53b647642/LICENSE"
+    },
+    {
+      "id": "aim-code",
+      "kind": "code",
+      "repo": "aimhubio/aim",
+      "commit": "6e098e38065364c76b2bb7c028f266e53b647642",
+      "path": "aim/sdk/run.py",
+      "url": "https://github.com/aimhubio/aim/blob/6e098e38065364c76b2bb7c028f266e53b647642/aim/sdk/run.py"
+    },
+    {
+      "id": "aim-release",
+      "kind": "release",
+      "repo": "aimhubio/aim",
+      "tag": "v3.29.1",
+      "published_at": "2025-05-08T10:24:23Z",
+      "url": "https://github.com/aimhubio/aim/releases/tag/v3.29.1"
+    },
+    {
+      "id": "marquez-readme",
+      "kind": "readme",
+      "repo": "MarquezProject/marquez",
+      "commit": "180f37b22387146187af1ef0279e3ee1d1ccd789",
+      "path": "README.md",
+      "url": "https://github.com/MarquezProject/marquez/blob/180f37b22387146187af1ef0279e3ee1d1ccd789/README.md"
+    },
+    {
+      "id": "marquez-license",
+      "kind": "license",
+      "repo": "MarquezProject/marquez",
+      "commit": "180f37b22387146187af1ef0279e3ee1d1ccd789",
+      "path": "LICENSE",
+      "url": "https://github.com/MarquezProject/marquez/blob/180f37b22387146187af1ef0279e3ee1d1ccd789/LICENSE"
+    },
+    {
+      "id": "marquez-code",
+      "kind": "code",
+      "repo": "MarquezProject/marquez",
+      "commit": "180f37b22387146187af1ef0279e3ee1d1ccd789",
+      "path": "docker-compose.yml",
+      "url": "https://github.com/MarquezProject/marquez/blob/180f37b22387146187af1ef0279e3ee1d1ccd789/docker-compose.yml"
+    },
+    {
+      "id": "marquez-release",
+      "kind": "release",
+      "repo": "MarquezProject/marquez",
+      "tag": "0.50.0",
+      "published_at": "2024-10-24T08:23:00Z",
+      "url": "https://github.com/MarquezProject/marquez/releases/tag/0.50.0"
+    },
+    {
+      "id": "renku-readme",
+      "kind": "readme",
+      "repo": "SwissDataScienceCenter/renku",
+      "commit": "e5608308d1a62bafd2c6d7dd00c4a269ce6c009c",
+      "path": "README.md",
+      "url": "https://github.com/SwissDataScienceCenter/renku/blob/e5608308d1a62bafd2c6d7dd00c4a269ce6c009c/README.md"
+    },
+    {
+      "id": "renku-license",
+      "kind": "license",
+      "repo": "SwissDataScienceCenter/renku",
+      "commit": "e5608308d1a62bafd2c6d7dd00c4a269ce6c009c",
+      "path": "LICENSE",
+      "url": "https://github.com/SwissDataScienceCenter/renku/blob/e5608308d1a62bafd2c6d7dd00c4a269ce6c009c/LICENSE"
+    },
+    {
+      "id": "renku-code",
+      "kind": "code",
+      "repo": "SwissDataScienceCenter/renku",
+      "commit": "e5608308d1a62bafd2c6d7dd00c4a269ce6c009c",
+      "path": "docs/docs/20-admins/10-architecture/10-services.md",
+      "url": "https://github.com/SwissDataScienceCenter/renku/blob/e5608308d1a62bafd2c6d7dd00c4a269ce6c009c/docs/docs/20-admins/10-architecture/10-services.md"
+    },
+    {
+      "id": "renku-release",
+      "kind": "release",
+      "repo": "SwissDataScienceCenter/renku",
+      "tag": "2.20.0",
+      "published_at": "2026-08-27T07:37:57Z",
+      "url": "https://github.com/SwissDataScienceCenter/renku/releases/tag/2.20.0"
+    },
+    {
+      "id": "logseq-readme",
+      "kind": "readme",
+      "repo": "logseq/logseq",
+      "commit": "263fd97cbde87b747712f3d2de7d8b12c774ce23",
+      "path": "README.md",
+      "url": "https://github.com/logseq/logseq/blob/263fd97cbde87b747712f3d2de7d8b12c774ce23/README.md"
+    },
+    {
+      "id": "logseq-license",
+      "kind": "license",
+      "repo": "logseq/logseq",
+      "commit": "263fd97cbde87b747712f3d2de7d8b12c774ce23",
+      "path": "LICENSE.md",
+      "url": "https://github.com/logseq/logseq/blob/263fd97cbde87b747712f3d2de7d8b12c774ce23/LICENSE.md"
+    },
+    {
+      "id": "logseq-code",
+      "kind": "code",
+      "repo": "logseq/logseq",
+      "commit": "263fd97cbde87b747712f3d2de7d8b12c774ce23",
+      "path": "deps/db/src/logseq/db/frontend/schema.cljs",
+      "url": "https://github.com/logseq/logseq/blob/263fd97cbde87b747712f3d2de7d8b12c774ce23/deps/db/src/logseq/db/frontend/schema.cljs"
+    },
+    {
+      "id": "logseq-release",
+      "kind": "release",
+      "repo": "logseq/logseq",
+      "tag": "2.0.1",
+      "published_at": "2026-07-13T14:10:34Z",
+      "url": "https://github.com/logseq/logseq/releases/tag/2.0.1"
+    }
+  ],
+  "critical_findings": [
+    {
+      "claim": "MLflow pandas digest samples at most 10000 rows of selected columns and truncates MD5 to 8 characters; not a full arbitrary-file content hash",
+      "evidence": [
+        "mlflow-code",
+        "mlflow-digest"
+      ],
+      "type": "code_review"
+    },
+    {
+      "claim": "DataLad no-change run test expects save notneeded and unchanged commit; record every attempt separately if product requires that",
+      "evidence": [
+        "datalad-code",
+        "datalad-test"
+      ],
+      "type": "code_review_plus_product_inference"
+    },
+    {
+      "claim": "OpenLineage dataset identity and version metadata do not compute or retain local file content",
+      "evidence": [
+        "ol-spec",
+        "ol-schema",
+        "ol-code",
+        "ol-version"
+      ],
+      "type": "model_review_plus_product_inference"
+    },
+    {
+      "claim": "Directory responsibility and artifact/run provenance should remain distinct linked entities",
+      "evidence": [
+        "dvc-code",
+        "datalad-code",
+        "ol-code",
+        "logseq-code"
+      ],
+      "type": "product_proposal"
+    }
+  ]
+}

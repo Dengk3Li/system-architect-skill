@@ -4,22 +4,30 @@
 
 [![CI](https://github.com/Dengk3Li/system-architect-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/Dengk3Li/system-architect-skill/actions/workflows/ci.yml)
 
-确定改动应该放在哪里，保护现有功能，并把架构变成可查看、可编辑的图。这套工具包含系统架构 Skill、Python 模块范围检查器，以及离线 HTML/SVG 架构视图。
+从模块找到文件，从实验结果追到当时的输入，再看清项目空间花在哪里。这套工具把架构设计、模块边界检查、可编辑架构图与本地文件历史工作台连接起来。
 
-## 先看一个具体结果
+**[直接打开研究工作台](https://dengk3li.github.io/system-architect-skill/)** · [下载 v0.4.0](https://github.com/Dengk3Li/system-architect-skill/releases/tag/v0.4.0) · [竞品研究与取舍](docs/research/README.md)
 
-![退款工作台架构示例](examples/refund-dashboard/preview.svg)
+![模块职责、文件与历史详情工作台](examples/research-workspace/preview.png)
 
-[下载交互 HTML](https://raw.githubusercontent.com/Dengk3Li/system-architect-skill/main/examples/refund-dashboard/architecture.html)，保存后在浏览器中打开。切换系统上下文与前端视图，选择组件，移动、批注并导出修改后的 JSON。这是现有渲染器生成的虚构退款工作台示例，不代表已经核验的生产系统。
+## 先试三个问题
 
-[示例源文件和复现方法](examples/refund-dashboard/README.md) · [v0.3.1 更新记录](CHANGELOG.md)
+1. **文件归谁负责？** 选择模块或目录，搜索路径，查看声明的职责、业务性质、扩展名和大小。
+2. **结果从哪里来？** 选择 24 步窗口的预测文件，进入相关运行，再打开当时的输入或配置。每次引用保留自己的快照和完整摘要。
+3. **什么占了空间？** 打开存储分布，按业务性质、模块、格式或目录分组。逻辑大小和已分配字节分别列示。
 
-## v0.3.1 更新
+样例包含 4 个快照和 3 次明确标记的合成运行。逻辑大小和完整摘要来自临时文件的实际扫描；分配字节与观察时间经过归一化，便于复现。实验指标为虚构数据。保存离线 HTML 后，资料和当前选择都能保留，无需账户或持续运行的服务。
 
-- Git 操作遵守项目规则和用户明确授权的范围，包括仅本地修改。
-- 同一动作沿用已有授权；Skill 不额外授予发布或合并权限。
-- 不适合委派或环境不支持时，可直接完成文档研究。
-- 增加可下载示例，便于体验已有架构查看与编辑能力。
+[样例说明与复现](examples/research-workspace/README.md) · [原有可编辑架构图示例](examples/refund-dashboard/README.md)
+
+## v0.4.0 更新
+
+- 新增 `architecture-workspace` Skill 和 Python 命令行工具，将指定目录的元数据保存到独立目录。
+- 历史记录分别保存路径、完整内容身份、分配空间、声明性质和独立运行；无法计算摘要的文件保留未知状态。
+- 文件与架构、运行与历史、存储分布三个视图共享文件选择，支持历史反查和比较。
+- 独立 HTML、JSON 导出、可复现样例与在线入口，让结果能够直接体验和分享。
+
+首版只读文件、记录元数据。原文件正文由原项目保管，运行经过需要明确登记。扫描和写入目录支持 macOS/Linux、Python 3.10+；离线工作台使用现代浏览器。扫描和渲染均无需 AI 模型或第三方运行库。
 
 ## 快速开始
 
@@ -28,7 +36,23 @@
 ```bash
 npx skills add Dengk3Li/system-architect-skill --skill system-architect
 npx skills add Dengk3Li/system-architect-skill --skill architecture-visualizer
+npx skills add Dengk3Li/system-architect-skill --skill architecture-workspace
 ```
+
+生成文件历史工作台：
+
+```text
+使用 $architecture-workspace，把这个项目已声明的模块连接到文件，
+将目录快照存到源目录之外，生成可以反查历史输入、实验运行和存储分布的离线工作台。
+```
+
+克隆仓库后，无需安装即可重新生成合成样例：
+
+```bash
+python3 examples/research-workspace/generate.py
+```
+
+直接打开 `examples/research-workspace/index.html`。处理自己的目录时，参照[工作台操作](skills/architecture-workspace/SKILL.md)和[数据模型](skills/architecture-workspace/references/catalog-model.md)。分享前检查路径、命令与结论中的私有信息。
 
 让 Agent 为改动确定模块边界：
 
@@ -226,6 +250,7 @@ python3 skills/system-architect/scripts/check_module_scope.py \
 | 产品经理 | 用户问题、优先级、发布范围、验收 |
 | 系统架构师 | 模块落点、页面占比、文件归属、接口、整合顺序 |
 | 架构可视化 | 稳定架构模型、读者视图、来源证据和图示反馈 |
+| 架构与文件工作台 | 目录观察、文件内容身份、显式运行引用、存储视图和离线导出 |
 | 模块开发者 | 一个登记模块内的实现和测试 |
 | 集成者 | 通过声明接口修改经过授权的共享区域 |
 
@@ -263,6 +288,15 @@ skills/architecture-visualizer/
   assets/frontend-module.template.json
   references/architecture-model.md
   scripts/render_architecture.py
+skills/architecture-workspace/
+  SKILL.md
+  agents/openai.yaml
+  assets/workspace.html / workspace.css / workspace.js
+  references/catalog-model.md
+  scripts/workspace.py
+examples/research-workspace/
+docs/research/
+tests/test_workspace.py
 tests/test_architecture_visualizer.py
 tests/test_check_module_scope.py
 ```
