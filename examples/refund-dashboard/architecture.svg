@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1310" height="1288" viewBox="0 0 1310 1288">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#637083"/></marker></defs>
+<style>.node{fill:#f7f9fc;stroke:#3659a2;stroke-width:2}.name{font:600 17px system-ui;fill:#132238}.meta{font:13px system-ui;fill:#516174}.edge{stroke:#637083;stroke-width:2;marker-end:url(#arrow)}.label{font:600 11px system-ui;fill:#334155}.legend{font:13px system-ui;fill:#334155}</style>
+<text x="55" y="45" font-family="system-ui" font-size="26" font-weight="700">Refund dashboard architecture</text>
+<text x="55" y="94" font-family="system-ui" font-size="17" font-weight="650">From support request to refund</text>
+<line class="edge" x1="220" y1="222" x2="440" y2="222"/>
+<text class="label" text-anchor="middle" x="330" y="210">R1</text>
+<line class="edge" x1="570" y1="222" x2="790" y2="222"/>
+<text class="label" text-anchor="middle" x="680" y="210">R2</text>
+<rect class="node" x="90" y="180" width="260" height="84" rx="14"/>
+<text class="name" x="108" y="211">Support specialist</text>
+<text class="meta" x="108" y="236">person</text>
+<title>Checks unresolved requests and chooses the refund action</title>
+<rect class="node" x="440" y="180" width="260" height="84" rx="14"/>
+<text class="name" x="458" y="211">Refund dashboard</text>
+<text class="meta" x="458" y="236">container</text>
+<title>Owns the refund route, review form, transient state and recoverable feedback</title>
+<rect class="node" x="790" y="180" width="260" height="84" rx="14"/>
+<text class="name" x="808" y="211">Refunds API</text>
+<text class="meta" x="808" y="236">container</text>
+<title>Validates eligibility and records each authorized refund once</title>
+<text class="legend" x="55" y="414">R1  reviews request</text>
+<text class="legend" x="55" y="438">R2  submits refund</text>
+<text x="55" y="482" font-family="system-ui" font-size="17" font-weight="650">Refund workspace and recovery</text>
+<text class="meta" x="55" y="508">/refunds · frontend-module-canvas-v1</text>
+<line class="edge" x1="825" y1="888.0" x2="915" y2="763.0"/>
+<text class="label" text-anchor="middle" x="870.0" y="817.5">user intent</text>
+<line class="edge" x1="1200" y1="763.0" x2="915" y2="988.0"/>
+<text class="label" text-anchor="middle" x="1057.5" y="867.5">validated request</text>
+<line class="edge" x1="275" y1="888.0" x2="915" y2="763.0"/>
+<text class="label" text-anchor="middle" x="595.0" y="817.5">retry or fallback intent</text>
+<rect class="node" x="100" y="578" width="760" height="600" rx="12"/>
+<text class="name" x="114" y="605">Refund workspace</text>
+<text class="meta" x="114" y="627">page · R1 +1</text>
+<rect class="node" x="135" y="633" width="690" height="90" rx="12"/>
+<text class="name" x="149" y="660">Navigation</text>
+<text class="meta" x="149" y="682">component · R1</text>
+<rect class="node" x="305" y="768" width="520" height="240" rx="12"/>
+<text class="name" x="319" y="795">Request review</text>
+<text class="meta" x="319" y="817">component · R1</text>
+<rect class="node" x="135" y="768" width="140" height="240" rx="12"/>
+<text class="name" x="149" y="795">Recovery</text>
+<text class="meta" x="149" y="817">state · R2</text>
+<rect class="node" x="915" y="688" width="285" height="150" rx="12"/>
+<text class="name" x="929" y="715">Refund action</text>
+<text class="meta" x="929" y="737">state-controller · R1 +1</text>
+<rect class="node" x="915" y="913" width="285" height="150" rx="12"/>
+<text class="name" x="929" y="940">Refunds API adapter</text>
+<text class="meta" x="929" y="962">data-contract · R1 +1</text>
+</svg>

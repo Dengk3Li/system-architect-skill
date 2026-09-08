@@ -153,7 +153,7 @@ Share contracts, not internal state. A consumer must not reach into another modu
 3. Add the smallest shared-surface change only after the module works independently.
 4. Run module, contract, scope and affected regression tests.
 5. Record durable shared decisions as an ADR only when they are hard to reverse, surprising without context, and the result of a real trade-off.
-6. For an authorized build or integration request, create an isolated branch/worktree, commit the scoped change, push it, open a PR, and merge after required verification and review. This lifecycle does not require a second approval. Clean up only Git resources created by this task after verifying the PR is merged, the merge is reachable from the target branch, the worktree is clean, no active writer remains, and referenced evidence is retained.
+6. Follow the active project’s Git-delivery policy and the user’s requested scope. Reuse previously granted authorization for the same concrete action; this skill grants no additional publish, push, merge, or lifecycle authority. Where the project authorizes end-to-end Git delivery, complete the scoped branch/worktree, commit, push, PR, and merge after required checks and review without repeated approval. Clean up only Git resources created by this task after verifying the PR is merged, the merge is reachable from the target branch, the worktree is clean, no active writer remains, and referenced evidence is retained.
 7. Report the integrated result and remaining coupling. Pause when branch protection, conflicts, missing credentials, or unrelated dirty work prevents reliable automation.
 
 Read `references/architecture-sources.md` when designing a new boundary policy or choosing enforcement tools for a specific stack.

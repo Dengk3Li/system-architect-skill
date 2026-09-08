@@ -1,0 +1,264 @@
+{
+  "title": "Refund dashboard architecture",
+  "scope": "Review a refund request, submit it once, and preserve progress when a request fails.",
+  "language": "en",
+  "audience": [
+    "product",
+    "design",
+    "frontend engineering",
+    "system architecture"
+  ],
+  "views": [
+    {
+      "id": "context",
+      "title": "From support request to refund",
+      "node_ids": [
+        "user",
+        "frontend-capability",
+        "business-api"
+      ],
+      "relationship_ids": [
+        "uses-capability",
+        "calls-api"
+      ]
+    },
+    {
+      "id": "frontend-workspace",
+      "title": "Refund workspace and recovery",
+      "kind": "frontend",
+      "frontend_module_id": "frontend-capability-workspace",
+      "node_ids": [
+        "frontend-capability"
+      ],
+      "relationship_ids": []
+    }
+  ],
+  "nodes": [
+    {
+      "id": "user",
+      "name": "Support specialist",
+      "type": "person",
+      "responsibility": "Checks unresolved requests and chooses the refund action",
+      "business_driver": "Review and recover a refund request",
+      "source": "Fictional scenario in examples/refund-dashboard/README.md",
+      "source_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    },
+    {
+      "id": "frontend-capability",
+      "name": "Refund dashboard",
+      "type": "container",
+      "responsibility": "Owns the refund route, review form, transient state and recoverable feedback",
+      "business_driver": "Review and recover a refund request",
+      "source": "Fictional scenario in examples/refund-dashboard/README.md",
+      "source_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    },
+    {
+      "id": "business-api",
+      "name": "Refunds API",
+      "type": "container",
+      "responsibility": "Validates eligibility and records each authorized refund once",
+      "business_driver": "Review and recover a refund request",
+      "source": "Fictional scenario in examples/refund-dashboard/README.md",
+      "source_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "uses-capability",
+      "source": "user",
+      "target": "frontend-capability",
+      "label": "reviews request",
+      "evidence": "Fictional scenario in examples/refund-dashboard/README.md",
+      "evidence_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    },
+    {
+      "id": "calls-api",
+      "source": "frontend-capability",
+      "target": "business-api",
+      "label": "submits refund",
+      "evidence": "Fictional scenario in examples/refund-dashboard/README.md",
+      "evidence_type": "AI_PROPOSAL",
+      "evidence_status": "PROPOSED"
+    }
+  ],
+  "frontend_modules": [
+    {
+      "id": "frontend-capability-workspace",
+      "node_id": "frontend-capability",
+      "name": "Refund workspace",
+      "surface": "/refunds",
+      "template_ref": "frontend-module-canvas-v1",
+      "requirement_ids": [
+        "R1",
+        "R2"
+      ],
+      "implementation_requirements": {
+        "pages": [
+          "Refund request review and result"
+        ],
+        "components": [
+          "Navigation",
+          "Request review",
+          "Status and retry"
+        ],
+        "states": {
+          "loading": "Preserve orientation and show bounded progress",
+          "empty": "Explain why no business data exists and offer the next valid action",
+          "error": "State the impact and provide a recoverable action without losing user input",
+          "unavailable": "Keep authoritative state unchanged and offer retry or a deterministic fallback",
+          "ready": "Expose one clear primary action and current business status"
+        },
+        "interactions": [
+          {
+            "id": "complete-primary-action",
+            "trigger": "User confirms the primary action",
+            "result": "Validate locally, call one versioned contract, and render the resulting authoritative state",
+            "requirement_ids": [
+              "R1"
+            ]
+          },
+          {
+            "id": "recover-failed-action",
+            "trigger": "The provider returns an error or is unavailable",
+            "result": "Preserve user work, explain impact, and expose a safe retry or fallback",
+            "requirement_ids": [
+              "R2"
+            ]
+          }
+        ],
+        "data_contracts": [
+          {
+            "id": "refunds-api-v1",
+            "provider": "business-api",
+            "version": "1.0",
+            "read_write": "The API owns eligibility and refund records; the browser owns unsent form state"
+          }
+        ],
+        "quality": [
+          "Keyboard and screen-reader operable for the critical journey",
+          "Responsive behavior defined for compact and wide layouts",
+          "Loading and input response targets tied to the accepted user outcome",
+          "No duplicate side effects after retry or navigation"
+        ]
+      },
+      "canvas": {
+        "width": 1200,
+        "height": 700,
+        "elements": [
+          {
+            "id": "capability-page",
+            "kind": "page",
+            "title": "Refund workspace",
+            "details": "Owns the route, page-level states, focus order, and recovery path",
+            "requirement_ids": [
+              "R1",
+              "R2"
+            ],
+            "x": 45,
+            "y": 45,
+            "width": 760,
+            "height": 600
+          },
+          {
+            "id": "route-shell",
+            "kind": "component",
+            "title": "Navigation",
+            "details": "Provides navigation context and a stable slot without owning feature state",
+            "requirement_ids": [
+              "R1"
+            ],
+            "x": 80,
+            "y": 100,
+            "width": 690,
+            "height": 90
+          },
+          {
+            "id": "primary-workspace",
+            "kind": "component",
+            "title": "Request review",
+            "details": "Review the order, requested amount and reason before submitting the refund.",
+            "requirement_ids": [
+              "R1"
+            ],
+            "x": 250,
+            "y": 235,
+            "width": 520,
+            "height": 240
+          },
+          {
+            "id": "status-recovery",
+            "kind": "state",
+            "title": "Recovery",
+            "details": "Preserve the request after a failure and show a retry action with the recorded status.",
+            "requirement_ids": [
+              "R2"
+            ],
+            "x": 80,
+            "y": 235,
+            "width": 140,
+            "height": 240
+          },
+          {
+            "id": "interaction-controller",
+            "kind": "state-controller",
+            "title": "Refund action",
+            "details": "Owns transient UI state and maps explicit user intents to versioned requests",
+            "requirement_ids": [
+              "R1",
+              "R2"
+            ],
+            "x": 860,
+            "y": 155,
+            "width": 285,
+            "height": 150
+          },
+          {
+            "id": "api-adapter",
+            "kind": "data-contract",
+            "title": "Refunds API adapter",
+            "details": "Send the requested refund once and return typed eligibility, success and recoverable-error results.",
+            "requirement_ids": [
+              "R1",
+              "R2"
+            ],
+            "x": 860,
+            "y": 380,
+            "width": 285,
+            "height": 150
+          }
+        ],
+        "connectors": [
+          {
+            "id": "workspace-intent",
+            "source": "primary-workspace",
+            "target": "interaction-controller",
+            "label": "user intent"
+          },
+          {
+            "id": "controller-request",
+            "source": "interaction-controller",
+            "target": "api-adapter",
+            "label": "validated request"
+          },
+          {
+            "id": "recovery-state",
+            "source": "status-recovery",
+            "target": "interaction-controller",
+            "label": "retry or fallback intent"
+          }
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "feedback": [
+    {
+      "severity": "note",
+      "message": "Illustrative proposal. No production source or runtime has been verified."
+    }
+  ]
+}
