@@ -27,6 +27,8 @@ flowchart LR
 
 One catalog contains one project and one bound source directory. The source binding hashes the resolved root path and device/inode; it omits the absolute path from the catalog. Moving a root or using another machine may require a new catalog. This guard detects accidental mixing; it is not authenticated provenance.
 
+The synthetic flag must agree between the catalog and every snapshot; changing only the top-level label fails validation. Aggregate counts and bytes must fit JavaScript safe integers before rendering.
+
 Snapshot maps are frozen. Updating the current map cannot relabel historical observations. Equality uses full content digests only. Equal digests at two paths mean equal bytes; they do not prove either copy is safe to delete. Cross-snapshot paths do not become renamed-file identities automatically.
 
 ## Map format

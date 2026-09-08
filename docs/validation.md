@@ -4,9 +4,9 @@ This record describes engineering and interface checks, not scientific validatio
 
 ## Automated checks
 
-Local platform: macOS, Python 3.10.2, Node 20.20.2. All 55 Python tests passed, including 28 workspace tests and the 27 existing architect/visualizer tests. All three Skill manifests and the plugin manifest passed the installed creator validators. The JavaScript syntax check passed.
+Local platform: macOS, Python 3.10.2, Node 20.20.2. All 57 Python tests passed, including 30 workspace tests and the 27 existing architect/visualizer tests. All three Skill manifests and the plugin manifest passed the installed creator validators. The JavaScript syntax check passed.
 
-Workspace cases cover full hashing, unknown content, overwritten historical inputs, source binding, path exclusions and symlinks, hardlinks, partial scans, explicit and empty-output runs, invalid references and forged hashes, snapshot/receipt integrity, conflicting maps, changing/unreadable content, lock conflicts, atomic replacement failure, source write avoidance, malformed policy/time/numeric fields, boundary-map projection, empty catalogs, script embedding, and deterministic example generation.
+Workspace cases cover consistent synthetic identity across catalog and snapshots, exact browser-safe aggregate bytes, full hashing, unknown content, overwritten historical inputs, source binding, path exclusions and symlinks, hardlinks, partial scans, explicit and empty-output runs, invalid references and forged hashes, snapshot/receipt integrity, conflicting maps, changing/unreadable content, lock conflicts, atomic replacement failure, source write avoidance, malformed policy/time/numeric fields, boundary-map projection, empty catalogs, script embedding, and deterministic example generation.
 
 A separate CLI journey created two temporary files and exercised scan → second snapshot → record-run → validate → render → diff. It retained both historical observations, imported one explicit receipt, and wrote no extra files in the source. The command text in the receipt was not executed.
 

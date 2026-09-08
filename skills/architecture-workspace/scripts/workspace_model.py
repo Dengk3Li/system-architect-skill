@@ -147,10 +147,13 @@ def summarize(files):
         if key not in storage: storage[key] = f['allocated_bytes']
         elif storage[key] != f['allocated_bytes']: storage[key] = None
     allocated = None if any(v is None for v in storage.values()) else sum(storage.values())
-    return {'file_count': len(files), 'logical_bytes': sum(f['size_bytes'] for f in files),
+    result = {'file_count': len(files), 'logical_bytes': sum(f['size_bytes'] for f in files),
             'allocated_bytes': allocated, 'storage_object_count': len(storage),
             'full_hash_count': sum(f['hash_status'] == 'full' for f in files),
             'unclassified_count': sum(f['nature'] is None for f in files)}
+    for field, value in result.items():
+        if value is not None: integer(value, f'summary {field}')
+    return result
 
 
 def seal_snapshot(snapshot):
@@ -240,6 +243,7 @@ def validate_catalog(cat):
     for s in snapshots.values():
         validate_snapshot(s)
         require(s['map']['project']['id'] == cat['project']['id'], 'snapshot belongs to a different project')
+        require(s['map']['project']['synthetic'] == cat['project']['synthetic'], 'snapshot synthetic identity disagrees with catalog')
     require(len({s['source_key'] for s in snapshots.values()}) <= 1, 'snapshots belong to different source directories')
     for run in unique(cat.get('runs'), 'run').values():
         require(normalize_run(cat, run) == run, 'run digest or content reference mismatch')

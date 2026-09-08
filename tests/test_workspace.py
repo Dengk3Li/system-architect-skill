@@ -62,6 +62,24 @@ class WorkspaceTest(unittest.TestCase):
         self.assertNotIn(str(self.root), json.dumps(s))
         self.assertNotIn('a,b', json.dumps(s))
 
+    def test_catalog_cannot_relabel_synthetic_observations_as_real(self):
+        cat = copy.deepcopy(self.catalog())
+        cat['project']['synthetic'] = False
+        with self.assertRaisesRegex(ValueError, 'synthetic'):
+            model.validate_catalog(cat)
+
+    def test_aggregate_bytes_must_remain_exact_in_browser(self):
+        observed = self.snapshot()['files'][0]
+        files = [copy.deepcopy(observed), copy.deepcopy(observed)]
+        files[0]['storage_id'], files[1]['storage_id'] = 'one', 'two'
+        for field in ('size_bytes', 'allocated_bytes'):
+            with self.subTest(field=field):
+                oversized = copy.deepcopy(files)
+                for f in oversized:
+                    f[field] = model.MAX_SAFE_INTEGER
+                with self.assertRaisesRegex(ValueError, 'safe integer'):
+                    model.summarize(oversized)
+
     def test_unknown_hash_stays_unknown_even_if_size_and_time_equal(self):
         s = self.snapshot(hash_max_bytes=1)
         self.assertIsNone(s['files'][0]['content_id'])

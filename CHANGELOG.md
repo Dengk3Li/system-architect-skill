@@ -7,7 +7,7 @@
 - Architecture Workspace Skill, versioned catalog contracts, read-only POSIX scanner, explicit run importer, boundary-map adapter, and offline renderer.
 - Module/file navigation, full-content identity and unknown states, historical input/config/output tracing, run and snapshot comparison, and storage grouping with separate logical/allocation semantics.
 - Atomic catalog updates with writer coordination, source-directory binding, tamper and reference validation, and protected output paths.
-- Reproducible synthetic research example, public Pages entry, offline HTML/JSON exports, 28 workspace regression tests, and a bounded review of 28 related repositories.
+- Reproducible synthetic research example, public Pages entry, offline HTML/JSON exports, 30 workspace regression tests, and a bounded review of 28 related repositories.
 
 ### Changed
 
