@@ -14,7 +14,7 @@ Turn accepted product intent and business constraints into a system that can be 
 - Let a module developer implement one registered module.
 - Let an integrator connect accepted outputs through declared interfaces without rewriting module internals.
 
-Do not turn the system architect into a global feature developer or final product owner.
+Roles are responsibility boundaries. One agent may carry product, architecture and implementation work forward within the same authorized task; keep product decisions with the user and preserve module write boundaries.
 
 ## Start from business logic
 
@@ -32,9 +32,9 @@ For medium or larger architecture work, read [references/architecture-workflow.m
 
 ## Preflight
 
-1. Read repository guidance, accepted architecture, current Git state, runtime evidence, and active work boundaries.
-2. Locate `.system-architect/module-boundaries.json`. If it is absent, copy `assets/module-boundaries.template.json`, then replace every example path and contract with verified repository facts before allowing writes.
-3. Run the manifest check:
+1. Read repository guidance and the architecture, source or runtime evidence relevant to this task. Before writes, inspect the affected Git state and work boundaries.
+2. Use the existing module manifest when the project adopts managed module boundaries. A read-only review does not create or register files. For an ordinary unregistered project, infer the scoped boundary from current source and conventions; create a manifest only when this task explicitly adopts that governance or the project requires it.
+3. For a managed module write or an explicit manifest audit, run the manifest check; reuse a valid result while its inputs are unchanged:
 
 ```bash
 python3 <skill-dir>/scripts/check_module_scope.py --repo-root <repo> --check-manifest
@@ -44,7 +44,7 @@ python3 <skill-dir>/scripts/check_module_scope.py --repo-root <repo> --check-man
 
 ## Inspect the current system
 
-Use primary repository and runtime evidence first. If graphify-out/graph.json exists, query it for relevant nodes, paths, communities, and candidate dependencies instead of rebuilding the graph. Run or update graphify only when the necessary evidence is absent or source files have materially changed.
+Use primary repository and runtime evidence first. If graphify-out/graph.json exists, query it for relevant nodes, paths, communities, and candidate dependencies instead of rebuilding the graph. Use focused source search when the graph is stale or incomplete. Build or update it only when the user requests index maintenance or it is necessary and within the authorized write scope.
 
 Graphify describes relationships discovered from source material. Treat those relationships as evidence candidates until contracts, runtime behavior, or accepted decisions confirm their architectural meaning. Keep observed, accepted, and proposed architecture distinct.
 
@@ -99,7 +99,7 @@ For a material frontend design, use architecture-visualizer's `assets/frontend-m
 
 ## Freeze the change contract
 
-Before code, state:
+For a new module, cross-module interface or protected change, state the relevant parts of this contract. Reuse the existing task context for settled local changes:
 
 - requirement IDs served and any unresolved product mapping;
 - module ID and role;
@@ -115,7 +115,7 @@ For new modules, interfaces or protected changes, read `references/change-contra
 
 ## Enforce the write boundary
 
-Check planned files before editing:
+For projects using the managed manifest, check planned files before editing:
 
 ```bash
 python3 <skill-dir>/scripts/check_module_scope.py \
@@ -172,7 +172,7 @@ When the user's question concerns actual directories, file sizes, historical inp
 
 ## Stop conditions
 
-Stop with `BLOCKED` or `UNKNOWN` when:
+For managed or protected changes, pause only the affected write when the following prevents a safe action. Continue read-only analysis and independent authorized work:
 
 - a managed file has no single owner;
 - the request needs sibling-module edits without an authorized interface change;
